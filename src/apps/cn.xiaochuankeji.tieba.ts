@@ -5,6 +5,23 @@ export default defineGkdApp({
   name: '最右',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          position: {
+            left: 'width * 0.8824',
+            top: 'width * 0.1333',
+          },
+          matches: '[vid="contentView"]',
+          snapshotUrls: 'https://i.gkd.li/i/19762870',
+        },
+      ],
+    },
+    {
       key: 1,
       name: '更新提示',
       matchTime: 10000,
