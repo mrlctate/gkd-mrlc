@@ -1,0 +1,58 @@
+name: Issue Labeled
+
+# 新增标签时触发
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  issue-labeled:
+    # 打标签和提交 issue 的不是同一个人才执行
+    if: github.actor != github.event.issue.user.login
+    runs-on: ubuntu-latest
+    steps:
+      - name: Need reproduce
+        if: github.event.label.name == 'need reproduce'
+        uses: actions-cool/issues-helper@main
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，请提供一个可以在线访问的链接, 或者（上传快照zip文件） 提供示例并详细说明获取步骤 ([查看更多模板](https://raw.githubusercontent.com/mrlctate/gkd-mrlc/refs/heads/main/Snapshot.png)), 3 天内未回复您的 issue 将会自动关闭。
+
+            Hello @${{ github.event.issue.user.login }}, Please provide a link that can be accessed online, Or (Upload snapshot zip file) provide an example and detail the obtaining steps ([see more templates] (https://raw.githubusercontent.com/mrlctate/gkd-mrlc/refs/heads/main/Snapshot.png)), 3 days did not return issue will be closed automatically.
+
+      - name: Need more info
+        if: github.event.label.name == 'need more info'
+        uses: actions-cool/issues-helper@main
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，你所提供的信息不足于我们排查问题, 请按照 issue 模板填写相关信息, 提供有效快照链接等方式, 详细说明复现步骤, 感谢配合, 谢谢! 3 天内未回复 issue 将会自动关闭。
+
+            Hello, @${{ github.event.issue.user.login }}, The information you provided is insufficient for us to troubleshoot the problem. Please fill in the relevant information according to the issue template, and provide a valid snapshot link or other means to describe in detail the steps for reproducing the issue. Thank you for your cooperation. We appreciate your understanding. If there is no reply to the issue within 3 days, it will be automatically closed.
+            
+      - name: feature request
+        if: github.event.label.name == 'enhancement'
+        uses: actions-cool/issues-helper@main
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUBTOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，已收到你的建议，维护完成后将在issue区域通知你。
+            Hello @${{ github.event.issue.user.login }}.We have received your suggestion and will notify you in the issue area after the maintenance is completed.
+
+      - name: need reproduction
+        if: github.event.label.name == 'bug'
+        uses: actions-cool/issues-helper@main
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUBTOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，已收到你反馈的问题，问题解决后将在issue区域通知你。
+            Hello @${{ github.event.issue.user.login }}. Your feedback has been received, and you will be notified in the issue area when the problem is resolved.
