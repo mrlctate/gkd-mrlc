@@ -56,3 +56,15 @@ jobs:
           body: |
             你好 @${{ github.event.issue.user.login }}，已收到你反馈的问题，问题解决后将在issue区域通知你。
             Hello @${{ github.event.issue.user.login }}. Your feedback has been received, and you will be notified in the issue area when the problem is resolved.
+
+      - name: Accepted
+        if: github.event.label.name == 'accepted'
+        uses: actions-cool/issues-helper@main
+        with:
+          actions: 'create-comment'
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.issue.number }}
+          body: |
+            你好 @${{ github.event.issue.user.login }}，经过我们的反复讨论, 你的需求现已被采纳, 我们会排期维护, 请关注后续发布日志。
+
+            Hello, @${{ github.event.issue.user.login }}, your feature request has been accepted after our repeated discussion. We will schedule the development, please pay attention to the follow-up release logs.

@@ -10,6 +10,7 @@ export default defineGkdGlobalGroups([
     key: 0,
     name: '开屏广告',
     desc: '关闭打开应用时的开屏广告',
+    disableIfAppGroupMatch: '开屏广告',
     order: OPEN_AD_ORDER,
     fastQuery: true,
     matchTime: 3800,
@@ -26,7 +27,7 @@ export default defineGkdGlobalGroups([
           '[text^="温馨" || text*="搜索" || text^="猜你" || text="历史记录" || text$="在搜" && text.length>3 && text.length<6]',
         anyMatches: [
           '[text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" && text.length<10]',
-          '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text^="跳转"]', // 字节SDK
+          '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text$="s"] + [text="|"]',
         ],
       },
@@ -41,6 +42,7 @@ export default defineGkdGlobalGroups([
     key: 1,
     name: '更新提示',
     desc: '关闭应用的更新弹窗',
+    disableIfAppGroupMatch: '更新提示',
     order: UPDATE_PROMPT_ORDER,
     fastQuery: true,
     matchTime: 10000,
@@ -66,6 +68,7 @@ export default defineGkdGlobalGroups([
     key: 2,
     name: '青少年模式',
     desc: '关闭应用的青少年模式弹窗',
+    disableIfAppGroupMatch: '青少年模式',
     order: YOUTH_MODE_ORDER,
     fastQuery: true,
     matchTime: 10000,
