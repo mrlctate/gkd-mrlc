@@ -16,7 +16,8 @@ export default defineGkdApp({
             left: 'width * 0.8824',
             top: 'width * 0.1333',
           },
-          matches: '[vid="contentView"]',
+          matches:
+            '@[vid="contentView"] > TextView[index=parent.childCount.minus(1) && text*="跳转"]',
           snapshotUrls: 'https://i.gkd.li/i/19762870',
         },
       ],
