@@ -16,7 +16,7 @@ export default defineGkdApp({
         {
           key: 0,
           anyMatches: [
-            '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && text=null] <n FrameLayout[childCount>2] >(7,8,9,10) TextView[text.length=4]',
+            '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/13188653',
         },

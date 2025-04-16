@@ -7,11 +7,18 @@ export default defineGkdApp({
     {
       key: 0,
       name: '开屏广告',
-      matchTime: 8000,
+      matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
       rules: [
         {
+          key: 0,
+          anyMatches: [
+            '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
+          ],
+        },
+        {
+          key: 1,
           position: {
             left: 'width * 0.8824',
             top: 'width * 0.1333',

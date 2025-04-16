@@ -9,7 +9,11 @@ const apps = await batchImportApps(`${import.meta.dirname}/apps`);
 const rawApps: RawApp[] = [];
 apps.forEach((appConfig) => {
   appConfig.groups?.forEach((g: RawAppGroup) => {
-    g.order = OPEN_AD_ORDER;
+    if (!g.name.startsWith('开屏广告')) {
+      g.enable = false;
+    } else {
+      g.order = OPEN_AD_ORDER;
+    }
   });
   rawApps.push(appConfig);
 });

@@ -10,25 +10,23 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      fastQuery: true,
       actionMaximumKey: 0,
       priorityTime: 10000,
       rules: [
         {
           key: 0,
-          fastQuery: true,
-          matches: '[text*="跳过" && text.length<10 && visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/16322789',
-        },
-        {
-          key: 1,
           anyMatches: [
-            '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && text=null] <n FrameLayout[childCount>2] >(7,8,9,10) TextView[text.length=4]',
+            '[text*="跳过" || text*="跳過" && text.length<10]',
+            '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           ],
-          snapshotUrls: 'https://i.gkd.li/i/16333782',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16333782',
+            'https://i.gkd.li/i/16322789',
+          ],
         },
         {
           key: 2,
-          fastQuery: true,
           matches: '[vid="ms_skipView"]', // vid="iv_notification_fragment_news" 并非跳过节点，只是位置相同
           exampleUrls: 'https://e.gkd.li/4b7fd3fe-8467-49e3-93af-64515416911c',
           snapshotUrls: 'https://i.gkd.li/i/16860311',
@@ -36,7 +34,6 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          fastQuery: true,
           position: {
             left: 'width * 0.9041',
             top: 'width * 0.1598',

@@ -21,10 +21,10 @@ export default defineGkdGlobalGroups([
     rules: [
       {
         key: 0,
-        action: 'clickCenter',
         // 防止在应用的搜索页面误触
         excludeMatches:
           '[text^="温馨" || text*="搜索" || text^="猜你" || text="历史记录" || text$="在搜" && text.length>3 && text.length<6]',
+        action: 'clickCenter',
         anyMatches: [
           '[text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" && text.length<10]',
           '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
