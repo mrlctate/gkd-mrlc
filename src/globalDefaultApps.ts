@@ -261,12 +261,17 @@ export const yongBlackListAppIDs = new Set([
 // 在应用中单独启用某个全局规则
 // 开屏广告白名单
 export const openAdWhiteListAppIDs = new Set([
+  'com.hihonor.appmarket', // 荣耀应用市场
   'com.bbk.appstore', // vivo应用商店
+  'com.vivo.browser', // vivo浏览器
+  'com.vivo.wallet', // vivo钱包
   'com.miui.player', // 小米音乐
   'com.tencent.southpole.appstore', // 黑鲨应用市场
   'com.heytap.browser', // 一加浏览器
   'com.heytap.themestore', // oppo主题商店
   'com.bbk.theme', // vivo主题商店
+  'com.huawei.android.thememanager', // 华为主题
+  'com.heytap.themestore', // oppo主题商店
 ]);
 
 // 更新提示白名单
