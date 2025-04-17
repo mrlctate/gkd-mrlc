@@ -82,14 +82,25 @@ export default defineGkdApp({
       name: '功能类-签到',
       fastQuery: true,
       actionMaximum: 1,
+      activityIds: '.ui.cloudp2p.RichMediaActivity',
       rules: [
         {
           key: 1,
-          activityIds: '.ui.cloudp2p.RichMediaActivity',
           matches:
-            '[text^="连续签到7天后"] +2 TextView[clickable=true][text^="签到"]',
+            '@TextView[clickable=true && text^="签到"] -2 [text^="连续签到7天后"]',
           snapshotUrls: 'https://i.gkd.li/i/18762226',
           exampleUrls: 'https://e.gkd.li/89b963b3-f46c-426b-9439-8244f4ac4836',
+        },
+        {
+          preKeys: [1],
+          key: 2,
+          position: {
+            left: 'width * 0.6509',
+            top: 'width * 0.8515',
+          },
+          matches:
+            'TextView[clickable=true && text^="已签到"] -2 [text^="连续签到7天后"] <4 View[childCount=7 && height>900]',
+          snapshotUrls: 'https://i.gkd.li/i/19788772',
         },
       ],
     },
