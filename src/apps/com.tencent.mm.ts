@@ -575,11 +575,15 @@ export default defineGkdApp({
       name: '开屏广告-微信小程序',
       fastQuery: true,
       matchTime: 5000,
+      forcedTime: 5000,
       priorityTime: 5000,
       rules: [
         {
-          actionDelay: 900, // 过早点击大概率跳不过
-          matches: ['[text="广告"]', '[text="跳过"]'],
+          actionDelay: 800, // 过早点击大概率跳不过
+          matches: [
+            '[text="广告"][visibleToUser=true]',
+            '[text="跳过"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/12785183',
             'https://i.gkd.li/i/15108441',
