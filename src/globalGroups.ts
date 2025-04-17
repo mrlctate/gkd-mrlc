@@ -27,7 +27,7 @@ export default defineGkdGlobalGroups([
         action: 'clickCenter',
         anyMatches: [
           '[text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" && text.length<10]',
-          '@View[clickable=true && text=null] + TextView[index=parent.childCount.minus(1) && clickable=true && text=null] <(3,4,5) FrameLayout[childCount>2] >(8,9,10) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
+          '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text$="s"] + [text="|"]',
         ],
       },
