@@ -566,25 +566,14 @@ export default defineGkdApp({
       key: 39,
       name: '开屏广告-微信小程序',
       fastQuery: true,
-      matchTime: 10000,
-      forcedTime: 10000,
-      // actionMaximum: 1, // 经常需要点2次，首次点击过早大概率跳不过
-      priorityTime: 10000,
-      activityIds: [
-        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
-        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
-      ],
+      matchTime: 5000,
+      priorityTime: 5000,
       rules: [
         {
-          actionDelay: 800, // 过早点击首次大概率跳不过
-          matches: [
-            '[text="广告"][visibleToUser=true]',
-            '[text="跳过"][visibleToUser=true]',
-          ],
+          action: 'clickCenter',
+          matches: ['[text="广告"]', '[text="跳过"]'],
           snapshotUrls: [
             'https://i.gkd.li/i/12785183',
-            'https://i.gkd.li/i/13306883',
-            'https://i.gkd.li/i/13407275',
             'https://i.gkd.li/i/15108441',
           ],
         },
@@ -595,20 +584,46 @@ export default defineGkdApp({
       name: '全屏广告-小程序弹窗广告',
       desc: '点击关闭',
       fastQuery: true,
-      actionMaximum: 2,
-      matchTime: 10000,
-      activityIds: '.plugin.appbrand.ui.AppBrandUI00',
+      activityIds: [
+        '.plugin.appbrand.ui.AppBrandUI00',
+        '.plugin.appbrand.ui.AppBrandUI01',
+        '.plugin.appbrand.ui.AppBrandUI02',
+        '.plugin.appbrand.ui.AppBrandUI03',
+        '.plugin.appbrand.ui.AppBrandUI04',
+      ],
       rules: [
         {
-          key: 1,
-          matches:
-            'FrameLayout > TextView + FrameLayout > FrameLayout > ImageView[width=height]',
+          key: 0,
+          matches: [
+            '[text="广告"]',
+            '@ImageView[width<150 && width>60] < FrameLayout < FrameLayout <2 FrameLayout[childCount=2] <5 FrameLayout[childCount=5 && index=1]',
+          ],
           exampleUrls: 'https://e.gkd.li/d2b12af6-c204-4da7-8553-4765ef8b8c31',
           snapshotUrls: [
-            'https://i.gkd.li/i/13459614',
-            'https://i.gkd.li/i/16943989',
+            'https://i.gkd.li/i/19795409',
             'https://i.gkd.li/i/16920797',
           ],
+        },
+      ],
+    },
+    {
+      key: 41,
+      name: '全屏广告-关闭已获得奖励的弹窗广告',
+      desc: '点击关闭',
+      fastQuery: true,
+      activityIds: [
+        '.plugin.appbrand.ui.AppBrandUI00',
+        '.plugin.appbrand.ui.AppBrandUI01',
+        '.plugin.appbrand.ui.AppBrandUI02',
+        '.plugin.appbrand.ui.AppBrandUI03',
+        '.plugin.appbrand.ui.AppBrandUI04',
+      ],
+      rules: [
+        {
+          key: 0,
+          matches: ['[text="已获得奖励"]', '[text="关闭"]'],
+          exampleUrls: 'https://e.gkd.li/4219ee6e-5eb8-4536-9bd5-8cfcd38d5970',
+          snapshotUrls: 'https://i.gkd.li/i/19795527',
         },
       ],
     },
