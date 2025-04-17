@@ -577,13 +577,14 @@ export default defineGkdApp({
       matchTime: 5000,
       forcedTime: 5000,
       priorityTime: 5000,
+      activityIds: [
+        'com.tencent.mm.plugin.appbrand.ui.AppBrandUI',
+        'com.tencent.mm.plugin.appbrand.launching.AppBrandLaunchProxyUI',
+      ],
       rules: [
         {
           actionDelay: 800, // 过早点击大概率跳不过
-          matches: [
-            '[text="广告"][visibleToUser=true]',
-            '[text="跳过"][visibleToUser=true]',
-          ],
+          matches: ['[text="广告"]', '[text="跳过"]'],
           snapshotUrls: [
             'https://i.gkd.li/i/12785183',
             'https://i.gkd.li/i/15108441',

@@ -87,7 +87,7 @@ export default defineGkdApp({
         {
           key: 1,
           matches:
-            '@TextView[clickable=true && text^="签到"] -2 [text^="连续签到7天后"]',
+            '[text^="连续签到7天后"] +2 TextView[text^="签到" && clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/18762226',
           exampleUrls: 'https://e.gkd.li/89b963b3-f46c-426b-9439-8244f4ac4836',
         },

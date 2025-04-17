@@ -13,10 +13,11 @@ export default defineGkdGlobalGroups([
     disableIfAppGroupMatch: '开屏广告',
     order: OPEN_AD_ORDER,
     fastQuery: true,
-    matchTime: 3800,
     actionMaximum: 1,
     resetMatch: 'app',
     actionMaximumKey: 0,
+    matchTime: 3800,
+    forcedTime: 3800,
     priorityTime: 3800,
     rules: [
       {
