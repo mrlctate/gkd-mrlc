@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '豆瓣',
   groups: [
     {
-      key: -1,
+      key: 0,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 1,
@@ -16,8 +16,8 @@ export default defineGkdApp({
         {
           key: 0,
           anyMatches: [
-            '@View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null] <n FrameLayout[childCount>2] >(7,8,9,10) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑"][visibleToUser=true]',
-            'FrameLayout > FrameLayout[childCount>2] > @View[clickable=true][text=null][visibleToUser=true] + TextView[index=parent.childCount.minus(1)][text=null][visibleToUser=true]',
+            '[text*="跳过" || text*="跳過" && text.length<10]',
+            '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           ],
           snapshotUrls: 'https://i.gkd.li/i/15981630',
         },
@@ -34,25 +34,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13575547',
             'https://i.gkd.li/i/18423724',
           ],
-        },
-        {
-          key: 2,
-          fastQuery: true,
-          position: {
-            left: 'width * 0.8666',
-            top: 'width * 0.1625',
-          },
-          matches: '[vid="ad_view"][visibleToUser=true][width=1200]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13601755',
-            'https://i.gkd.li/i/16054268',
-          ],
-        },
-        {
-          key: 3,
-          fastQuery: true,
-          matches: '[text*="跳过"][text.length<10][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/17687115',
         },
       ],
     },

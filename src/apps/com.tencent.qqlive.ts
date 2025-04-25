@@ -250,12 +250,12 @@ export default defineGkdApp({
         },
         {
           key: 4,
-          matches:
-            '@[text^="暂不需要" || text^="放弃" && clickable=true] - FrameLayout > [text="立即免费领取"]',
+          matches: '[text="立即免费领取"] < * +(1,2) *[clickable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/17525567',
             'https://i.gkd.li/i/19400923',
             'https://i.gkd.li/i/19523781',
+            'https://i.gkd.li/i/19887054',
           ],
         },
         {

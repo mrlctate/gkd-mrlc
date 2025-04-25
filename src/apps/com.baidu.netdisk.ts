@@ -102,6 +102,14 @@ export default defineGkdApp({
             'TextView[clickable=true && text^="已签到"] -2 [text^="连续签到7天后"] <4 View[childCount=7 && height>900]',
           snapshotUrls: 'https://i.gkd.li/i/19788772',
         },
+        {
+          preKeys: [2],
+          key: 3,
+          action: 'clickCenter',
+          matches:
+            '[text="看视频广告"] < View +3 [text="去完成"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/19885285',
+        },
       ],
     },
     {

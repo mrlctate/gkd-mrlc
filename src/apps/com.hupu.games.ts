@@ -14,6 +14,7 @@ export default defineGkdApp({
         'com.hupu.android.bbs.detail.PostDetailActivity',
         'com.hupu.topic.TopicActivity',
         'com.hupu.android.bbs.page.rating.ratingDetail.RatingDetailActivity',
+        'com.hupu.android.bbs.page.rating.ratingDetail.RatingDetailMatchActivity',
       ],
       rules: [
         {

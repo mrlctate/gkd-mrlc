@@ -4,8 +4,8 @@
   "type": "module",
   "gkd": {
     "outDir": "dist",
-    "file": "gkd.json5",
-    "versionFile": "gkd.version.json5",
+    "file": "beta-gkd.json5",
+    "versionFile": "beta-gkd.version.json5",
     "changelog": "CHANGELOG.md",
     "README.md": "README.md"
   },
