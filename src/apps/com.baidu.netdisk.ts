@@ -103,11 +103,22 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/19788772',
         },
         {
-          preKeys: [2],
           key: 3,
           action: 'clickCenter',
           matches:
             '[text="看视频广告"] < View +3 [text="去完成"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/19885285',
+        },
+        {
+          preKeys: [3],
+          key: 4,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity',
+          position: {
+            left: 'width * 0.8274',
+            top: 'width * 0.0888',
+          },
+          matches: 'View[childCount=4] > [text="奖励已领取"][index=1]',
           snapshotUrls: 'https://i.gkd.li/i/19885285',
         },
       ],

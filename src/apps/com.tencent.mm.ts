@@ -1,13 +1,5 @@
 import { defineGkdApp } from '@gkd-kit/define';
 
-export const Mini_Program = [
-  '.plugin.appbrand.ui.AppBrandUI00',
-  '.plugin.appbrand.ui.AppBrandUI01',
-  '.plugin.appbrand.ui.AppBrandUI02',
-  '.plugin.appbrand.ui.AppBrandUI03',
-  '.plugin.appbrand.ui.AppBrandUI04',
-];
-
 export default defineGkdApp({
   id: 'com.tencent.mm',
   name: '微信',
@@ -113,21 +105,17 @@ export default defineGkdApp({
       name: '功能类-电脑端登录微信时自动确认登录',
       fastQuery: true,
       matchTime: 10000,
-      actionMaximum: 2,
+      actionMaximum: 1,
       rules: [
         {
           key: 1,
-          action: 'clickCenter',
           activityIds: [
             '.plugin.webwx.ui.ExtDeviceWXLoginUI',
             '.ui.LauncherUI',
           ],
           matches:
-            'RelativeLayout[id!=null] + LinearLayout[childCount=2] > @Button[clickable=true] + TextView[clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13522577',
-            'https://i.gkd.li/i/19245204',
-          ],
+            'LinearLayout[childCount=2] > @Button[text="登录" && clickable=true] + TextView[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/13522577',
         },
         {
           key: 2,
@@ -165,6 +153,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          action: 'clickCenter',
           matches: '[text="微信读书网页版"] +3 Button[text="登 录"]',
           snapshotUrls: 'https://i.gkd.li/i/12506197',
         },
@@ -594,62 +583,66 @@ export default defineGkdApp({
     },
     {
       key: 40,
-      name: '全屏广告-小程序弹窗广告',
+      name: '其他-小程序广告',
       desc: '点击关闭',
       fastQuery: true,
-      activityIds: Mini_Program,
+      activityIds: [
+        '.plugin.appbrand.ui.AppBrandUI00',
+        '.plugin.appbrand.ui.AppBrandUI01',
+        '.plugin.appbrand.ui.AppBrandUI02',
+        '.plugin.appbrand.ui.AppBrandUI03',
+        '.plugin.appbrand.ui.AppBrandUI04',
+      ],
       rules: [
         {
           key: 0,
+          name: '全屏广告-小程序弹窗广告',
           matches: [
             '[text="广告"]',
             '@ImageView[width<150 && width>60] < FrameLayout < FrameLayout <2 FrameLayout[childCount=2] <5 FrameLayout[childCount=5 && index=1]',
           ],
-          exampleUrls: 'https://e.gkd.li/d2b12af6-c204-4da7-8553-4765ef8b8c31',
           snapshotUrls: [
             'https://i.gkd.li/i/19795409',
             'https://i.gkd.li/i/16920797',
           ],
         },
-      ],
-    },
-    {
-      key: 41,
-      name: '全屏广告-关闭已获得奖励的弹窗广告',
-      desc: '点击关闭',
-      fastQuery: true,
-      activityIds: Mini_Program,
-      rules: [
         {
-          key: 0,
+          key: 1,
+          name: '全屏广告-关闭已获得奖励的弹窗广告',
           matches: ['[text="已获得奖励"]', '[text="关闭"]'],
-          exampleUrls: 'https://e.gkd.li/4219ee6e-5eb8-4536-9bd5-8cfcd38d5970',
           snapshotUrls: 'https://i.gkd.li/i/19795527',
         },
-      ],
-    },
-    {
-      key: 42,
-      name: '局部广告-关闭卡片广告',
-      desc: '点击关闭',
-      fastQuery: true,
-      activityIds: Mini_Program,
-      rules: [
         {
-          key: 0,
-          matches: ['[desc="广告"][height<35]'],
-          exampleUrls: 'https://e.gkd.li/d8daf0c6-efff-4c75-9ce2-e0b60254765d',
-          snapshotUrls: 'https://i.gkd.li/i/19796902',
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches: ['[desc="广告"][height<35]', '[desc="不感兴趣"]'],
-        },
-        {
-          preKeys: [1],
           key: 2,
-          matches: ['[desc="广告"][height<35]', '[desc="与我无关"]'],
+          name: '局部广告-关闭"添加到我的小程序"弹窗',
+          matches: '[text="+" && text.length=1]',
+          snapshotUrls: 'https://i.gkd.li/i/19919359',
+        },
+        {
+          key: 3,
+          name: '局部广告-关闭卡片广告',
+          matches: '[desc="广告" || text="广告" && height<38]',
+          exampleUrls: 'https://e.gkd.li/d8daf0c6-efff-4c75-9ce2-e0b60254765d',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19796902',
+            'https://i.gkd.li/i/19919301',
+          ],
+        },
+        {
+          preKeys: [3],
+          key: 4,
+          matches: [
+            '[desc="广告" || text="广告"]',
+            '[desc="不感兴趣" || text="不感兴趣"]',
+          ],
+        },
+        {
+          preKeys: [4],
+          key: 5,
+          matches: [
+            '[desc="广告" || text="广告"]',
+            '[desc="与我无关" || text="与我无关"]',
+          ],
         },
       ],
     },
