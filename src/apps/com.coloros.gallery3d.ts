@@ -5,23 +5,6 @@ export default defineGkdApp({
   name: '相册',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.app.MainActivity',
-          matches: '[text="更新"] -2 [text="取消"]',
-          exampleUrls:
-            'https://m.gkd.li/47232102/0dae9f4b-8432-4cf4-b648-07ae17cdece2',
-          snapshotUrls: 'https://i.gkd.li/i/13554797',
-        },
-      ],
-    },
-    {
       key: 6,
       name: '功能类-开启相册同步弹窗',
       desc: '点击忽略',

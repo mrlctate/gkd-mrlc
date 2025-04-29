@@ -20,21 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MarketActivity',
-          matches: '@[text="以后再说"] + [text="立即更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/13228520',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '功能类-应用更新页面-点击[查看更多]',
       fastQuery: true,

@@ -256,21 +256,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.xunlei.upgrade.XUpgradeActivity',
-          matches: '[id="com.xunlei.downloadprovider:id/x_upgrade_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/13228920',
-        },
-      ],
-    },
-    {
       key: 10,
       name: '全屏广告-会员广告',
       fastQuery: true,

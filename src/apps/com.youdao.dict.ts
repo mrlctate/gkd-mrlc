@@ -145,22 +145,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.MainActivity',
-          matches:
-            '[id="com.youdao.dict:id/tv_version"] + [id="com.youdao.dict:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13627912',
-        },
-      ],
-    },
-    {
       key: 7,
       name: '功能类-点击显示释义',
       activityIds:

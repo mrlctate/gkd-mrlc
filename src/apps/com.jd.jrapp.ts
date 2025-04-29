@@ -29,22 +29,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.bm.mainbox.main.MainActivity',
-          matches:
-            '@ImageButton[id="com.jd.jrapp:id/ib_close"] + RelativeLayout [text^="发现新版本"]',
-          snapshotUrls: 'https://i.gkd.li/i/13628364',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '评价提示-满意度打分弹窗',
       fastQuery: true,

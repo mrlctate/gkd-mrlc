@@ -13,20 +13,6 @@ export default defineGkdApp({
       snapshotUrls: 'https://i.gkd.li/i/12498315',
     },
     {
-      key: 3,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: '[id="com.cmcc.cmvideo:id/btn_update_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13276116',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '权限提示-通知权限',
       fastQuery: true,

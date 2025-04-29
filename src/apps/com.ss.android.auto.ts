@@ -44,21 +44,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.SplashActivity',
-          matches:
-            '@TextView[text="以后再说"] - FrameLayout >2 TextView[text$="升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/13534445',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '局部广告-右下角悬浮窗',
       matchTime: 10000,

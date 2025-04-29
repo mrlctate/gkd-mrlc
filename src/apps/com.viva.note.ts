@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '囧次元',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
-          matches: '[desc="不再显示"]',
-          snapshotUrls: 'https://i.gkd.li/i/12888361',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       matchTime: 10000,

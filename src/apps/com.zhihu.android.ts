@@ -252,40 +252,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 16,
-      name: '更新提示',
-      matchTime: 10000,
-      fastQuery: true,
-      resetMatch: 'app',
-      actionMaximum: 1,
-      activityIds: [
-        '.app.ui.activity.MainActivity',
-        '.feature.short_container_feature.ui.ShortContainerHostActivity',
-      ],
-      rules: [
-        {
-          key: 0,
-          name: '勾选[不再提醒]',
-          matches: 'CheckBox[text="不再提醒"][checked=false][clickable=true]', // checked=false 区别勾选前后
-          exampleUrls:
-            'https://m.gkd.li/57941037/728ea1cd-ca19-4de9-9e7e-eb2a3513f965',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14445502', // 勾选前
-            'https://i.gkd.li/i/14445815', // 勾选后
-          ],
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          name: '点击[取消]',
-          matches: ['[text="去应用市场"]', '[text="取消"]'],
-          exampleUrls:
-            'https://m.gkd.li/57941037/728ea1cd-ca19-4de9-9e7e-eb2a3513f965',
-          snapshotUrls: 'https://i.gkd.li/i/14445502',
-        },
-      ],
-    },
-    {
       key: 17,
       name: '功能类-热榜页自动点击[展开更多]',
       rules: [

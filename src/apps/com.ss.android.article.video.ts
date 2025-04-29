@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '西瓜视频',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.SplashActivity',
-          matches: '@[desc="关闭"] - LinearLayout > [text="立即升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/13328430',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '权限提示-通知权限',
       fastQuery: true,

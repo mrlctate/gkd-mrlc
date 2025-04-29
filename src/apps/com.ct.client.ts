@@ -20,29 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.activity.MainActivity',
-            '.activity.SplashActivity',
-            '.common.ConfirmDialogActivity',
-          ],
-          matches: 'LinearLayout > [text="取消升级"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12819594',
-            'https://i.gkd.li/i/13316168',
-            'https://i.gkd.li/i/13695096',
-          ],
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告-浮窗广告',
       desc: '会出现在首页、查询办理页面',

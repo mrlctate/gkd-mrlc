@@ -19,23 +19,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.didi.sdk.app.MainActivity',
-          matches: '[vid="iv_upgrade_btn_ignore"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/ba2a4ef6-d63d-4d67-ab89-222085ea3b3f',
-          snapshotUrls: 'https://i.gkd.li/i/14582620',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',

@@ -124,15 +124,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[text="立即更新"] -2 [text="下次再说"]', //使用ID会导致误触（例如删除确认https://i.gkd.li/i/13069049）
-      snapshotUrls: 'https://i.gkd.li/i/16118181',
-    },
-    {
       key: 8,
       name: '权限提示-通知权限',
       desc: '自动点击关闭',

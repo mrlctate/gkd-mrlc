@@ -20,26 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '更新提示',
-      desc: '点击取消',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          fastQuery: true,
-          activityIds: 'com.ucpro.BrowserActivity',
-          matches: ['[text*="版本更新" || text^="优化升级"]', '[text="取消"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13292512',
-            'https://i.gkd.li/i/13455360',
-            'https://i.gkd.li/i/16643051', // 避免误触
-          ],
-        },
-      ],
-    },
-    {
       key: 4,
       name: '全屏广告-弹窗广告',
       rules: [

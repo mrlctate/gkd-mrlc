@@ -20,30 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: 'com.jianshu.wireless.articleV2.X5ArticleDetailActivity',
-      rules: [
-        {
-          key: 0,
-          matches: '@[checked=false] + [text="忽略此版本"]',
-          exampleUrls: 'https://e.gkd.li/23662d6a-1858-4d97-9bc7-ef03ede9f316',
-          snapshotUrls: 'https://i.gkd.li/i/15989275',
-        },
-        {
-          preKeys: [0],
-          key: 1,
-          matches: '[text="取消"]',
-          exampleUrls: 'https://e.gkd.li/23662d6a-1858-4d97-9bc7-ef03ede9f316',
-          snapshotUrls: 'https://i.gkd.li/i/15989275',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '局部广告-首页信息流广告',
       desc: '点击关闭',

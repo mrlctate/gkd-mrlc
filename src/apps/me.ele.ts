@@ -5,29 +5,6 @@ export default defineGkdApp({
   name: '饿了么',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      // matchTime: 10000, 部分更新提示不在10s内
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.afollestad.materialdialogs.MaterialDialog',
-            '.application.ui.Launcher.LauncherActivity',
-          ],
-          matches: ['[text*="更新应用版本"]', '[text="取消"]'],
-          exampleUrls: 'https://e.gkd.li/7a0ade81-d2f3-4174-ba6e-9976b8e7ecf5',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12650280',
-            'https://i.gkd.li/i/13206819',
-            'https://i.gkd.li/i/18096620',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-红包弹窗',
       rules: [

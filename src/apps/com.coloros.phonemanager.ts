@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: 'OPPO手机管家',
   groups: [
     {
-      key: 3,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches:
-            '@[text="取消"] < [id="com.coloros.phonemanager:id/buttonPanel"] > [text="更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/13194979',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '局部广告-卡片广告',
       desc: '点击关闭',

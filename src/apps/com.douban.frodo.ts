@@ -219,31 +219,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 11,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: [
-            '.activity.BetaApkDialogActivity',
-            '.activity.SplashActivity',
-          ],
-          matches: [
-            '[text="新版试用邀请"][visibleToUser=true]',
-            '[text="取消"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13228832',
-            'https://i.gkd.li/i/13659160',
-          ],
-        },
-      ],
-    },
-    {
       key: 13,
       name: '其他-标记看过的影视弹窗',
       desc: '点击[取消]',

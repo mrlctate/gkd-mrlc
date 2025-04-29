@@ -5,25 +5,6 @@ export default defineGkdApp({
   name: 'CSDN',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: ['.activity.MainActivity', '.activity.SetActivity'],
-          matches:
-            '[id="net.csdn.csdnplus:id/update"] -2 [id="net.csdn.csdnplus:id/cancel"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12673693',
-            'https://i.gkd.li/i/12673654',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '分段广告-信息流广告',
       fastQuery: true,

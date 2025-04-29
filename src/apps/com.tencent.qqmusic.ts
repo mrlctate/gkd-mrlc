@@ -85,11 +85,6 @@ export default defineGkdApp({
           ],
         },
         {
-          key: 1,
-          name: '更新提示-内测体验弹窗',
-          matches: '[text="抢先体验"] -2 [text="不再提醒"]',
-        },
-        {
           key: 2,
           matches:
             '@ImageView <3 FrameLayout <2 FrameLayout < FrameLayout < [vid="f61"]',

@@ -30,21 +30,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.home.setting.SettingActivity',
-          matches:
-            '[id="cn.xiaochuankeji.tieba:id/btn_ok"][text^="马上升级"] + [id="cn.xiaochuankeji.tieba:id/btn_cancel"][text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/12660882',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '分段广告-评论区卡片广告',
       activityIds:

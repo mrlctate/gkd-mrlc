@@ -103,21 +103,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.homepage.view.activity.HomePageActivity',
-          matches: '[text="确认"] - [text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/13042207',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '权限提示-通知权限',
       desc: '自动点击关闭',

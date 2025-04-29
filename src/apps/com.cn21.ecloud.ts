@@ -24,20 +24,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.MainPageActivity',
-          matches: '[id="com.cn21.ecloud:id/ivCancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/13399488',
-        },
-      ],
-    },
   ],
 });

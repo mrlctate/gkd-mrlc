@@ -5,30 +5,6 @@ export default defineGkdApp({
   name: '高德地图',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: 'com.autonavi.map.activity.NewMapActivity',
-      rules: [
-        {
-          key: 1,
-          name: '更新弹窗-1',
-          matches:
-            '@[id="com.autonavi.minimap:id/iv_close"] + * > [text^="立即升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/13379094',
-        },
-        {
-          key: 2,
-          name: '更新弹窗-2',
-          matches: '@[text="取消"] + * + [text="去下载"]',
-          snapshotUrls: 'https://i.gkd.li/i/13379426',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '功能类-截屏分享',
       desc: '关闭截屏时app弹出的分享弹窗',

@@ -21,20 +21,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示-版本升级弹窗',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.globalpopwindow.popwindow.PopWindowActivity',
-          matches: '[id="com.xiaomi.youpin:id/ypd_alert_close_image"]',
-          snapshotUrls: 'https://i.gkd.li/i/12836775',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '局部广告-主页贴片广告',
       rules: [

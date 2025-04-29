@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '懂球帝',
   groups: [
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.DownloadActivity',
-          matches: 'TextView[text*="新版本"] +3 TextView[text="下次提醒"]',
-          snapshotUrls: 'https://i.gkd.li/i/12620586',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '分段广告-首页信息流广告',
       desc: '点击卡片广告x关闭按钮-关闭反馈理由弹窗',

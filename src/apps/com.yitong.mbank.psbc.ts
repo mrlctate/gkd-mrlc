@@ -5,27 +5,6 @@ export default defineGkdApp({
   name: '邮储银行',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.module.home.view.activity.MainActivity',
-            '.module.app.view.customview.dialog.DialogUpdateApk',
-          ],
-          matches: 'Button[id="com.yitong.mbank.psbc:id/bt_cancel"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12685350',
-            'https://i.gkd.li/i/13695462',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-首页弹窗广告',
       fastQuery: true,

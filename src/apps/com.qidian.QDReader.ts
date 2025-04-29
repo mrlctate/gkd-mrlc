@@ -26,29 +26,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 1,
-          activityIds: '.framework.widget.dialog.judian',
-          matches:
-            '[text$="新版本"] +2 * >2 [id="com.qidian.QDReader:id/cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/12641026',
-        },
-        {
-          key: 2,
-          activityIds: 'com.tencent.upgrade.ui.UpgradeDialogActivity',
-          matches: '[id="com.qidian.QDReader:id/upgrade_dialog_close_btn"]',
-          snapshotUrls: 'https://i.gkd.li/i/13116821',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '青少年模式',
       fastQuery: true,

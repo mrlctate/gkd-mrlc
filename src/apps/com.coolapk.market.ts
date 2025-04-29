@@ -113,21 +113,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          action: 'back',
-          activityIds: '.view.main.MainActivity',
-          matches: '[text="立即更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/15511206',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '权限提示-通知权限',
       fastQuery: true,

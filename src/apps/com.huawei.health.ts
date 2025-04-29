@@ -72,22 +72,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 6,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      matchTime: 10000,
-      resetMatch: 'app',
-      rules: [
-        {
-          action: 'back',
-          activityIds:
-            'com.huawei.hwversionmgr.activity.AppUpdateDialogActivity',
-          matches: '[text="发现新版本"]',
-          snapshotUrls: 'https://i.gkd.li/i/15521811',
-        },
-      ],
-    },
   ],
 });

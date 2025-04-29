@@ -18,24 +18,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '更新提示-关闭更新弹窗',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.main.MainActivity',
-          matches: ['[text="立即升级"]', '[text="以后再说"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/12534016',
-            'https://i.gkd.li/i/13328599',
-            'https://i.gkd.li/i/15359995',
-          ],
-        },
-      ],
-    },
-    {
       key: 7,
       name: '功能类-设置无声进入抖音弹窗',
       desc: '点击[拒绝]',

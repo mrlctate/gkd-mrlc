@@ -618,11 +618,15 @@ export default defineGkdApp({
           matches: '[text="+" && text.length=1]',
           snapshotUrls: 'https://i.gkd.li/i/19919359',
         },
+
+        // [text="广告"]
         {
           key: 3,
-          name: '局部广告-关闭卡片广告',
-          matches: '[desc="广告" || text="广告" && height<38]',
-          exampleUrls: 'https://e.gkd.li/d8daf0c6-efff-4c75-9ce2-e0b60254765d',
+          name: '局部广告1-点击【广告】',
+          matches: [
+            'FrameLayout[childCount=2] > ViewGroup[childCount>1] > FrameLayout[childCount=1 && index=0] + FrameLayout[childCount=1]', // 有弹窗时不点击  https://i.gkd.li/i/19927457
+            'View[childCount=1] > View[childCount=3] > [text="广告" || desc="广告"][index=1]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/19796902',
             'https://i.gkd.li/i/19919301',
@@ -631,18 +635,41 @@ export default defineGkdApp({
         {
           preKeys: [3],
           key: 4,
-          matches: [
-            '[desc="广告" || text="广告"]',
-            '[desc="不感兴趣" || text="不感兴趣"]',
-          ],
+          name: '局部广告1-点击【不感兴趣】',
+          matches: '[text="不感兴趣" || desc="不感兴趣"]',
         },
         {
           preKeys: [4],
           key: 5,
-          matches: [
-            '[desc="广告" || text="广告"]',
-            '[desc="与我无关" || text="与我无关"]',
+          name: '局部广告1-【与我无关】',
+          matches: '[text="与我无关" || desc="与我无关"]',
+        },
+
+        // [desc="广告"] 部分没有弹窗情况下使用, 可能多次触发
+        {
+          key: 6,
+          actionCd: 2500,
+          forcedTime: 5000,
+          name: '局部广告2-点击【广告】',
+          excludeMatches: [
+            '[text="跳过"]',
+            '[desc="不感兴趣"]',
+            '[desc="与我无关"]',
           ],
+          matches: '[desc="广告" && height<35]',
+          snapshotUrls: 'https://i.gkd.li/i/19928443',
+        },
+        {
+          preKeys: [6],
+          key: 7,
+          name: '局部广告2-点击【不感兴趣】',
+          matches: '[desc="不感兴趣"]',
+        },
+        {
+          preKeys: [7],
+          key: 8,
+          name: '局部广告2-【与我无关】',
+          matches: '[desc="与我无关"]',
         },
       ],
     },

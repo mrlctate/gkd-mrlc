@@ -51,25 +51,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: [
-            '[text="下载并安装" || text="立即更新"]',
-            '[text="放弃更新" || text="取消"]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13537840',
-            'https://i.gkd.li/i/13626328',
-          ],
-        },
-      ],
-    },
   ],
 });

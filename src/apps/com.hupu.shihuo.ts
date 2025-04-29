@@ -32,21 +32,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '更新提示',
-      desc: '点击[以后再说]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.shizhi.shihuoapp.module.main.ui.main.MainActivity',
-          matches: '[text="发现新版本"] +2 ViewGroup > [text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/14052208',
-        },
-      ],
-    },
   ],
 });

@@ -108,51 +108,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '更新提示-版本更新弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: [
-            'com.alipay.mobile.alipassapp.alkb.kb.ALPMainPage',
-            '.AlipayLogin',
-          ],
-          matches: [
-            '[text="立即更新" || text="马上体验"]',
-            '[text^="稍后"][text.length=4]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13327095',
-            'https://i.gkd.li/i/15010554',
-          ],
-        },
-        {
-          key: 1,
-          activityIds: [
-            'com.alipay.mobile.about.ui.AboutAlipayActivity',
-            '.AlipayLogin',
-          ],
-          matches:
-            '[text="版本更新"||text^="Version"] - [id="com.alipay.mobile.antui:id/btn_close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13490805',
-            'https://i.gkd.li/i/13580594',
-          ],
-        },
-        {
-          key: 2,
-          activityIds: '.AlipayLogin',
-          matches:
-            '[text="立即升级最新版支付宝客户端"] < LinearLayout + [id="com.alipay.mobile.advertisement:id/announcementview_righticon"]',
-          snapshotUrls: 'https://i.gkd.li/i/13490797',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '功能类-设置支付宝小组件',
       desc: '点击关闭',

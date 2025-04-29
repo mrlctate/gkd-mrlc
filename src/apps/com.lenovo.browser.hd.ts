@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '联想浏览器HD',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.zui.launcher.drawer.NormalLauncher',
-          matches:
-            '[text="发现新版本"] - * > [id="com.lenovo.browser.hd:id/fl_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13401982',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '权限提示-通知权限',
       fastQuery: true,

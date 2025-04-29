@@ -19,21 +19,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '更新提示',
-      desc: '点击取消',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.WelcomeActivity',
-          matches: '@TextView[text="取消"] + TextView[text="确定"]',
-          snapshotUrls: 'https://i.gkd.li/i/13446421',
-        },
-      ],
-    },
   ],
 });

@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '一刻相册',
   groups: [
     {
-      key: 2,
-      name: '更新提示-软件升级提醒',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: [
-        {
-          activityIds: '.home.view.HomeActivity',
-          matches:
-            '[id="com.baidu.youavideo:id/tv_upgrade"] < LinearLayout +2 [id="com.baidu.youavideo:id/img_close"]',
-          snapshotUrls: ['https://i.gkd.li/i/12597916'],
-        },
-      ],
-    },
-    {
       key: 3,
       name: '局部广告-悬浮窗广告',
       desc: '关闭广告悬浮窗',

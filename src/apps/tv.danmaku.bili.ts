@@ -98,38 +98,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: [
-        'com.bilibili.app.preferences.BiliPreferencesActivity',
-        'tv.danmaku.bili.ui.splash.ad.page.HotSplashActivity',
-        '.MainActivityV2',
-      ],
-      rules: [
-        {
-          key: 1,
-          matches: '[text="忽略此版本的更新"][checked=false]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12649689',
-            'https://i.gkd.li/i/13212209',
-            'https://i.gkd.li/i/13228977',
-          ],
-        },
-        {
-          preKeys: [1],
-          matches: '[id="tv.danmaku.bili:id/update_btn_cancel"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12649689',
-            'https://i.gkd.li/i/13212209',
-            'https://i.gkd.li/i/13228977',
-          ],
-        },
-      ],
-    },
-    {
       key: 7,
       name: '局部广告-视频页广告',
       desc: '领取大会员月卡,B站免流星卡',

@@ -21,22 +21,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      desc: '点击 暂不更新',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.bankcomm.module.biz.webcontainer.BCMHtml5Activity',
-          matches:
-            '[id = "com.bankcomm.Bankcomm:id/tvNotNow" && text = "暂不更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/12842484',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '通知提示-网络代理提示弹窗',
       desc: '点击[继续使用]',

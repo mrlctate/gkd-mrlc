@@ -103,27 +103,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.activity.main.activity.MainActivity',
-            '.activity.init.InitActivity',
-          ],
-          matches: '[id="com.zmzx.college.search:id/update_close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13063373',
-            'https://i.gkd.li/i/13623469',
-          ],
-        },
-      ],
-    },
-    {
       key: 6,
       name: '权限提示-通知权限',
       fastQuery: true,

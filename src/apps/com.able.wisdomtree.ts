@@ -31,27 +31,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '更新提示',
-      desc: '点击[忽略]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.login.StartActivity',
-            'com.example.advertisement_business.advertisement.AdvertisementActivity',
-          ],
-          matches: ['[text="更新"] ', ' [text="忽略"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13458796',
-            'https://i.gkd.li/i/13797285',
-          ],
-        },
-      ],
-    },
   ],
 });

@@ -5,30 +5,6 @@ export default defineGkdApp({
   name: '美团',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.meituan.android.upgrade.ui.f',
-            'com.meituan.android.upgrade.UpgradeDialogActivity',
-            'com.meituan.android.pt.homepage.activity.MainActivity',
-          ],
-          matches: 'ImageView[vid="update_logo"] + Button[vid="btn_close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12614559',
-            'https://i.gkd.li/i/12673132',
-            'https://i.gkd.li/i/13292635',
-            'https://i.gkd.li/i/18375410',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       rules: [

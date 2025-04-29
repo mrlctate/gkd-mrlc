@@ -5,23 +5,6 @@ export default defineGkdApp({
   name: '胖乖生活',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: '.MainActivity',
-          matches:
-            '[id="com.qiekj.user:id/btn_cancelUpdate"][text*="暂不更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/13435011',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '功能类-开启[自动抵扣]开关',
       rules: [

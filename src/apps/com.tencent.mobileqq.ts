@@ -382,54 +382,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 13,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      actionMaximumKey: 0,
-      rules: [
-        {
-          key: 0,
-          matches: '@[desc="关闭"] <2 * >2 Button[text^="立即"][text.length=4]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13386719',
-            'https://i.gkd.li/i/13526551',
-          ],
-        },
-        {
-          key: 1,
-          matches: ['[text="立即升级"]', '[text="稍后处理"]'],
-          snapshotUrls: 'https://i.gkd.li/i/14724108',
-        },
-      ],
-    },
-    {
-      key: 14,
-      name: '更新提示-消息页面-顶部',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: 'com.tencent.mobileqq.activity.SplashActivity',
-          matches:
-            '@ImageView[clickable=true][text=null][visibleToUser=true] - [text*="版本更新" || text="点击下载" || text="立即安装" || text="点击更新"][text.length<15]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13255493', //desc值为null快照
-            'https://i.gkd.li/i/13843140',
-            'https://i.gkd.li/i/14138340',
-            'https://i.gkd.li/i/13931212',
-            'https://i.gkd.li/i/16323755', // add [text*="有新版本"]
-          ],
-          excludeSnapshotUrls: 'https://i.gkd.li/i/17920550',
-        },
-      ],
-    },
-    {
       key: 15,
       name: '全屏广告-首页弹窗广告',
       activityIds: 'com.tencent.mobileqq.activity.QPublicTransFragmentActivity',

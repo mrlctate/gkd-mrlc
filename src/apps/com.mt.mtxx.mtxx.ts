@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '美图秀秀',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: '[text="升级新版客户端"] - [text="取消"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/13238352',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-VIP弹窗',
       desc: '点击关闭',

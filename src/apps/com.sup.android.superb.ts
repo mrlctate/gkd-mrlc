@@ -34,21 +34,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '更新提示',
-      desc: '点击[我再想想]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: '[text="发现新版本"] +2 * > [text="我再想想"]',
-          snapshotUrls: 'https://i.gkd.li/i/13858490',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '评价提示',
       desc: '点击取消',

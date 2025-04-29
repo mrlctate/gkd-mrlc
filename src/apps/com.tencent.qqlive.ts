@@ -5,18 +5,6 @@ export default defineGkdApp({
   name: '腾讯视频',
   groups: [
     {
-      key: 3,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: 'TextView[text*="新版本"] +3 TextView[text="暂不升级"]',
-      snapshotUrls: [
-        'https://i.gkd.li/i/12700486',
-        'https://i.gkd.li/i/13799951',
-      ],
-    },
-    {
       key: 4,
       name: '分段广告-卡片广告',
       fastQuery: true,

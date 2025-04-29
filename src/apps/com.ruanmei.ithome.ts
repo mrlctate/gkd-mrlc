@@ -77,20 +77,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.ruanmei.ithome.ui.MainActivity',
-          matches: '[vid="btn_dialog_upgrade_ignore"]',
-          snapshotUrls: 'https://i.gkd.li/i/15413494',
-        },
-      ],
-    },
   ],
 });

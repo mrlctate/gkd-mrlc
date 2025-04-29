@@ -58,27 +58,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'org.qiyi.android.video.MainActivity',
-            'org.qiyi.android.search.view.PhoneSearchActivity',
-          ],
-          matches: '[id="com.qiyi.video:id/cancel_btn"][text="暂不升级"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12838158',
-            'https://i.gkd.li/i/13684912',
-          ],
-        },
-      ],
-    },
-    {
       key: 5,
       name: '全屏广告-播放页-插入广告',
       desc: '视频播放前或播放中途插入的广告',

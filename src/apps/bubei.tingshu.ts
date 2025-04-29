@@ -19,20 +19,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.home.ui.HomeActivity',
-          matches: '[text="暂不升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/13545953',
-        },
-      ],
-    },
   ],
 });

@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '南网在线',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainActivity',
-          matches: '@[text="关闭"] + [text="升级"]',
-          snapshotUrls: 'https://i.gkd.li/i/12700060',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-首页弹窗广告',
       matchTime: 10000,

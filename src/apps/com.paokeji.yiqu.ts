@@ -5,25 +5,6 @@ export default defineGkdApp({
   name: '喵趣漫画',
   groups: [
     {
-      key: 2,
-      name: '更新提示',
-      desc: '点击"暂不"',
-      matchTime: 10000,
-      fastQuery: true,
-      resetMatch: 'app',
-      actionMaximum: 1,
-      rules: [
-        {
-          activityIds:
-            'com.aster.comic.app.view.bookdetails.BookdetailsActivity',
-          matches: '[id="com.paokeji.yiqu:id/btnCancel"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/2ce54292-bfc6-41c6-b2e5-e7d8302fc522',
-          snapshotUrls: 'https://i.gkd.li/i/14140265',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告-弹窗广告',
       rules: [

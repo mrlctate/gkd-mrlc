@@ -67,24 +67,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: ['.update', '.pages.main.MainFragmentActivity'],
-          matches: '@[text="以后再说"] + [text="优先体验"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12716477',
-            'https://i.gkd.li/i/18175292',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-首页右侧悬浮广告',
       rules: [

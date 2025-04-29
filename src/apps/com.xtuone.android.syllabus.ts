@@ -42,19 +42,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.xtuone.android.friday.UpdateActivity',
-          matches: '@[vid="update_cancel"] + [vid="go_to_update"]',
-          snapshotUrls: 'https://i.gkd.li/i/14292875',
-        },
-      ],
-    },
   ],
 });

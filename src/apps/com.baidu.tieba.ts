@@ -115,22 +115,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      priorityTime: 10000,
-      rules: [
-        {
-          activityIds: '.UpdateDialog',
-          matches: '[text="稍后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/16908501',
-        },
-      ],
-    },
-    {
       key: 9,
       name: '全屏广告-弹窗广告',
       matchTime: 10000,

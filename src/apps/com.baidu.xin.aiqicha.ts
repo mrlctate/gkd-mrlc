@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '爱企查',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.baidu.newbridge.fast.MainFastActivity',
-          matches: '[id="com.baidu.xin.aiqicha:id/update_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/12755738',
-        },
-      ],
-    },
-    {
       key: 10,
       name: '权限提示-通知权限',
       desc: '自动点击"不允许"/关闭',

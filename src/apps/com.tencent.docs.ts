@@ -20,20 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.DocsFlutterActivity',
-          matches: '@[desc="暂不更新"] + [desc="现在更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/13198091',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-卡片广告',
       rules: [

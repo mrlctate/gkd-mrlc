@@ -34,24 +34,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: '.ui.contollers.main.MainActivity',
-          matches: ['[text="发现新版本"]', '[text$="不再提醒"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/14395465',
-            'https://i.gkd.li/i/17825255',
-          ],
-        },
-      ],
-    },
-    {
       key: 4,
       name: '权限提示-通知权限',
       desc: '点击关闭',

@@ -79,22 +79,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.cretin.www.cretinautoupdatelibrary.activity.UpdateType10Activity',
-          matches:
-            '[id="com.magicalstory.AppStore:id/tv_update"] <2 * + * > [id="com.magicalstory.AppStore:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13459373',
-        },
-      ],
-    },
   ],
 });

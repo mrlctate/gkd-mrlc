@@ -5,28 +5,6 @@ export default defineGkdApp({
   name: '掌上生活',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.CMBRootActivityV2',
-            '.secplugin.activity.login.fingerprint.cmbR6VH0R',
-          ],
-          matches: '[text="暂不更新"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12647025',
-            'https://i.gkd.li/i/12727203',
-            'https://i.gkd.li/i/13345771',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-首页弹窗广告',
       fastQuery: true,

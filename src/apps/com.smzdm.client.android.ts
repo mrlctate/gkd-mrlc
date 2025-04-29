@@ -20,22 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.app.HomeActivity',
-          matches:
-            '[id="com.smzdm.client.android:id/tv_version"] +2 [id="com.smzdm.client.android:id/iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13198016',
-        },
-      ],
-    },
-    {
       key: 10,
       name: '权限提示-请求读取剪贴板权限弹窗',
       desc: '点击暂不允许',

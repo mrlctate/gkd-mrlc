@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '小米社区',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'miuix.appcompat.app.AlertDialog',
-          matches:
-            '@[text="稍后安装"] < LinearLayout - ScrollView >(4) [text="发现新版本"]',
-          snapshotUrls: 'https://i.gkd.li/i/12642466',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-评论区卡片广告',
       rules: [

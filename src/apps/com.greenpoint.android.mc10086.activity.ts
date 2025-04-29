@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '中国移动',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.mc10086.cmcc.view.tabs.AppTabFragment',
-          matches: '[text="暂不更新"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/130e0c2e-f568-4a96-9c06-9876a21e0466',
-          snapshotUrls: 'https://i.gkd.li/i/18271745',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-首页弹窗广告',
       matchTime: 10000,

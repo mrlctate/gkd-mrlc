@@ -70,22 +70,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 6,
-      name: '更新提示',
-      desc: '点击以后再说',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.DkMainActivity',
-          matches:
-            '[id="com.duokan.reader:id/general__common_dialog_view__button_frame"] >2 [text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/14007573',
-        },
-      ],
-    },
   ],
 });

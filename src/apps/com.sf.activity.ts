@@ -5,29 +5,6 @@ export default defineGkdApp({
   name: '顺丰速运',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.MainActivity',
-      rules: [
-        {
-          key: 0,
-          matches:
-            '@[text="取消"] < ViewGroup - ScrollView >(2) [text*="新版本"]',
-          snapshotUrls: 'https://i.gkd.li/i/12642445',
-        },
-        {
-          key: 1,
-          fastQuery: true,
-          matches:
-            '@Button[desc="取消"] - ViewGroup >3 [visibleToUser=true][text="立即升级"] <<n [id="com.sf.activity:id/rnRootLayout"]',
-          snapshotUrls: 'https://i.gkd.li/i/13291144',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '其他-专属月报弹窗',
       matchTime: 10000,

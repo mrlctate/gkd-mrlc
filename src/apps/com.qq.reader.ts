@@ -25,23 +25,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '更新提示-内测邀请弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.tencent.upgrade.ui.UpgradeDialogActivity',
-          matches: '[vid="upgrade_dialog_close_btn"][clickable=true]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/03e35d57-5f40-4ccb-911a-5f9061eab46e',
-          snapshotUrls: 'https://i.gkd.li/i/14376088',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '分段广告-阅读页面广告',
       desc: '点击关闭-点击[关闭本条广告]',

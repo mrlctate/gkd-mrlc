@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '两步路户外助手',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.upgrade',
-          matches:
-            '[id="com.lolaage.tbulu.tools:id/tvFullUpgrade"] + [id="com.lolaage.tbulu.tools:id/tvCancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/12882550',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       rules: [

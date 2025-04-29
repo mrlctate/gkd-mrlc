@@ -22,22 +22,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '更新提示',
-      desc: '点击[忽略更新]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.activity.MainActivity',
-          matches: '[text="忽略更新"][clickable=true][visibleToUser=true]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/e92b10b8-b0f8-4dc3-95bf-172829996600',
-          snapshotUrls: 'https://i.gkd.li/i/14322280',
-        },
-      ],
-    },
   ],
 });

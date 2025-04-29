@@ -1,9 +1,13 @@
 import { defineGkdGlobalGroups } from '@gkd-kit/define';
 import * as appList from './globalDefaultApps';
 
-export const OPEN_AD_ORDER = 1; // 开屏广告
-export const UPDATE_PROMPT_ORDER = 2; // 更新提示
-export const YOUTH_MODE_ORDER = 3; // 青少年模式
+export const OPEN_AD_ORDER = -10; // 开屏广告
+export const UPDATE_PROMPT_ORDER = -9; // 更新提示
+export const YOUTH_MODE_ORDER = -8; // 青少年模式
+
+// 更新提示
+export const ids =
+  'id*="close" || id*="Close" || id*="cancel" || id*="Cancel" || id*="update" || id*="Update"';
 
 export default defineGkdGlobalGroups([
   {
@@ -17,7 +21,6 @@ export default defineGkdGlobalGroups([
     resetMatch: 'app',
     actionMaximumKey: 0,
     matchTime: 3800,
-    forcedTime: 3800,
     priorityTime: 3800,
     rules: [
       {
@@ -53,9 +56,8 @@ export default defineGkdGlobalGroups([
       {
         key: 0,
         matches: [
-          '[text*="内测" || text*="测试版" || text*="新版" || text*="更新" || text*="升级" || text*="体验" || text*="內測" || text*="測試版" || text*="升級" || text*="體驗" || text*="Update" || text*="Upgrade" || text*="Experience"][text!*="自动" && text!*="自動" && text!*="成功" && text!*="失败" && text!*="失敗" && text!*="检查更新" && text!*="检测更新" && text!*="卸载"][name!$=".CheckBox"][childCount=0][visibleToUser=true]',
-          '[text*="更新" || text*="下载" || text*="安装" || text*="升级" || text*="查看" || text*="体验" || text*="确定" || text*="确认"][text.length<6][name!$=".CheckBox"][childCount=0][visibleToUser=true]',
-          '[text*="不再提醒" || text$="再说" || text$="拒绝" || text$="再想想" || text*="再看看" || text^="忽略" || text^="暂不" || text^="放弃" || text^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="关闭" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || vid="iv_close" || vid="iv_cancel" || vid="img_close" || vid="btn_close" || vid="ivCancel" || vid="ivClose" || vid="imgClose" || vid="iv_negative"][name!$=".CheckBox"][childCount=0][visibleToUser=true]',
+          '[text*="更新" || text*="新版" || text*="升级" || text*="体验" || text*="内测" || text*="测试版" || text*="內測" || text*="測試版" || text*="體驗" || text*="update" || text*="Update" || text*="Upgrade" || text*="Experience"][text!*="自动" && text!*="自動" && text!*="成功" && text!*="失败" && text!*="失敗" && text!*="检查更新" && text!*="检测更新" && text!*="卸载"][text.length<35][childCount=0][visibleToUser=true]',
+          `[text="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || text="关闭" || desc*="关闭" || text$="再想想" || text*="再看看" || text*="忽略" || text^="暂不" || text^="放弃" || text^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || ${ids}][text.length<10][name!$=".CheckBox"][childCount=0][visibleToUser=true]`,
         ],
       },
     ],

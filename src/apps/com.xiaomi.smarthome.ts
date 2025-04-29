@@ -16,19 +16,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 1,
-      name: '更新提示-设备固件升级提示弹窗',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches:
-            '[text*="检测到"&&text*="升级"] < ViewGroup + ViewGroup > Button > [text = "取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/12639671',
-        },
-      ],
-    },
   ],
 });

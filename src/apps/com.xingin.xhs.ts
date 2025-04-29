@@ -65,39 +65,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      actionMaximumKey: 0,
-      activityIds: [
-        '.index.v2.IndexActivityV2',
-        'com.xingin.update.UpdateDialogActivity',
-      ],
-      rules: [
-        {
-          key: 0,
-          matches: '@ImageView <2 * + * > [text="NEW"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13246890',
-            'https://i.gkd.li/i/13741680',
-            'https://i.gkd.li/i/14445193',
-          ],
-        },
-        {
-          key: 1,
-          matches: 'Button[text="立即安装"] + Button[text="稍后再说"]',
-          exampleUrls: 'https://e.gkd.li/7064a569-fcdd-44e2-b4d1-c55e093f4a02',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15283162',
-            'https://i.gkd.li/i/18289347',
-          ],
-        },
-      ],
-    },
-    {
       key: 3,
       name: '分段广告-信息流广告',
       desc: '长按"赞助"/"广告"标识的卡片-点"不感兴趣"',

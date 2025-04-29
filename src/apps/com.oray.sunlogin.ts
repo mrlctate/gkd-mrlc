@@ -41,22 +41,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 1,
-      name: '更新提示-版本更新',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.application.Main',
-          matches:
-            '[text="立即更新"] <2 * > [id="com.oray.sunlogin:id/button_cancel"][text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/13195560',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-卡片广告',
       fastQuery: true,

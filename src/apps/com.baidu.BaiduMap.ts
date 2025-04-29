@@ -92,21 +92,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.baidu.baidumaps.MapsActivity',
-          matches: 'ImageView[id="com.baidu.BaiduMap:id/cancel_update"]',
-          snapshotUrls: 'https://i.gkd.li/i/12909385',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '权限提示-通知权限',
       desc: '点击关闭',

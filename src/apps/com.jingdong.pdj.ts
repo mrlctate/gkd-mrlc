@@ -26,20 +26,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.plunginupdate.update.UpdateDialogActivity',
-          matches: 'Button[text="暂不安装"]',
-          snapshotUrls: 'https://i.gkd.li/i/13217634',
-        },
-      ],
-    },
   ],
 });

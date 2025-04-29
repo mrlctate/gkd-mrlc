@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: 'SteamPY',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.common.MainActivity',
-          matches:
-            '@[id="com.steampy.app:id/imgClose"] - RelativeLayout [id="com.steampy.app:id/tv_update"]',
-          snapshotUrls: 'https://i.gkd.li/i/13695519',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '功能类-首页优惠券弹窗自动点击领取/使用',
       fastQuery: true,

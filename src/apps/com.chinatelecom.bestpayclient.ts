@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '翼支付',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.MainActivity',
-          matches:
-            '[id="com.chinatelecom.bestpayclient:id/bupdate_tv_bottom_tip"]',
-          snapshotUrls: 'https://i.gkd.li/i/13391544',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告-弹窗广告',
       rules: [

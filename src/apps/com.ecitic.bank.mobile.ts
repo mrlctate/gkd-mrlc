@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: '中信银行',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.MainActivity',
-          matches: '@[text="暂不更新"] + [text="立即更新"]',
-          snapshotUrls: 'https://i.gkd.li/i/12701217',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       rules: [

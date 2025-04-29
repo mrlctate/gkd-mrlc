@@ -5,24 +5,6 @@ export default defineGkdApp({
   name: '转转',
   groups: [
     {
-      key: 1,
-      name: '更新提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          matches:
-            '@[text="下次再说" || text="残忍拒绝"] < * > [text^="立即"][text.length=4]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14292849',
-            'https://i.gkd.li/i/14392301',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',
