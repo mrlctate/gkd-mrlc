@@ -247,15 +247,6 @@ export const updateBlackListAppIDs = new Set([
   'info.muge.appshare', // AppShare
 ]);
 
-// 青少年模式黑名单
-export const yongBlackListAppIDs = new Set([
-  ...blackListAppIDs,
-  'xxx.pornhub.fuck', // JavDB
-  'com.netease.cloudmusic', // 网易云音乐 全局规则在 https://i.gkd.li/i/14931708 误触
-  'com.zhihu.android', // 知乎 全局规则在 https://i.gkd.li/i/14964990 误触
-  'com.luna.music', // 汽水音乐 全局规则在 https://i.gkd.li/i/15124801 误触
-]);
-
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
 
 // 在应用中单独启用某个全局规则
@@ -277,13 +268,4 @@ export const openAdWhiteListAppIDs = new Set([
 // 更新提示白名单
 export const updateWhiteListAppIDs = new Set([
   'com.hihonor.phoneservice', // 我的荣耀
-]);
-
-// 青少年模式白名单
-export const yongWhiteListAppIDs = new Set([
-  'com.ss.android.ugc.aweme', // 抖音
-  'com.sup.android.superb', // 皮皮虾
-  'com.tencent.qqlive', // 腾讯视频
-  'com.upupoo.apu.mobile', // UPUPOO动态壁纸
-  'com.taptap', // TapTap
 ]);

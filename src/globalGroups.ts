@@ -3,7 +3,6 @@ import * as appList from './globalDefaultApps';
 
 export const OPEN_AD_ORDER = -10; // 开屏广告
 export const UPDATE_PROMPT_ORDER = -9; // 更新提示
-export const YOUTH_MODE_ORDER = -8; // 青少年模式
 
 // 更新提示
 export const ids =
@@ -65,35 +64,6 @@ export default defineGkdGlobalGroups([
       .map((id) => ({ id, enable: false }))
       .concat(
         [...appList.updateWhiteListAppIDs].map((id) => ({ id, enable: true })),
-      ),
-  },
-  {
-    key: 2,
-    name: '青少年模式',
-    desc: '关闭应用的青少年模式弹窗',
-    disableIfAppGroupMatch: '青少年模式',
-    order: YOUTH_MODE_ORDER,
-    fastQuery: true,
-    matchTime: 10000,
-    actionMaximum: 1,
-    resetMatch: 'app',
-    rules: [
-      {
-        key: 0,
-        matches: [
-          '[text*="青少年" || text*="未成年" || text*="儿童"][text*="模式" || text*="守护"][text.length<15][childCount=0][visibleToUser=true]',
-          '[text*="知道了" || text*="关闭" || text*="我已知晓" || text*="已满" || text="不再提醒" || vid="iv_close"][text.length<8][childCount=0][visibleToUser=true]',
-        ],
-        excludeSnapshotUrls: [
-          'https://i.gkd.li/i/14917848',
-          'https://i.gkd.li/i/17610958',
-        ],
-      },
-    ],
-    apps: [...appList.yongBlackListAppIDs]
-      .map((id) => ({ id, enable: false }))
-      .concat(
-        [...appList.yongWhiteListAppIDs].map((id) => ({ id, enable: true })),
       ),
   },
 ]);
