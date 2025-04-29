@@ -42,7 +42,8 @@ export default defineGkdApp({
         },
         {
           key: 5,
-          matches: '[text="天选时刻"] > View > View > TextView[clickable=true][index=1]',
+          matches:
+            '[text="天选时刻"] > View > View > TextView[clickable=true][index=1]',
           snapshotUrls: 'https://i.gkd.li/i/19958881',
         },
       ],
