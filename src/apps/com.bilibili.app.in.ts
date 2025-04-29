@@ -2,7 +2,7 @@ import { defineGkdApp } from '@gkd-kit/define';
 
 export default defineGkdApp({
   id: 'com.bilibili.app.in',
-  name: 'bilibili',
+  name: '哔哩哔哩-国际版',
   groups: [
     {
       key: 3,
@@ -39,6 +39,11 @@ export default defineGkdApp({
           key: 4,
           matches: '[text^="关注主播"] +2 [vid="iv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/18300949',
+        },
+        {
+          key: 5,
+          matches: '[text="天选时刻"] > View > View > TextView[clickable=true][index=1]',
+          snapshotUrls: 'https://i.gkd.li/i/19958881',
         },
       ],
     },

@@ -6,8 +6,7 @@ export const UPDATE_PROMPT_ORDER = -9; // 更新提示
 export const NOTIFICATION_PROMPT = -6; // 通知提示
 
 const COMMON_PREFIX =
-  '[desc!^="清空"][desc!^="清除"][name!$=".CheckBox"][name!$=".EditText"][childCount=0][visibleToUser=true][height>0&&width>0&&top>0&&left>0]';
-
+  '[id!*="search"&&name!$=".CheckBox"&&name!$=".EditText"][childCount=0][visibleToUser=true][height>0&&width>0&&top>0&&left>0]';
 // 更新提示
 const ids =
   'id*="close" || id*="Close" || id*="cancel" || id*="Cancel" || id*="update" || id*="Update"';
