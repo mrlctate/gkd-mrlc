@@ -82,21 +82,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '通知提示-公告弹窗',
-      desc: '点击[不再提示]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.androlua.LuaActivity',
-          matches: '[text="不再提示"][clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/13852447',
-        },
-      ],
-    },
   ],
 });

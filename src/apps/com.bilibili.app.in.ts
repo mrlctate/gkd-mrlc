@@ -70,21 +70,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 7,
-      name: '通知提示-订阅感兴趣的通知',
-      desc: '点击"暂不开启"',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: ['[text="订阅感兴趣的通知"]', '[text="暂不开启"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13399195',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '权限提示-通知权限',
       desc: '自动点击"暂不"',

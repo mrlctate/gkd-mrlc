@@ -45,22 +45,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '通知提示-志愿者保险提示弹窗',
-      desc: '点击[暂不领取]',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.MainActivity',
-          matches: '[text="暂不领取"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/fe4b163a-bb6c-4337-b095-4bdf1219e9b2',
-          snapshotUrls: 'https://i.gkd.li/i/19485920',
-        },
-      ],
-    },
   ],
 });

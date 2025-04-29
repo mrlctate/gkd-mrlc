@@ -64,20 +64,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '通知提示-公告弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.main.MainActivity',
-          matches: '[text="隐藏"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/17892865',
-        },
-      ],
-    },
   ],
 });

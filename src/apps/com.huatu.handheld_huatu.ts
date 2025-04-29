@@ -25,19 +25,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.business.main.MainTabActivity',
-          matches: '[text*="开启通知提示"] +2 LinearLayout > [text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/12715719',
-        },
-      ],
-    },
   ],
 });

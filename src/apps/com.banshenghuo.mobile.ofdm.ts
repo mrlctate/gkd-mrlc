@@ -42,21 +42,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '通知提示-公告弹窗',
-      desc: '点击[我知道了]',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.anythink.basead.ui.ATPortraitTranslucentActivity',
-          matches: '[desc="我知道了"]',
-          exampleUrls: 'https://e.gkd.li/327ea04c-acda-4913-a0a9-fdda9cd83dd7',
-          snapshotUrls: 'https://i.gkd.li/i/16548158',
-        },
-      ],
-    },
   ],
 });

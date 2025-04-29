@@ -68,21 +68,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '通知提示-公告弹窗',
-      desc: '点击[我知道了]',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainActivity',
-          matches: '[desc^="必读通告"] +n [desc="我知道了"]',
-          snapshotUrls: 'https://i.gkd.li/i/12843280',
-        },
-      ],
-    },
-    {
       key: 11,
       name: '局部广告-卡片广告',
       desc: '点击关闭',

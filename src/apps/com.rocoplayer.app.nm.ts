@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '柠檬听书',
   groups: [
     {
-      key: 1,
-      name: '通知提示-温馨提示弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.e4a.runtime.android.mainActivity',
-          matches: '[text="温馨提示"] +2 [text="确定"]',
-          snapshotUrls: 'https://i.gkd.li/i/14304132',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告',
       matchTime: 10000,

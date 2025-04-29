@@ -133,24 +133,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '通知提示-公告弹窗',
-      desc: '点击[收到]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'info.muge.appshare.view.main.MainActivity',
-          matches: '[vid="tvSure"][clickable=true]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/8b782da0-1501-4839-a19b-92209b4d2723',
-          snapshotUrls: 'https://i.gkd.li/i/14345476',
-        },
-      ],
-    },
-    {
       key: 6,
       name: '功能类-自动点击[使用浏览器打开]',
       desc: '下载文件页面',

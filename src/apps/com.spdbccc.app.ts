@@ -5,26 +5,6 @@ export default defineGkdApp({
   name: '浦大喜奔',
   groups: [
     {
-      key: 1,
-      name: '通知提示-代理提示弹窗',
-      desc: '点击[确定]',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.sp.splash.activity.SplashActivity',
-          matches: [
-            '[text="提示"][visibleToUser=true]',
-            '[text="确定"][visibleToUser=true]',
-          ],
-          exampleUrls: 'https://e.gkd.li/e582c5d4-bce3-46a2-ad69-7d0ac4e2fb52',
-          snapshotUrls: 'https://i.gkd.li/i/18275651',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-首页弹窗广告',
       fastQuery: true,

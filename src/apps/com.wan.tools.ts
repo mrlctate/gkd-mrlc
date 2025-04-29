@@ -5,22 +5,6 @@ export default defineGkdApp({
   name: '下载工具箱',
   groups: [
     {
-      key: 1,
-      name: '通知提示-公告弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.one.downloadtools.ui.activity.HomeActivity',
-          matches:
-            'LinearLayout[childCount=2] > @[text="取消"] + [text="确认"]',
-          snapshotUrls: 'https://i.gkd.li/i/13392027',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '功能类-自动识别解析链接',
       rules: [

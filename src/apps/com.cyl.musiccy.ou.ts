@@ -5,20 +5,6 @@ export default defineGkdApp({
   name: 'OMOFUN',
   groups: [
     {
-      key: 1,
-      name: '通知提示-公告弹窗',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainActivity',
-          matches: '[desc="我知道了"]',
-          snapshotUrls: 'https://i.gkd.li/i/13063206',
-        },
-      ],
-    },
-    {
       key: 2,
       name: '全屏广告-弹窗广告',
       actionDelay: 300,

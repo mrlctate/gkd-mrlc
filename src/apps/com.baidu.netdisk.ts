@@ -104,14 +104,6 @@ export default defineGkdApp({
         },
         {
           key: 3,
-          action: 'clickCenter',
-          matches:
-            '[text="看视频广告"] < View +3 [text="去完成"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19885285',
-        },
-        {
-          preKeys: [3],
-          key: 4,
           activityIds:
             'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity',
           position: {

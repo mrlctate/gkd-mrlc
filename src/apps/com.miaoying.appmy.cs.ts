@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '新小财神影视',
   groups: [
     {
-      key: -1,
-      name: '通知提示-公告弹窗',
-      desc: 'APP启动时出现的公告栏',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.MainActivity',
-          matches: '@[desc="我知道了"] + [desc="了解更多"]',
-          snapshotUrls: 'https://i.gkd.li/i/12522872',
-        },
-      ],
-    },
-    {
       key: 0,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',

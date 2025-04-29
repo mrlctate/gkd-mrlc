@@ -20,22 +20,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '通知提示-网络代理提示弹窗',
-      desc: '点击[继续使用]',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.bankcomm.module.biz.home.MainActivity',
-          matches: '[text="继续使用"]',
-          exampleUrls: 'https://e.gkd.li/b9854883-ed3c-4a55-bd8e-7af7c02d59ba',
-          snapshotUrls: 'https://i.gkd.li/i/17556284',
-        },
-      ],
-    },
   ],
 });

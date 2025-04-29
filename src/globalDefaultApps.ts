@@ -247,6 +247,9 @@ export const updateBlackListAppIDs = new Set([
   'info.muge.appshare', // AppShare
 ]);
 
+// 通知提示黑名单
+export const notificationBlackListAppIDs = new Set([...blackListAppIDs]);
+
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
 
 // 在应用中单独启用某个全局规则
@@ -269,3 +272,6 @@ export const openAdWhiteListAppIDs = new Set([
 export const updateWhiteListAppIDs = new Set([
   'com.hihonor.phoneservice', // 我的荣耀
 ]);
+
+// 通知提示白名单
+export const notificationWhiteListAppIDs = new Set([]);

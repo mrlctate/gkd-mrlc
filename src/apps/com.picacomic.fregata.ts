@@ -22,23 +22,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 2,
-      name: '通知提示-公告弹窗',
-      desc: '点击主页面的公告和广告',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      rules: [
-        {
-          matches:
-            '[id="com.picacomic.fregata:id/button_dialog_announcement_positive"]',
-          exampleUrls:
-            'https://m.gkd.li/83610194/a5cbd7ce-79b4-49da-ba01-2b7db907d1f1',
-          snapshotUrls: 'https://i.gkd.li/i/13422767',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '局部广告-漫画详情页广告',
       desc: '点击卡片广告',
