@@ -60,7 +60,7 @@ export default defineGkdGlobalGroups([
         key: 0,
         matches: [
           '[text*="更新" || text*="新版" || text*="升级" || text*="体验" || text*="内测" || text*="测试版" || text*="內測" || text*="測試版" || text*="體驗" || text*="update" || text*="Update" || text*="Upgrade" || text*="Experience"][text!*="自动" && text!*="自動" && text!*="成功" && text!*="失败" && text!*="失敗" && text!*="检查更新" && text!*="检测更新" && text!*="卸载"][childCount=0][visibleToUser=true]',
-          `[text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || text="关闭" || desc*="关闭" || text$="再想想" || text*="再看看" || text*="忽略" || text^="暂不" || text^="放弃" || text^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || ${ids}] ${COMMON_PREFIX}`,
+          `[text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || text="关闭" || desc*="关闭" || text$="再想想" || text*="再看看" || text*="忽略" || text^="暂不" || text^="放弃" || text^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || ${ids}]${COMMON_PREFIX}`,
         ],
       },
     ],
@@ -86,7 +86,7 @@ export default defineGkdGlobalGroups([
         key: 0,
         matches: [
           '[text*="通知" || text*="公告" || text*="使用" || text*="代理" || text*="内容" || text*="赞助" || text$="提示" || desc="温馨提示" || desc*="新版本" || desc*="下载" || desc*="官网" || text*="交流群" || text*="QQ群" || desc*="谢谢理解"][childCount=0][visibleToUser=true]',
-          `[text^="暂不" || text$="知道了" || text$="继续使用" || desc$="知道了" || text^="我已知晓" || text^="不再" || text="下次再说" || text="取消" || text="确定" || text="收到" || text="隐藏" || vid$="close"] ${COMMON_PREFIX}`,
+          `[text^="暂不" || text$="知道了" || text$="继续使用" || desc$="知道了" || text^="我已知晓" || text^="不再" || text="下次再说" || text="取消" || text="确定" || text="收到" || text="隐藏" || vid$="close"]${COMMON_PREFIX}`,
         ],
       },
     ],
