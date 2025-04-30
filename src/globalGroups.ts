@@ -35,7 +35,7 @@ export default defineGkdGlobalGroups([
           '[text^="温馨" || text*="搜索" || text^="猜你" || text="历史记录" || text$="在搜" && text.length>3 && text.length<6]',
         action: 'clickCenter',
         anyMatches: [
-          `[text*="跳过" || text*="跳過" || text*="skip" || text.length<10][width<200]${CommonPrefix}`,
+          `[text*="跳过" || text*="跳過" || text*="skip" && text.length<10][width<200]${CommonPrefix}`,
           '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text$="s"] + [text="|"]',
         ],
@@ -61,8 +61,8 @@ export default defineGkdGlobalGroups([
       {
         key: 0,
         matches: [
-          `[text*="更新" || text*="新版" || desc*="新版" || text*="升级" || text*="体验" || text*="内测" || text*="测试版" || text*="內測" || text*="測試版" || text*="體驗" || text*="update" || text*="Update" || text*="Upgrade" || text*="Experience"][top>360]${UpdatePromptText}`,
-          `[text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || desc*="关闭" || text$="再想想" || text*="再看看" || text*="忽略" || text^="暂不" || text^="放弃" || text^="取消" || desc="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || ${UpdatePromptId}]${UpdatePromptImpose}`,
+          `[text*="更新" || text*="新版" || desc*="新版" || text*="升级" || text*="体验" || text*="内测" || text*="测试版" || text*="內測" || text*="測試版" || text*="體驗" || text*="update" || text*="Update" || text*="Upgrade" || text*="Experience"]${UpdatePromptText}`,
+          `[text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || desc*="关闭" || text$="再想想" || text*="再看看" || text*="忽略" || text^="暂不" || text^="放弃" || text^="取消" || desc="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel" || ${UpdatePromptId}][top>360]${UpdatePromptImpose}`,
         ],
       },
     ],
