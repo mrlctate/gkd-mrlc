@@ -10,17 +10,6 @@ export default defineGkdApp({
       desc: '点击关闭',
       rules: [
         {
-          key: 0,
-          name: '快手广告',
-          fastQuery: true,
-          activityIds: 'com.deep.search.MainActivity',
-          matches: [
-            '[text="广告"]',
-            '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/i/13766176',
-        },
-        {
           key: 1,
           fastQuery: true,
           activityIds: 'com.deep.search.SearchActivity',

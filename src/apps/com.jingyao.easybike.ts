@@ -20,42 +20,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.yanzhenjie.permission.PermissionActivity',
-            'com.hellobike.atlas.business.portal.PortalActivity',
-          ],
-          matches: ['[text*="开启通知"]', '[text="取消"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13228735',
-            'https://i.gkd.li/i/13402675',
-          ],
-        },
-      ],
-    },
-    {
-      key: 9,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.hellobike.atlas.business.portal.PortalActivity',
-          matches: ['[text="系统定位服务已关闭"]', '[text="取消"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13228677',
-        },
-      ],
-    },
-    {
       key: 10,
       name: '全屏广告-弹窗广告',
       rules: [

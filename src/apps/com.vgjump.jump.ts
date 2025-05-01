@@ -5,34 +5,6 @@ export default defineGkdApp({
   name: 'Jump',
   groups: [
     {
-      key: 1,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      matchTime: 10000,
-      actionMaximum: 2,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: [
-            '.ui.my.favorite.FavoriteActivity',
-            '.ui.game.detail.GameDetailActivity',
-            '.ui.content.msg.MsgIndexActivity',
-          ],
-          matches: [
-            '[text="开启推送通知"][visibleToUser=true]',
-            '[vid="ivClose" || vid="tvClose"][visibleToUser=true]',
-          ],
-          exampleUrls: 'https://e.gkd.li/ce574950-4233-477e-b0cc-a4b0d18df249',
-          snapshotUrls: [
-            'https://i.gkd.li/i/17828834',
-            'https://i.gkd.li/i/17949205',
-            'https://i.gkd.li/i/18022146',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '局部广告-信息流广告/卡片广告',
       desc: '点击关闭',

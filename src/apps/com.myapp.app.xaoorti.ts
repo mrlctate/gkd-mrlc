@@ -14,16 +14,6 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
-          key: 0,
-          name: '快手广告-1',
-          activityIds: 'com.ys.resemble.ui.login.splash.SplashADSetActivity',
-          matches: [
-            '[text="广告"]',
-            '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/i/13520475',
-        },
-        {
           key: 1,
           name: '快手广告-2',
           activityIds: 'com.ys.resemble.ui.MainActivity',

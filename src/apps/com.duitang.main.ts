@@ -29,22 +29,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '评价提示',
-      desc: '点击[下次再说]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.business.main.NAMainActivity',
-          matches: '[vid="scoreDuitangCancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/14273094',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '全屏广告-图片页弹窗广告',
       desc: '点击关闭',

@@ -157,27 +157,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.MainActivityV2',
-            'com.bilibili.video.story.StoryTransparentActivity',
-          ],
-          matches: '[text$="通知"] +2 * > [id="tv.danmaku.bili:id/close"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13229159',
-            'https://i.gkd.li/i/13614090',
-          ],
-        },
-      ],
-    },
-    {
       key: 10,
       name: '分段广告-首页推荐视频卡片广告',
       fastQuery: true,

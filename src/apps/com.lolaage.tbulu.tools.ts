@@ -44,21 +44,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '权限提示-通知权限',
-      desc: '点击[取消]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.activity.main.MainActivity',
-          matches: '[text="发送通知"] + * >3 [text="取消"]',
-          snapshotUrls: 'https://i.gkd.li/i/14952803',
-        },
-      ],
-    },
   ],
 });

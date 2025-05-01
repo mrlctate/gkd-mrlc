@@ -23,21 +23,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.ui.MainActivity',
-          matches: '@[text="取消"] + [text="立即开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/13399102',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '局部广告-理财产品悬浮广告',
       rules: [

@@ -151,21 +151,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '评价提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.twitter.app.main.MainActivity',
-          matches: '[id="com.twitter.android:id/app_rating_button_never"]',
-          snapshotUrls: 'https://i.gkd.li/i/13774150',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '权限提示-通知权限',
       desc: '点击"Not now"',

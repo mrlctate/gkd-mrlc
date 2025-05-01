@@ -413,24 +413,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 32,
-      name: '权限提示-权限申请弹窗',
-      desc: '点击取消',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: 'com.tencent.mm.pluginsdk.permission.PermissionActivity',
-          matches: ['[text="权限申请"]', '[text="取消"]'],
-          exampleUrls:
-            'https://m.gkd.li/57941037/43632b72-d389-4fe7-9708-dac78e900679',
-          snapshotUrls: 'https://i.gkd.li/i/14645385',
-        },
-      ],
-    },
-    {
       key: 34,
       name: '功能类-付款时自动点击[支付]',
       fastQuery: true,

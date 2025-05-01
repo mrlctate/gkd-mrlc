@@ -38,22 +38,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 9,
-      name: '权限提示-通知权限',
-      desc: '点击暂不开启',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.ss.android.ugc.aweme.main.MainActivity',
-          matches: '[text="及时获得消息提醒"] +2 [text="暂不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/13888485',
-        },
-      ],
-    },
-    {
       key: 10,
       name: '功能类-选择图片时自动勾选原图',
       rules: [

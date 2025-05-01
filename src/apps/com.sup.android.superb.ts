@@ -5,19 +5,6 @@ export default defineGkdApp({
   name: '皮皮虾',
   groups: [
     {
-      key: 5,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: '[text="开启推送通知"] +2 * > [text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/13691081',
-        },
-      ],
-    },
-    {
       key: 6,
       name: '局部广告-右上角红包悬浮窗',
       matchTime: 10000,
@@ -30,28 +17,6 @@ export default defineGkdApp({
           matches:
             '@ImageView[clickable=true][visibleToUser=true][childCount=0] < RelativeLayout[childCount=2] < FrameLayout - [id="com.sup.android.superb:id/tab_container"]',
           snapshotUrls: 'https://i.gkd.li/i/13624220',
-        },
-      ],
-    },
-    {
-      key: 8,
-      name: '评价提示',
-      desc: '点击取消',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.sup.android.base.MainActivity',
-            'com.sup.android.base.praise.PraiseDialogActivity',
-          ],
-          matches: ['[text^="喜欢皮皮虾吗"]', '[text="取消"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/14005608',
-            'https://i.gkd.li/i/15285383',
-          ],
         },
       ],
     },

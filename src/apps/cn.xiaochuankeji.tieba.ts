@@ -50,28 +50,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-通知权限',
-      desc: '系统通知弹窗，点击暂不开启',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.ui.home.page.PageMainActivity',
-      rules: [
-        {
-          key: 1,
-          matches:
-            '[id="cn.xiaochuankeji.tieba:id/confirm"][text="打开通知"] + [id="cn.xiaochuankeji.tieba:id/cancel"][text="暂不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/12660823',
-        },
-        {
-          key: 2,
-          matches:
-            '[text^="开启通知"] +(2) [id="cn.xiaochuankeji.tieba:id/tips_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/12660851',
-        },
-      ],
-    },
   ],
 });

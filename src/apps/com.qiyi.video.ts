@@ -43,21 +43,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'org.qiyi.android.video.MainActivity',
-          matches: '[id="com.qiyi.video:id/cancel_btn"][text="暂时不要"]',
-          snapshotUrls: 'https://i.gkd.li/i/12838152',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '全屏广告-播放页-插入广告',
       desc: '视频播放前或播放中途插入的广告',

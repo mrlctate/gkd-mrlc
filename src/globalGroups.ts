@@ -17,8 +17,8 @@ const UpdatePromptId =
 export default defineGkdGlobalGroups([
   {
     key: 0,
-    name: '开屏广告',
-    desc: '关闭打开应用时的开屏广告',
+    name: '开屏广告-关闭全局的应用开屏广告',
+    desc: '用于关闭大部分的应用开屏广告，不要关闭',
     disableIfAppGroupMatch: '开屏广告',
     order: OPEN_AD_ORDER,
     fastQuery: true,
@@ -49,8 +49,8 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 1,
-    name: '更新提示',
-    desc: '关闭应用的更新弹窗',
+    name: '更新提示-关闭全局的应用更新弹窗',
+    desc: '关闭应用的更新弹窗；关闭此规则可能会影响体验',
     disableIfAppGroupMatch: '更新提示',
     order: UPDATE_PROMPT_ORDER,
     fastQuery: true,
@@ -74,8 +74,8 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 2,
-    name: '通知提示',
-    desc: '关闭应用的通知提示',
+    name: '通知提示-关闭全局的应用弹窗提示',
+    desc: '关闭通知提示,权限提示,评价提示;如有问题请反馈',
     disableIfAppGroupMatch: '通知提示',
     order: NOTIFICATION_PROMPT,
     fastQuery: true,
@@ -87,8 +87,8 @@ export default defineGkdGlobalGroups([
       {
         key: 0,
         matches: [
-          `[text*="通知" || text*="权限" || text*="公告" || text="广告" || text*="消息" || text*="发现" || text*="剪贴板" || text="去开启" || text="去设置" || text*="使用" || text*="代理" || text*="定位" || text*="位置" || text*="内容" || text*="分享" || text*="赞助" || text$="提示" || desc$="提示" || desc*="下载" || desc*="官网" || text*="交流" || text*="链接" || text*="关注" || desc*="谢谢"]${CommonPrefix}`,
-          `[text^="暂不" || text$="知道了" || text$="继续使用" || desc$="知道了" || text^="我已知晓" || text="拒绝" || text^="不再" || text$="再说" || text="不允许" || text*="不了" || text="取消" || text="确定" || text="收到" || text="隐藏" || text="否" || id*="close" || id$="Close" || id*="cancel"]${CommonPrefix}`,
+          `[text*="通知" || text*="权限" || text*="公告" || text="广告" || text*="喜欢" || text*="好评" || desc*="好评" || text*="评论" || text*="评分" || text*="评价" || text*="获取" || text*="消息" || text*="使用" ||text*="推荐" || text*="发现" || text*="推送" || text*="免费" || desc*="免费" || text*="立即" || text*="剪贴板" || text*="开启" || text="去设置" || text*="使用" || text*="代理" || text*="定位" || text*="位置" || text*="内容" || text*="调研" || text*="分享" || text*="赞助" || text$="提示" || desc$="提示" || desc*="下载" || desc*="官网" || text*="交流" || text*="链接" || text*="关注" || desc*="谢谢" || id$="image"]${CommonPrefix}`,
+          `[text^="暂不" || text^="暂时" || text$="继续使用" || text$="知道了" || desc$="知道了" || text="取消" || text^="我已知晓" || text*="拒绝" || text^="不再" || text$="再说" || text="不允许" || text*="不了" || text^="下次" || text="考虑一下" || text="没兴趣" || text="關閉" || text="确定" || text="收到" || text="隐藏" || text="否" || id*="close" || id$="Close" || id*="cancel" || id*="dialog" || id*="delete"]${CommonPrefix}`,
         ],
       },
     ],

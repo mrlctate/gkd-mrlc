@@ -14,16 +14,6 @@ export default defineGkdApp({
       snapshotUrls: 'https://i.gkd.li/i/13538351',
     },
     {
-      key: 2,
-      name: '权限提示',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: 'com.taobao.idlefish.maincontainer.activity.MainActivity',
-      rules:
-        '@Button[visibleToUser=true][text="取消"] <<n FrameLayout >n TextView[text*="手机信息"]',
-      snapshotUrls: 'https://i.gkd.li/i/13620277',
-    },
-    {
       key: 4,
       name: '全屏广告-红包弹窗',
       desc: '点击关闭',

@@ -37,21 +37,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 3,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: [
-        {
-          activityIds: '.module.main.MainActivity',
-          matches:
-            'TextView[text="接收通知"] < LinearLayout < LinearLayout +n [id="android:id/buttonPanel"] Button[text="否"]',
-          snapshotUrls: 'https://i.gkd.li/i/13073319',
-        },
-      ],
-    },
   ],
 });

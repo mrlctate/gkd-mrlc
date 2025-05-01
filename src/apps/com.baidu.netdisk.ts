@@ -116,26 +116,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: 'ImageView[id="com.baidu.netdisk:id/dialog_cancel"]', //单独使用ID会导致误触（例如删除确认https://i.gkd.li/i/13069049）
-      snapshotUrls: 'https://i.gkd.li/i/12923936',
-    },
-    {
-      key: 9,
-      name: '评价提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[vid="view_score_style"] > [text="以后再说"]',
-      snapshotUrls: 'https://i.gkd.li/i/14317054',
-    },
-    {
       key: 12,
       name: '局部广告-悬浮广告',
       desc: '点击关闭',

@@ -21,13 +21,6 @@ export default defineGkdApp({
           ],
         },
         {
-          key: 2,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
-          matches: 'TextView[text$="s"] + TextView[text$="跳过"]',
-          snapshotUrls: 'https://i.gkd.li/i/12877535',
-        },
-        {
           key: 3,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',

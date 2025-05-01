@@ -29,9 +29,31 @@ export default defineGkdApp({
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
           matches:
             '[text="反馈"] -2 @View > Image[text=""][visibleToUser=true][childCount=0]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/f41a31f3-5ddd-44a5-b450-a6678f551328',
           snapshotUrls: 'https://i.gkd.li/i/15220517',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.mvvm.main.MainActivity',
+          matches:
+            '@ImageView[childCount=0][width=height] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] +n FrameLayout >(1,2) [text.length<6]',
+          snapshotUrls: 'https://i.gkd.li/i/19954295',
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: '.mvvm.main.MainActivity',
+          matches:
+            '@ImageView[childCount=0][width=height] < FrameLayout[childCount=1][text=null][desc=null][id=null] <2 FrameLayout[childCount=5] + FrameLayout[childCount=2] > [text.length<6]',
+          snapshotUrls: 'https://i.gkd.li/i/19955131',
+        },
+        {
+          key: 4,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '@View[text=""][id!=null][childCount=1][getChild(0).getChild(0).childCount=0] + View[childCount=1] > [text="反馈"]',
+          snapshotUrls: 'https://i.gkd.li/i/19955070',
         },
       ],
     },

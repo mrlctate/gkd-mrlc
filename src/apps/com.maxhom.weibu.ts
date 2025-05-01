@@ -68,28 +68,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 5,
-      name: '权限提示-定位权限',
-      desc: '自动点击取消',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.maxhom.weibu.tool.home.activity.ToolBottleActivity',
-            'com.maxhom.weibu.tool.msg.MyBottleActivity',
-            'com.maxhom.weibu.tool.home.activity.NewMainActivity',
-          ],
-          matches: '[text="去设置"] + [text="取消"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13377685',
-            'https://i.gkd.li/i/13457033',
-            'https://i.gkd.li/i/13457038',
-          ],
-        },
-      ],
-    },
   ],
 });

@@ -18,20 +18,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '评价提示',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.activity.web.ICBCWebView',
-          matches: '[text="下次再说"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/85e48265-4269-4122-a70f-5361698954c0',
-          snapshotUrls: 'https://i.gkd.li/i/18296892',
-        },
-      ],
-    },
   ],
 });

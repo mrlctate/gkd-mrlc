@@ -10,17 +10,6 @@ export default defineGkdApp({
       actionDelay: 400,
       rules: [
         {
-          key: 0,
-          name: '快手广告-1',
-          fastQuery: true,
-          activityIds: 'com.copymanga.app.MainActivity',
-          matches: [
-            '[text="广告"]',
-            '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/i/13259085',
-        },
-        {
           key: 1,
           name: '快手广告-2',
           fastQuery: true,

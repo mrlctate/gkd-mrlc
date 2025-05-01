@@ -141,21 +141,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      desc: '自动点击"取消"',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.defines.CustomDialog',
-          matches: ['[text$="请开启通知权限"]', '[text="取消"]'],
-          snapshotUrls: 'https://i.gkd.li/i/12715980',
-        },
-      ],
-    },
-    {
       key: 11,
       name: '功能类-签到成功弹窗',
       desc: '点击关闭',

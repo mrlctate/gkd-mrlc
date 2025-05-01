@@ -27,25 +27,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '权限提示-通知权限',
-      desc: '点击[取消]',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.danale.video.mainpage.main.MainActivity',
-          matches: [
-            '[text*="开启通知"][visibleToUser=true]',
-            '[text="取消"][visibleToUser=true]',
-          ],
-          exampleUrls: 'https://e.gkd.li/5f19c508-d4d3-4221-aafe-ab19845b3d4b',
-          snapshotUrls: 'https://i.gkd.li/i/18059150',
-        },
-      ],
-    },
   ],
 });

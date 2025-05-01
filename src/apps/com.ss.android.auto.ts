@@ -102,28 +102,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          action: 'back',
-          activityIds: [
-            '.activity.SplashActivity',
-            'com.bytedance.im.auto.conversation.activity.ConversationListActivity',
-          ],
-          matches: 'TextView[text*="推送通知"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12840664',
-            'https://i.gkd.li/i/14060897',
-            'https://i.gkd.li/i/14546563',
-          ],
-        },
-      ],
-    },
-    {
       key: 7,
       name: '局部广告-选车页卡片广告',
       rules: [

@@ -68,23 +68,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 5,
-      name: '评价提示-好评弹窗',
-      desc: '点击下次再说',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.centralis.activity.FundRootActivity',
-          matches: '@[desc="下次再说"] <<n [vid="container"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/d791a2f9-ae86-4389-8ee7-36a87f11b60d',
-          snapshotUrls: 'https://i.gkd.li/i/14179508',
-        },
-      ],
-    },
   ],
 });

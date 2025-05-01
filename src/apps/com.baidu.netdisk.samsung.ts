@@ -65,39 +65,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '评价提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.baidu.netdisk.ui.MainActivity',
-          matches: '[vid="view_score_style"] > [text="以后再说"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/167a8392-23c8-4e84-a55f-4f91e7e560d8',
-          snapshotUrls: 'https://i.gkd.li/i/14893286',
-        },
-      ],
-    },
-    {
-      key: 6,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches: '[vid="dialog_cancel"]',
-          exampleUrls:
-            'https://m.gkd.li/57941037/06ae328b-f852-407b-83ab-ec295d41baa4',
-          snapshotUrls: 'https://i.gkd.li/i/14893280',
-        },
-      ],
-    },
-    {
       key: 7,
       name: '功能类-[上新【专辑】功能]弹窗',
       desc: '点击关闭',

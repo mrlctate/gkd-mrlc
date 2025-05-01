@@ -220,22 +220,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 15,
-      name: '权限提示-悬浮窗权限',
-      desc: '点击[否]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.taobao.android.detail2.core.framework.floatwindow.permission.PermissionActivity',
-          matches: ['[text*="悬浮窗权限"]', '[text="否"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13588165',
-        },
-      ],
-    },
-    {
       key: 16,
       name: '全屏广告-花呗推荐弹窗',
       fastQuery: true,

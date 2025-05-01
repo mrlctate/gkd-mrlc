@@ -124,27 +124,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '评价提示',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            '.activity.MainActivity',
-            '.activity.DictQueryActivity',
-          ],
-          matches: '[id="com.youdao.dict:id/btn_never"][text*="不再提醒"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13540941',
-            'https://i.gkd.li/i/14256301',
-          ],
-        },
-      ],
-    },
-    {
       key: 7,
       name: '功能类-点击显示释义',
       activityIds:

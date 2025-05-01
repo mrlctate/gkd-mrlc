@@ -21,22 +21,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 2,
-      name: '权限提示-通知权限',
-      desc: '点击拒绝',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          matches: ['[text$="发送通知"]', '[text="拒绝"]'],
-          exampleUrls:
-            'https://m.gkd.li/57941037/0487a113-5b57-402e-96ca-1f351e121d82',
-          snapshotUrls: 'https://i.gkd.li/i/14321882',
-        },
-      ],
-    },
   ],
 });

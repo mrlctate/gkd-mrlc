@@ -115,24 +115,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 5,
-      name: '评价提示-关闭评分反馈弹窗',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.SplashActivity',
-          matches: [
-            '[text^="喜欢豆瓣吗"][visibleToUser=true]',
-            '[text="下次再说"][visibleToUser=true]',
-          ],
-          snapshotUrls: 'https://i.gkd.li/i/18424257',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '局部广告-卡片广告',
       desc: '点击关闭',

@@ -43,14 +43,6 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/18033023',
         },
         {
-          key: 3,
-          fastQuery: true,
-          activityIds: '.MainActivity',
-          matches: '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
-          exampleUrls: 'https://e.gkd.li/343016ff-dd8f-4a19-8e3c-63520b087e98',
-          snapshotUrls: 'https://i.gkd.li/i/12903095',
-        },
-        {
           key: 4,
           fastQuery: true,
           activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',

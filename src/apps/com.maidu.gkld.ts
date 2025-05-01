@@ -16,19 +16,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          matches:
-            '[id="com.maidu.gkld:id/ll_open_app_notice"] + [id="com.maidu.gkld:id/iv_cancel"]',
-          snapshotUrls: 'https://i.gkd.li/i/12715250',
-        },
-      ],
-    },
   ],
 });

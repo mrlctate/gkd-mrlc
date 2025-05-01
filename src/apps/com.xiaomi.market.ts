@@ -15,6 +15,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          action: 'clickCenter', // clickNode 可能无效
           activityIds: 'com.xiaomi.market.ui.FloatWebActivity',
           matches: '@Button[clickable=true][text="关闭"] <<n [vid="webview"]',
           snapshotUrls: 'https://i.gkd.li/i/16323123',
@@ -51,35 +52,6 @@ export default defineGkdApp({
           key: 2,
           matches: '[text="忽略本次"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/14931578',
-        },
-      ],
-    },
-    {
-      key: 11,
-      name: '权限提示-通知权限',
-      desc: '自动点击关闭按钮',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          name: '升级软件后的"开启推送"弹窗',
-          activityIds: '.ui.UpdateListActivity',
-          matches:
-            '[vid="dialog_cancel" || text="不再提醒"][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14814456',
-            'https://i.gkd.li/i/19643114',
-          ],
-        },
-        {
-          key: 1,
-          name: '开启通知栏提醒',
-          matchTime: 10000,
-          activityIds: '.business_ui.main.MarketTabActivity',
-          matches: ['[text="开启通知栏提醒"]', '[text="不了，谢谢"]'],
-          snapshotUrls: 'https://i.gkd.li/i/13691701',
         },
       ],
     },

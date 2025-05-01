@@ -194,28 +194,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 12,
-      name: '权限提示-通知权限',
-      desc: '取消推送通知',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.host.activity.MainActivity',
-          matches: [
-            '[text*="通知权限"][visibleToUser=true]',
-            '[text="取消"][visibleToUser=true]',
-          ],
-          exampleUrls: 'https://e.gkd.li/ab40c096-d024-4b7c-9c6f-245beafd373a',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13389145',
-            'https://i.gkd.li/i/18391977',
-          ],
-        },
-      ],
-    },
-    {
       key: 13,
       name: '全屏广告-免流提示',
       desc: '关闭[开免流送会员]弹窗',

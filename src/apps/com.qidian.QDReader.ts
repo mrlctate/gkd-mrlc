@@ -72,23 +72,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 4,
-      name: '权限提示-通知权限',
-      desc: '点击顶部提醒左侧关闭按钮',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.afollestad.materialdialogs.MaterialDialog',
-          matches:
-            '@[id="com.qidian.QDReader:id/ivClose"] + [text^="开启推送"]',
-          snapshotUrls: 'https://i.gkd.li/i/12640242',
-        },
-      ],
-    },
-    {
       key: 5,
       name: '局部广告-悬浮广告',
       rules: [

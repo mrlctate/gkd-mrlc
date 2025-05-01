@@ -70,21 +70,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 6,
-      name: '权限提示-通知权限',
-      desc: '点击[以后再说]',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds:
-            'com.huawei.appgallery.jointmessage.jointmessage.impl.activity.NotificationSwitchDialogActivity',
-          matches: '[text="以后再说"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/1a0531ef-a18c-483d-8ac9-b50c96c6431d',
-          snapshotUrls: 'https://i.gkd.li/i/18328929',
-        },
-      ],
-    },
-    {
       key: 7,
       name: '功能类-自动安装应用',
       fastQuery: true,

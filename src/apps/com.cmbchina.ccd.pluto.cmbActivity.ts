@@ -75,14 +75,5 @@ export default defineGkdApp({
         '[id="com.cmbchina.ccd.pluto.cmbActivity:id/btn_open_notify"] + [id="com.cmbchina.ccd.pluto.cmbActivity:id/iv_delete"]',
       snapshotUrls: ['https://i.gkd.li/i/12647068'],
     },
-    {
-      key: 5,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '[text="定位服务"] +n * > [text="取消"]',
-      snapshotUrls: 'https://i.gkd.li/i/14209071',
-    },
   ],
 });

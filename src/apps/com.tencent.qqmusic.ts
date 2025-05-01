@@ -208,21 +208,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 8,
-      name: '评价提示-好评弹窗',
-      desc: '点击关闭',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.activity.AppStarterActivity',
-          matches: '@[vid="close_btn"] - * > [text*="好评"]',
-          snapshotUrls: 'https://i.gkd.li/i/14881903',
-        },
-      ],
-    },
-    {
       key: 9,
       name: '分段广告-评论区广告',
       desc: '点击右下角展开-点击[不感兴趣]',

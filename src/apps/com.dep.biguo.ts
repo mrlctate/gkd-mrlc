@@ -19,18 +19,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 10,
-      name: '权限提示-定位权限',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.dep.biguo.mvp.ui.activity.MainActivity',
-          matches: '[text*="定位权限"] +2 [text="拒绝"]',
-          snapshotUrls: 'https://i.gkd.li/i/12708770',
-        },
-      ],
-    },
   ],
 });

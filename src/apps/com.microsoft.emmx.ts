@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: 'Edge',
   groups: [
     {
-      key: 3,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      fastQuery: true,
-      rules: [
-        {
-          activityIds: 'org.chromium.chrome.browser.ChromeTabbedActivity',
-          matches: '[text="允许通知"] + [text="不，谢谢"]',
-          snapshotUrls: 'https://i.gkd.li/i/13646187',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '功能类-[关闭所有标签？]弹窗',
       desc: '点击[确定]',

@@ -113,21 +113,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.view.main.MainActivity',
-          matches: '[text="去开启"] - [text="以后再说"]',
-          snapshotUrls: 'https://i.gkd.li/i/13296465',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '局部广告-[大家还下载了]应用推荐',
       desc: '点击关闭',

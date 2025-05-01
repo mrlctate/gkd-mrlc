@@ -101,14 +101,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 9,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: '@[text="取消"] < * - * >n [text="开启消息通知"]',
-      snapshotUrls: 'https://i.gkd.li/i/12918192',
-    },
   ],
 });

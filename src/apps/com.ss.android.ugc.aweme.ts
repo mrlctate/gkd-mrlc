@@ -31,29 +31,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      desc: '点击[暂不]/[以后再说]',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.main.MainActivity',
-      rules: [
-        {
-          key: 1,
-          matches: [
-            '[text^="打开私信通知" || text="开启朋友的消息通知" || text="及时获得消息提醒"][visibleToUser=true]',
-            '[text="以后再说" || text="暂不开启"][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13669790',
-            'https://i.gkd.li/i/18417891',
-            'https://i.gkd.li/i/18419574',
-          ],
-        },
-      ],
-    },
-    {
       key: 11,
       name: '功能类-自动勾选原图',
       desc: '聊天发送图片时自动勾选原图',
@@ -211,26 +188,6 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/ef703cd7-99af-4e10-8345-9860ed160b8b',
           snapshotUrls: 'https://i.gkd.li/i/14585377',
-        },
-      ],
-    },
-    {
-      key: 19,
-      name: '权限提示-请求访问通讯录弹窗',
-      desc: '点击[拒绝]',
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          fastQuery: true,
-          activityIds: '.main.MainActivity',
-          matches: ['[text*="通讯录"]', '[text="拒绝"]'],
-          exampleUrls:
-            'https://m.gkd.li/57941037/8f70418d-92f0-4264-83fd-a680350c478e',
-          snapshotUrls: [
-            'https://i.gkd.li/i/14735280',
-            'https://i.gkd.li/i/16171391',
-          ],
         },
       ],
     },

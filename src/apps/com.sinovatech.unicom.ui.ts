@@ -5,26 +5,6 @@ export default defineGkdApp({
   name: '中国联通',
   groups: [
     {
-      key: 1,
-      name: '权限提示',
-      fastQuery: true,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: [
-            'com.sinovatech.unicom.basic.ui.activity.MainActivity',
-            'com.sinovatech.unicom.basic.ui.activity.WelcomeClient',
-          ],
-          matches: '[text="去开启"] - [vid="custom_dialog_cancel_button"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13331268',
-            'https://i.gkd.li/i/14751210',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '更新提示',
       fastQuery: true,

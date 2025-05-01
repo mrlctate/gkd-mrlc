@@ -274,4 +274,8 @@ export const updateWhiteListAppIDs = new Set([
 ]);
 
 // 通知提示白名单
-export const notificationWhiteListAppIDs = new Set([]);
+export const notificationWhiteListAppIDs = new Set([
+  'com.bbk.appstore', // vivo应用商店
+  'com.vivo.wallet', // 钱包
+  'com.xiaomi.market', // 小米应用商店
+]);

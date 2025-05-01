@@ -49,22 +49,5 @@ export default defineGkdApp({
         },
       ],
     },
-    {
-      key: 4,
-      name: '权限提示-通知权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds:
-            'com.ximalaya.ting.android.host.activity.WelComeActivity',
-          matches:
-            '[text="立即开启"] + [id="com.ximalaya.ting.lite:id/host_dialog_cancel_iv"]',
-          snapshotUrls: 'https://i.gkd.li/i/13256505',
-        },
-      ],
-    },
   ],
 });

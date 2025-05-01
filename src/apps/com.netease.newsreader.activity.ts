@@ -5,29 +5,6 @@ export default defineGkdApp({
   name: '网易新闻',
   groups: [
     {
-      key: 2,
-      name: '权限提示-通知权限',
-      desc: '点击暂不开启',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds:
-        'com.netease.newsreader.common.base.activity.SingleFragmentActivity',
-      rules: [
-        {
-          key: 0,
-          matches:
-            '[text*="开启系统推送"] - ImageView < * < * < FrameLayout + FrameLayout >(3) Button[text="暂不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/12639800',
-        },
-        {
-          key: 1,
-          matches: '[text^="打开推送"] +(2) RelativeLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/i/12639869',
-        },
-      ],
-    },
-    {
       key: 4,
       name: '分段广告-首页信息流广告',
       desc: '点击卡片广告x关闭按钮-关闭反馈理由弹窗',

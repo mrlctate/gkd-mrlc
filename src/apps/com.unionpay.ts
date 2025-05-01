@@ -45,48 +45,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-定位权限',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          key: 0,
-          activityIds: '.activity.UPActivityMain',
-          matches: '[id="com.unionpay:id/view_locate_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13634882',
-        },
-        {
-          key: 1,
-          activityIds: ['.activity.UPActivityMain', '.base.UPDialog'],
-          matches: ['[text*="访问您的位置信息"]', '[text="不允许"]'],
-          snapshotUrls: [
-            'https://i.gkd.li/i/12695773',
-            'https://i.gkd.li/i/14209001',
-          ],
-        },
-      ],
-    },
-    {
-      key: 12,
-      name: '权限提示-通知权限',
-      desc: '点击关闭',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: '.base.UPDialog',
-          matches:
-            '[text="开启消息通知"] < * + [id="com.unionpay:id/view_alert_cancel"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/12695736',
-        },
-      ],
-    },
-    {
       key: 13,
       name: '全屏广告-天天签到-获得新勋章提示',
       desc: '点击左上角返回',

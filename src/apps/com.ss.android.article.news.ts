@@ -27,27 +27,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 10,
-      name: '权限提示-通知权限',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      activityIds: '.activity.MainActivity',
-      rules: [
-        {
-          key: 0,
-          matches: '[text^="开启通知"] + LinearLayout > [text="暂不开启"]',
-          snapshotUrls: 'https://i.gkd.li/i/12706699',
-        },
-        {
-          key: 1,
-          matches:
-            '[text^="开启通知"] < LinearLayout +2 ImageView[desc="关闭"]',
-          snapshotUrls: 'https://i.gkd.li/i/12840217',
-        },
-      ],
-    },
-    {
       key: 11,
       name: '全屏广告-竖屏视频广告',
       desc: '点击右上角[更多]图标按钮,点击不感兴趣',
