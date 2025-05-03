@@ -110,17 +110,24 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: [
-            '.plugin.webwx.ui.ExtDeviceWXLoginUI',
+            '.plugin.webview.ui.tools.MMWebViewUI',
             '.ui.LauncherUI',
           ],
           matches:
             'LinearLayout[childCount=2] > @Button[text="登录" && clickable=true] + TextView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/13522577',
+          exampleUrls: 'https://e.gkd.li/3b0a628a-07d2-4d5d-9a78-a64015b1fe7f',
         },
         {
           key: 2,
           matches: '[text="验证已通过"] +2 [text="确定"][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/19243011',
+        },
+        {
+          key: 3,
+          matches:
+            '[text="新设备登录提醒"] +3 [text="继续登录"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20021962',
         },
       ],
     },
