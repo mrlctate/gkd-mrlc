@@ -5,27 +5,6 @@ export default defineGkdApp({
   name: '起点读书',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      priorityTime: 10000,
-      rules: [
-        {
-          fastQuery: true,
-          action: 'clickCenter',
-          matches:
-            '([text*="跳过"][text.length<10][visibleToUser=true]) || ([vid="splash_skip_button"][visibleToUser=true])',
-          exampleUrls: 'https://e.gkd.li/3e2357fd-dced-4929-85e0-a9a06ce5fea0',
-          snapshotUrls: [
-            'https://i.gkd.li/i/19580847',
-            'https://i.gkd.li/i/19633020',
-          ],
-        },
-      ],
-    },
-    {
       key: 2,
       name: '青少年模式',
       fastQuery: true,

@@ -46,6 +46,7 @@ export const blackListAppIDs: string[] = [
   'com.getsurfboard', // Surfboard
   'moe.nb4a', // NekoBox
   'com.v2ray.ang', // v2rayNG
+  'com.v2ray.v2fly', // v2flyNG
   'com.xiaoyv.bangumi', // Bangumi for Android
   'com.funny.translation', // 译站
   'com.looker.droidify', // Droid-ify
@@ -67,7 +68,6 @@ export const blackListAppIDs: string[] = [
   'dev.anilbeesetti.nextplayer', // Next Player
   'org.kde.kdeconnect_tp', // KDE Connect
   'xyz.adproqwq.GKDTool', // GKDTool
-  'com.alibaba.wireless', // 阿里巴巴
   'com.alibaba.aliyun', // 阿里云
   'com.alicloud.databox', // 阿里云盘 开屏广告在 https://i.gkd.li/i/15144565 误触导致自动签到规则执行中断
   'xyz.nextalone.nagram', // Nagram
@@ -118,70 +118,40 @@ export const blackListAppIDs: string[] = [
   'com.zyc.zcontrol', // ZControl
   'org.nobody.multitts', // MultiTTS
   'deltazero.amarok', // Amarok 更新提示在 https://i.gkd.li/i/17812411 误触
-
-  'com.canghai.haoka',
-  'com.xy.td',
-  'com.bug.hookvip',
-  'one.yufz.hmspush',
-  'io.github.huskydg.magisk',
-  'xzr.konabess',
-  'org.lsposed.manager',
-  'bin.mt.plus',
-  'tw.nekomimi.nekogram',
-  'io.github.qauxv',
-  'com.rezvorck.tiktokplugin',
-  'com.zhiliaoapp.musically',
-  'com.github.tianma8023.xposed.smscode',
-  'Han.GJZS',
-  'org.adblockplus.adblockplussbrowser',
-  'com.viewblocker.jrsen',
-  'com.tsng.hidemyapplist',
-  'com.pittvandewitt.wavelet',
-  'one.yufz.onebox',
-  'com.Wecrane.Scar.pubg',
-  'me.bmax.apatch',
-  'com.tubevpn.client',
-  'github.tornaco.android.thanos.pro',
-  'com.omarea.vtools',
-  'com.litebyte.samhelper',
-  'com.nurke.perfectone',
-  'qlenlen.OneDesign',
-  'icu.nullptr.nativetest',
-  'io.github.vvb2060.mahoshojo',
-  'com.samsung.android.memoryguardian',
-  'com.music.khkj',
-  'Hook.JiuWu.Xp',
-  'me.weishu.kernelsu',
-  'com.franco.kernel',
-  'com.samsung.android.themedesigner',
-  'com.samsung.android.game.gamehome',
-  'com.tencent.tmgp.sgame',
-  'com.yangyanghuzhou.heijuan',
-  'com.sec.android.app.sbrowser',
-  'com.samsung.android.game.gamelab',
-  'com.Twilight.tools',
-  'com.miui.securitymanager',
-  'com.google.android.documentsui',
-  'com.android.settings',
-  'com.miui.creation',
-  'com.xiaomi.scanner',
-  'com.miui.gallery',
-  'com.yozo.office',
-  'com.miui.video',
-  'com.xiaomi.wpslauncher',
-  'com.sevtinge.hyperceiler',
-  'com.dna.tools',
-  'flar2.devcheck',
-  'com.gstarmc.android',
-  'com.github.capntrips.kernelflasher',
-  'com.google.android.googlequicksearchbox',
-  'qyz.onedesign',
-  'com.samsung.android.app.repaircal',
-  'com.yhchat.app',
-  'com.skyhand.sinahelper',
-  'com.rong862.bear',
-  'be.mygod.vpnhotspot',
-  'com.samsung.android.bixby.agent',
+  'com.quark.browser', // 夸克浏览器 开屏广告误触 https://i.gkd.li/i/18221460
+  'bin.mt.plus', // MT管理器
+  'com.pikcloud.pikpak', // PikPak
+  'com.deepseek.chat', // DeepSeek
+  'com.yjllq.kito', // 可拓浏览器
+  'com.fuck.android.rimet', // 锤锤
+  'cn.tinyhai.ban_uninstall', // 禁止卸载
+  'cc.aoeiuv020.iamnotdisabled.hook', // 非残！
+  'cc.aoeiuv020.iamnotdisabled', // 我残？
+  'io.github.jqssun.gpssetter', // GPS Setter
+  'me.hoshino.novpndetect', // NoVPNDetect
+  'com.xchat', // XChat
+  'com.kooritea.fcmfix', // fcmfix
+  'nep.timeline.re_telegram', // Re:Telegram
+  'com.fankes.tsbattery', // TSBattery
+  'top.trangle.mbga', // MBGA
+  'cc.microblock.TGStickerProvider', // TGStickerProvider
+  'xyz.xfqlittlefan.notdeveloper', // 我不是开发者
+  'com.zhenxi.hunter', // Hunter
+  'com.reveny.nativecheck', // Native Detector
+  'cn.lyric.getter', // 酒域-歌词获取
+  'io.github.vvb2060.keyattestation', // 密钥认证
+  'com.google.android.hmal', // 隐藏应用列表（@pumPCin fork）
+  'com.adguard.android', // AdGuard
+  'com.spotify.music', // Spotify
+  'jp.pxv.android', // pixiv
+  'com.fankes.apperrorstracking', // 异常跟踪
+  'com.fankes.epperrorsdemo', // 异常示例
+  'com.fankes.miui.notify', // MIUI 原生通知图标
+  'com.simo.ssl.killer', // SSL Killer
+  'net.afdian.afdian', // 爱发电
+  'org.thoughtcrime.securesms', // Signal 全局规则误触 https://i.gkd.li/i/19952277
+  'com.example.piliplus', // PiliPlus
+  'com.mtphotosapp', // MT Photos 全局规则误触 https://i.gkd.li/i/20023048
 
   // 系统自带非系统应用
   // 小米
@@ -205,6 +175,7 @@ export const blackListAppIDs: string[] = [
   'com.xiaomi.cajlauncher', // CAJViewer PC
   'com.mi.car.padapp', // 小米汽车扩展屏
   'com.android.calendar', // 日历
+  'com.mi.earphone', // 小米耳机
 
   // 三星
   'com.samsung.android.app.cameraassistant',

@@ -5,21 +5,6 @@ export default defineGkdApp({
   name: '中国电信',
   groups: [
     {
-      key: 1,
-      name: '功能类-软件更新/安装后的用户引导',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      rules: [
-        {
-          activityIds: 'com.ct.client.activity.UserGuideActivity',
-          matches: '[id="com.ct.client:id/tvSkip"]',
-          snapshotUrls: 'https://i.gkd.li/i/12508971',
-        },
-      ],
-    },
-    {
       key: 3,
       name: '全屏广告-浮窗广告',
       desc: '会出现在首页、查询办理页面',

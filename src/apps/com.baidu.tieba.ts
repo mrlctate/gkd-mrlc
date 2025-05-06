@@ -78,6 +78,7 @@ export default defineGkdApp({
         },
         {
           preKeys: [0, 1, 2, 3],
+          key: 4,
           activityIds: [
             '.tblauncher.MainTabActivity',
             '.pb.pb.main.PbActivity',
@@ -91,6 +92,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16595511',
             'https://i.gkd.li/i/16595113',
           ],
+        },
+        {
+          key: 5,
+          activityIds: '.tblauncher.MainTabActivity',
+          matches:
+            'RelativeLayout[childCount=4] > TextView[text="刚刚"][index=2] + FrameLayout[vid="obfuscated"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/20033629',
         },
       ],
     },
@@ -151,18 +159,11 @@ export default defineGkdApp({
       key: 10,
       name: '局部广告-悬浮小广告',
       matchDelay: 500,
-      matchTime: 10000,
-      actionMaximum: 1,
+      fastQuery: true,
+      activityIds: ['.tblauncher.MainTabActivity', '.pb.pb.main.PbActivity'],
       rules: [
         {
           key: 0,
-          fastQuery: true,
-          matchTime: 10000,
-          actionMaximum: 1,
-          activityIds: [
-            '.tblauncher.MainTabActivity',
-            '.pb.pb.main.PbActivity',
-          ],
           matches:
             '@ImageView[clickable=true][visibleToUser=true][vid="obfuscated"] - [text="广告"]',
           snapshotUrls: [
@@ -174,24 +175,19 @@ export default defineGkdApp({
         {
           key: 1,
           name: '首页右侧悬浮广告-2',
-          activityIds: '.tblauncher.MainTabActivity',
           matches:
-            'RelativeLayout >2 RelativeLayout[childCount=1] > ImageView[childCount=0][clickable=true]',
+            'RelativeLayout[childCount=2] > RelativeLayout[childCount=1][vid="obfuscated"] > ImageView[clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/14291964',
         },
         {
           key: 2,
           name: '评论区左侧悬浮广告',
-          activityIds: '.pb.pb.main.PbActivity',
-          matches: 'LinearLayout[childCount=2] > @ImageView + [text="广告"]',
+          matches:
+            'LinearLayout[childCount=2] + LinearLayout > LinearLayout[childCount=2] > @ImageView + [text="广告"]',
           snapshotUrls: 'https://i.gkd.li/i/13296280',
         },
         {
           key: 3,
-          activityIds: [
-            '.pb.pb.main.PbActivity',
-            '.tblauncher.MainTabActivity',
-          ],
           matches:
             'RelativeLayout[childCount=2] > RelativeLayout[childCount=1] > ImageView[childCount=0][clickable=true]',
           snapshotUrls: [

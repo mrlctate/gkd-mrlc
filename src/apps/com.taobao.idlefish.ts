@@ -33,6 +33,7 @@ export default defineGkdApp({
     {
       key: 5,
       name: '分段广告-搜索页面广告',
+      fastQuery: true,
       activityIds: [
         '.search_implement.SearchResultActivity',
         'com.idlefish.flutterbridge.flutterboost.boost.FishFlutterBoostActivity',
@@ -40,9 +41,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          actionDelay: 700,
           action: 'longClick',
           matches:
-            '@FrameLayout[clickable=true] >(1,3) [text="广告" || desc$="广告"]',
+            '@FrameLayout[clickable=true] >(1,3) [text="广告" || desc$="广告"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/19661658',
             'https://i.gkd.li/i/19661662',
@@ -50,7 +52,7 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          matches: '[desc="引起不适" && desc.length=4 && index=1]',
+          matches: '[desc="引起不适"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/14723632',
         },
       ],

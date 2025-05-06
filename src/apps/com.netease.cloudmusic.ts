@@ -5,29 +5,6 @@ export default defineGkdApp({
   name: '网易云音乐',
   groups: [
     {
-      key: 0,
-      name: '开屏广告',
-      fastQuery: true,
-      matchTime: 10000,
-      actionMaximum: 1,
-      resetMatch: 'app',
-      priorityTime: 10000,
-      rules: [
-        {
-          key: 0,
-          excludeActivityIds:
-            'com.netease.cloudmusic.music.biz.setting.activity.SettingActivity',
-          matches:
-            '[text*="跳过"||text*="Skip"][text.length<10][visibleToUser=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/15092772',
-            'https://i.gkd.li/i/15092814', // 避免误触
-            'https://i.gkd.li/i/17892200', // 'Skip' for English users.
-          ],
-        },
-      ],
-    },
-    {
       key: 1,
       name: '分段广告-卡片广告',
       desc: '点击[X]-点击[直接关闭]/[不感兴趣]',

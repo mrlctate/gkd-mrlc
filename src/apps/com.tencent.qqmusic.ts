@@ -99,38 +99,14 @@ export default defineGkdApp({
       fastQuery: true,
       actionMaximum: 1,
       matchTime: 10000,
-      activityIds: [
-        '.business.playernew.view.NewPlayerActivity',
-        '.activity.AppStarterActivity',
-      ],
+      activityIds: '.activity.AppStarterActivity',
       rules: [
         {
           key: 1,
-          name: '点击立即签到1',
-          matches: '[desc="立即签到"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19235479',
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          name: '关闭弹窗',
-          matches: '[desc="关闭"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19235502',
-        },
-        {
-          key: 3,
-          name: '点击立即签到2',
-          matches:
-            '@ViewGroup <3 ViewGroup <5 ViewGroup <2 ViewGroup < FrameLayout < FrameLayout < [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/i/19235073',
-        },
-        {
-          preKeys: [3],
-          key: 4,
           name: '关闭签到弹窗',
           matches:
-            '@ViewGroup < ViewGroup < ViewGroup < FrameLayout < FrameLayout < [id="android:id/content"]',
-          snapshotUrls: 'https://i.gkd.li/i/19235115',
+            '[id="android:id/content"] >3 ViewGroup[childCount=2][clickable=true] >2 ViewGroup[clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/19235479',
         },
       ],
     },
