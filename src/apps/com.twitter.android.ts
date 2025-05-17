@@ -39,10 +39,12 @@ export default defineGkdApp({
           preKeys: [0, 1],
           key: 10,
           name: '点击[我不喜欢这个广告]',
-          matches: '@ViewGroup[clickable=true] > [text="我不喜欢这个广告"]',
+          matches:
+            '@ViewGroup[clickable=true] > [text="我不喜欢这个广告" || text^="屏蔽"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/12798810',
             'https://i.gkd.li/i/14782902',
+            'https://i.gkd.li/i/20239421',
           ],
         },
       ],
@@ -139,14 +141,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/12882676',
             'https://i.gkd.li/i/12904603',
           ],
-        },
-        {
-          preKeys: [0, 1],
-          key: 10,
-          name: '点击[我不喜欢这个广告]',
-          matches:
-            '@ViewGroup > [id="com.twitter.android:id/action_sheet_item_title"][text="我不喜欢这个广告"]',
-          snapshotUrls: 'https://i.gkd.li/i/12798810',
         },
       ],
     },
