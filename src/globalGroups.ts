@@ -24,8 +24,8 @@ const UpdatePromptId =
 export default defineGkdGlobalGroups([
   {
     key: 0,
-    name: '开屏广告-关闭全局的应用开屏广告',
-    desc: '用于关闭大部分的应用开屏广告，不要关闭',
+    name: '开屏广告-全局关闭应用的开屏广告',
+    desc: '用于关闭大部分的应用开屏广告，勿关',
     disableIfAppGroupMatch: '开屏广告',
     order: OPEN_AD_ORDER,
     fastQuery: true,
@@ -42,7 +42,8 @@ export default defineGkdGlobalGroups([
           '[text*="搜索" || desc*="搜索" || text^="猜你" || text="历史记录" || text$="在搜"][childCount=0][text.length<6][visibleToUser=true]',
         action: 'clickCenter',
         anyMatches: [
-          `[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" || id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && (text.length<10 || text.length=null) && width<300]${CommonPrefix}`,
+          '[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip") && text.length<10 && width<300][visibleToUser=true]',
+          '[(id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && text.length=null && width<300][visibleToUser=true]',
           '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
         ],
@@ -56,8 +57,8 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 1,
-    name: '更新提示-关闭全局的应用更新弹窗',
-    desc: '关闭应用的更新弹窗；关闭此规则可能会影响体验',
+    name: '更新提示-全局关闭应用的更新弹窗',
+    desc: '关闭应用的更新弹窗；如有误触请反馈',
     disableIfAppGroupMatch: '更新提示',
     order: UPDATE_PROMPT_ORDER,
     fastQuery: true,
@@ -84,7 +85,7 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 2,
-    name: '通知提示-关闭全局的应用弹窗提示',
+    name: '通知提示-全局关闭应用的弹窗提示',
     desc: '关闭通知提示,权限提示,评价提示;如有问题请反馈',
     disableIfAppGroupMatch: '通知提示',
     order: NOTIFICATION_PROMPT,
