@@ -18,6 +18,46 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 3,
+      name: '评价提示-app评分',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: [
+            '.component.chat.ConversationActivity',
+            '.component.startup.main.MainActivity',
+          ],
+          matches: [
+            '[vid="score_message"][visibleToUser=true]',
+            '[vid="cancel"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/4f67640e-836c-4b17-9870-5bb8b8547462',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13425057',
+            'https://i.gkd.li/i/18423888',
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '权限提示-通知权限',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.component.startup.main.MainActivity',
+          matches: '[text="消息通知显示消息内容"] +3 [vid="img_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/14332334',
+        },
+      ],
+    },
+    {
       key: 6,
       name: '局部广告-帖子详情页卡片广告',
       fastQuery: true,

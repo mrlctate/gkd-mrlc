@@ -18,8 +18,8 @@ const UpdatePromptId =
   'id*="close" || id*="Close" || id*="cancel" || id*="Cancel" || id*="update" || id*="Update"';
 
 // 通知提示
-const InformId =
-  '(id*="close" || id$="Close" || id*="cancel" || id*="delete") && top>200';
+// const InformId =
+//   '(id*="close" || id$="Close" || id*="cancel" || id*="delete") && width<120 && top>200';
 
 export default defineGkdGlobalGroups([
   {
@@ -42,7 +42,7 @@ export default defineGkdGlobalGroups([
           '[text*="搜索" || desc*="搜索" || text^="猜你" || text="历史记录" || text$="在搜"][childCount=0][text.length<6][visibleToUser=true]',
         action: 'clickCenter',
         anyMatches: [
-          `[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" || id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && (text.length<10 || text.length=null) && width<280]${CommonPrefix}`,
+          `[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip" || id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && (text.length<10 || text.length=null) && width<300]${CommonPrefix}`,
           '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
         ],
@@ -96,11 +96,10 @@ export default defineGkdGlobalGroups([
       {
         key: 0,
         // 停止如下页面触发
-        excludeMatches:
-          '[text^="我已阅读" || (text*="搜索" || desc*="搜索" || text="历史记录" || text="去更新") && (text.length<6 || desc.length<6)][childCount=0][visibleToUser=true]',
+        excludeMatches: '[text^="我已阅读"][childCount=0][visibleToUser=true]',
         matches: [
-          '[text*="通知" || text*="权限" || text*="公告" || text="广告" || text$="模式" || text*="喜欢" || text*="SVIP" || text*="是否满意" || text*="好评" || desc*="好评" || text*="评分" || text*="评价" || text*="获取" || text*="消息" || text*="使用" || text*="推荐" || text*="发现" || text*="推送" || text*="第一时间" || text*="免费" || text*="立即" || text*="剪贴板" || text*="开启" || text="去设置" || text*="使用" || text*="定位" || text*="位置" || text*="内容" || text*="调研" || text*="分享" || text*="赞助" || text$="提示" || desc$="提示" || desc*="官网" || text*="交流" || text*="链接" || id$="image"][childCount=0][visibleToUser=true]',
-          `[(text^="暂不" || text^="暂时" || text$="继续使用" || text$="知道了" || desc$="知道了" || text="取消" || text^="我已知晓" || text*="拒绝" || text^="不再" || text$="再说" || text="不允许" || text*="不了" || text^="下次" || text="不，谢谢" || text="考虑一下" || text="没兴趣" || text="關閉" || text="确定" || text="收到" || text="隐藏" || text="否")&&${CommonIdPostfix}&&text.length<6 || ${InformId}]${CommonPrefix}`,
+          '[text*="通知" || text*="权限" || text*="公告" || text="广告" || text$="模式" || text*="喜欢" || text*="SVIP" || text*="是否满意" || text*="好评" || desc*="好评" || text*="评分" || text*="评价" || text*="获取" || text*="消息" || text*="使用" || text*="推荐" || text*="发现" || text*="推送" || text*="第一时间" || text*="免费" || text*="立即" || text*="剪贴板" || text*="开启" || text="去设置" || text*="使用" || text*="定位" || text*="位置" || text*="内容" || text*="调研" || text*="赞助" || text$="提示" || desc$="提示" || desc*="官网" || text*="交流" || text*="链接" || id$="image"][childCount=0][visibleToUser=true]',
+          `[(text^="暂不" || text^="暂时" || text$="继续使用" || text$="知道了" || desc$="知道了" || text="取消" || text^="我已知晓" || text*="拒绝" || text^="不再" || text$="再说" || text="不允许" || text*="不了" || text^="下次" || text="不，谢谢" || text="考虑一下" || text="没兴趣" || text="關閉" || text="确定" || text="收到" || text="隐藏" || text="否" || text="返回")&&${CommonIdPostfix}&&text.length<6]${CommonPrefix}`,
         ],
       },
     ],

@@ -29,7 +29,7 @@ export default defineGkdApp({
           activityIds: 'com.oplus.phonemanager.virusdetect.VirusDialogActivity',
           matches: [
             '[text$="风险应用"][visibleToUser=true]',
-            '[text="忽略"][clickable=true]',
+            '[text="忽略"][visibleToUser=true]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/19749344',
         },

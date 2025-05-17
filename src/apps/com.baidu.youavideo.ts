@@ -18,6 +18,22 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 4,
+      name: '评价提示',
+      desc: '点击下次再说',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      fastQuery: true,
+      rules: [
+        {
+          activityIds: '.home.view.HomeActivity',
+          matches: '[id="com.baidu.youavideo:id/tv_next_time"]',
+          snapshotUrls: 'https://i.gkd.li/i/12970094',
+        },
+      ],
+    },
+    {
       key: 5,
       name: '全屏广告-会员弹窗',
       desc: '点击关闭',
@@ -65,6 +81,22 @@ export default defineGkdApp({
           matches: '[vid="dialog_home_pop_close_button"]',
           exampleUrls: 'https://e.gkd.li/c83b5006-1b0d-478e-ab0a-d2f3f4957162',
           snapshotUrls: 'https://i.gkd.li/i/17732139',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '权限提示-通知权限',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.app.ui.HomeActivity',
+          matches:
+            '[id="com.baidu.youavideo:id/dialog_open_guide_notification_root"] > [id="com.baidu.youavideo:id/img_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13413819',
         },
       ],
     },

@@ -103,6 +103,38 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 6,
+      name: '权限提示-通知权限',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.activity.main.activity.MainActivity',
+          matches:
+            '[text="开启推送通知"] - [id="com.zmzx.college.search:id/siv_dialog_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13440939',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '评价提示-请求好评弹窗',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.activity.camerasdk.ZybCameraSDKActivity',
+          matches:
+            '[id="com.zmzx.college.search:id/iv_logo"] + [id="com.zmzx.college.search:id/siv_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13476308',
+        },
+      ],
+    },
+    {
       key: 11,
       name: '全屏广告-邀好友得开学好礼',
       desc: '使用返回关闭',

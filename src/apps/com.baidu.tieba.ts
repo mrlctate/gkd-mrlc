@@ -22,6 +22,11 @@ export default defineGkdApp({
           matches: 'TextView[text="开启消息推送"] +2 TextView[text="不开启"]',
           snapshotUrls: 'https://i.gkd.li/i/13675694',
         },
+        {
+          key: 2,
+          matches: '[text="开启通知"] - [text="暂不开启"]',
+          snapshotUrls: 'https://i.gkd.li/i/13804455',
+        },
       ],
     },
     {

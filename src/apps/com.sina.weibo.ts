@@ -108,15 +108,49 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 7,
+      name: '局部广告-首页顶部话题分享窗口',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.sina.weibo.MainTabActivity',
+          matches:
+            '[id="com.sina.weibo:id/tvGuide"] + [id="com.sina.weibo:id/v_close"] + [id="com.sina.weibo:id/iv_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/12705972',
+        },
+      ],
+    },
+    {
       key: 8,
       name: '全屏广告-弹窗广告',
       fastQuery: true,
       rules: [
         {
+          key: 0,
+          activityIds: 'com.sina.weibo.business',
+          matches:
+            '@[id="com.sina.weibo:id/btn_close"] - FrameLayout > [id="com.sina.weibo:id/ad_tag"]',
+          snapshotUrls: 'https://i.gkd.li/i/12750090',
+        },
+        {
+          key: 1,
+          activityIds: 'com.sina.weibo.feed.MPDialogActivity',
+          matches:
+            'View[childCount=2] > @TextView[clickable=true] - View >n [visibleToUser=true][text="元"] <<n [id="com.sina.weibo:id/container"]',
+          snapshotUrls: 'https://i.gkd.li/i/13670266',
+        },
+        {
+          key: 2,
+          activityIds: 'com.sina.weibo.page.ad.DiscoverAdDialog',
+          matches:
+            '[id="com.sina.weibo:id/ad_portrait_layout"] + [id="com.sina.weibo:id/btn_close"]',
+          snapshotUrls: 'https://i.gkd.li/i/12705974',
+        },
+        {
           key: 3,
           activityIds: 'com.sina.weibo.feed.MPDialogActivity',
           matches:
-            'WebView[text="Wbox"] > View[childCount=1] >(1,2) View[childCount=2] > @TextView[clickable=true][visibleToUser=true][childCount=0][index=1][width<200] <<n [vid="container"]',
+            'WebView[text="Wbox"] > View[childCount=1] > View[childCount=2] > @TextView[clickable=true][visibleToUser=true][childCount=0][index=1][width<200] <<n [vid="container"]',
           snapshotUrls: [
             'https://i.gkd.li/i/14969848',
             'https://i.gkd.li/i/16944794',
@@ -128,6 +162,27 @@ export default defineGkdApp({
           matches:
             '@Image[text="close"] < View[childCount=4] <2 * <<n [id="com.sina.weibo:id/container"]',
           snapshotUrls: 'https://i.gkd.li/i/14033735',
+        },
+      ],
+    },
+    {
+      key: 9,
+      name: '权限提示-通知权限',
+      desc: '自动点击暂不开启',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: '.notifyguidev2.NotifyGuideV2Activity',
+          matches: '[text="暂不开启"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/18342279',
+        },
+        {
+          key: 1,
+          activityIds: '.MainTabActivity',
+          matches:
+            '[text^="打开通知"] < LinearLayout + ImageView[id="com.sina.weibo:id/right_icon"]',
+          snapshotUrls: 'https://i.gkd.li/i/12705986',
         },
       ],
     },
@@ -188,6 +243,32 @@ export default defineGkdApp({
           matches:
             '[text*="一键转发"] < LinearLayout +2 [id="com.sina.weibo:id/tv_close"]',
           snapshotUrls: 'https://i.gkd.li/i/13482960',
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '权限提示-定位权限',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionMaximumKey: 0,
+      rules: [
+        {
+          key: 0,
+          activityIds: ['.MainTabActivity', '.utils.WeiboDialog$CustomDialog'],
+          matches: '@[text="以后再说"] +2 [text="去开启"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13218093',
+            'https://i.gkd.li/i/13003311',
+          ],
+        },
+        {
+          key: 1,
+          activityIds: '.MainTabActivity',
+          matches:
+            '@[id="com.sina.weibo:id/btn_close"] +2 [text="使用您的位置信息"]',
+          snapshotUrls: 'https://i.gkd.li/i/13255595',
         },
       ],
     },
@@ -262,6 +343,22 @@ export default defineGkdApp({
           activityIds: 'com.sina.weibo.MainTabActivity',
           matches: '@[clickable=true] >2 [text="不感兴趣"]',
           snapshotUrls: 'https://i.gkd.li/i/14730274',
+        },
+      ],
+    },
+    {
+      key: 18,
+      name: '评价提示-APP评分弹窗',
+      desc: '点击关闭',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.MainTabActivity',
+          matches: '@[text="不了，谢谢"] +4 [text="喜欢，给好评"]',
+          snapshotUrls: 'https://i.gkd.li/i/13620220',
         },
       ],
     },

@@ -52,6 +52,21 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 3,
+      name: '更新提示',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches:
+            '[id="cn.wps.moffice_eng:id/close_new_func_guide_dialog_imageView"]',
+          snapshotUrls: 'https://i.gkd.li/i/12882371',
+        },
+      ],
+    },
+    {
       key: 4,
       name: '功能类-关闭[开启WPS云服务]弹窗',
       desc: '自动点击不开启',

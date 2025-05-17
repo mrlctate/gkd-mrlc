@@ -33,5 +33,21 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '权限提示-通知权限',
+      desc: '点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          matches: '[vid="pushsetting_close_iv"]',
+          exampleUrls: 'https://e.gkd.li/e28aa1f2-8088-4f78-bee9-2d5832637671',
+          snapshotUrls: 'https://i.gkd.li/i/17825298',
+        },
+      ],
+    },
   ],
 });

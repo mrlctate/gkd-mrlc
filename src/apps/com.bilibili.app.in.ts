@@ -48,5 +48,17 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 5,
+      name: '评价提示-评论区满意度评价',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      fastQuery: true,
+      activityIds: 'com.bilibili.video.story.StoryVideoActivity',
+      rules:
+        '[text="对当前的评论区满意吗？"] + [id="com.bilibili.app.in:id/close"]',
+      snapshotUrls: 'https://i.gkd.li/i/13115189',
+    },
   ],
 });

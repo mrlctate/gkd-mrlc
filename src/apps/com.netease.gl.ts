@@ -17,5 +17,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 10,
+      name: '权限提示-通知权限',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.compfeed.widget.CommonWebPopupDialog',
+          matches: '@[id="com.netease.gl:id/iv_close"] + [text="开启推送"]',
+          snapshotUrls: 'https://i.gkd.li/i/13072071',
+        },
+      ],
+    },
   ],
 });

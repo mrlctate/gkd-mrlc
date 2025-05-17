@@ -96,6 +96,22 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 10,
+      name: '权限提示-通知权限',
+      desc: '点击关闭',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 1,
+          activityIds: '.app.ui.activity.MainActivity',
+          matches: ['[text$="内容推送"]', '[vid="btn_close"]'],
+          snapshotUrls: 'https://i.gkd.li/i/18057057',
+        },
+      ],
+    },
+    {
       key: 12,
       name: '全屏广告-弹窗广告',
       desc: '点击关闭',

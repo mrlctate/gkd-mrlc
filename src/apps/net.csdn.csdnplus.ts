@@ -31,6 +31,24 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 10,
+      name: '权限提示-通知权限',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.activity.MainActivity',
+          matches: [
+            '[text="开启推送通知"]',
+            '[id="net.csdn.csdnplus:id/iv_close"]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/12673638',
+        },
+      ],
+    },
+    {
       key: 11,
       name: '分段广告-底部广告',
       desc: '点击关闭-点击不感兴趣',

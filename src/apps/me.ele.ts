@@ -158,6 +158,28 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 8,
+      name: '权限提示-定位权限',
+      desc: '点击关闭',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      actionMaximumKey: 0,
+      activityIds: 'me.ele.application.ui.Launcher.LauncherActivity',
+      rules: [
+        {
+          key: 0,
+          matches: '[text="去开启"] + [id="me.ele:id/close"]',
+          snapshotUrls: 'https://i.gkd.li/i/13710588',
+        },
+        {
+          key: 1,
+          matches: '[text="去开启"] + [id="me.ele:id/close_tips"]',
+          snapshotUrls: 'https://i.gkd.li/i/13710585',
+        },
+      ],
+    },
+    {
       key: 9,
       name: '通知提示-获取订单信息通知',
       desc: '点击关闭',
@@ -171,6 +193,26 @@ export default defineGkdApp({
           matches:
             '@View[visibleToUser=true] < * <2 [id="me.ele:id/frame_bottom_bg"]',
           snapshotUrls: 'https://i.gkd.li/i/13931205',
+        },
+      ],
+    },
+    {
+      key: 10,
+      name: '评价提示-底部调研邀请卡片',
+      desc: '点击关闭',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'me.ele.foodchannel.page.WMChannelNativeActivity',
+          matches: [
+            '[text*="小调研"]',
+            '[vid="iv_cancel"][visibleToUser=true]',
+          ],
+          exampleUrls:
+            'https://m.gkd.li/57941037/350d8f4d-8ab0-4572-8ff0-450ab4729d53',
+          snapshotUrls: 'https://i.gkd.li/i/14630370',
         },
       ],
     },

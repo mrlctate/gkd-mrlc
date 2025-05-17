@@ -103,6 +103,17 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 5,
+      name: '权限提示-通知权限',
+      desc: '自动点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      fastQuery: true,
+      rules: '[id="com.cainiao.wireless:id/gg_dialog_base_close"]',
+      snapshotUrls: 'https://i.gkd.li/i/13068573',
+    },
+    {
       key: 9,
       name: '功能类-询问[是否要查询包裹]弹窗',
       desc: '点击[立即查看]',

@@ -21,6 +21,28 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 8,
+      name: '评价提示',
+      desc: '点击取消',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: [
+            'com.sup.android.base.MainActivity',
+            'com.sup.android.base.praise.PraiseDialogActivity',
+          ],
+          matches: ['[text^="喜欢皮皮虾吗"]', '[text="取消"]'],
+          snapshotUrls: [
+            'https://i.gkd.li/i/14005608',
+            'https://i.gkd.li/i/15285383',
+          ],
+        },
+      ],
+    },
+    {
       key: 9,
       name: '全屏广告-集五福弹窗',
       desc: '点击关闭',

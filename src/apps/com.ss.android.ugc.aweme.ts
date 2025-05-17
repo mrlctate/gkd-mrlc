@@ -192,6 +192,26 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 19,
+      name: '权限提示-请求访问通讯录弹窗',
+      desc: '点击[拒绝]',
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.main.MainActivity',
+          matches: ['[text*="通讯录"]', '[text="拒绝"]'],
+          exampleUrls:
+            'https://m.gkd.li/57941037/8f70418d-92f0-4264-83fd-a680350c478e',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14735280',
+            'https://i.gkd.li/i/16171391',
+          ],
+        },
+      ],
+    },
+    {
       key: 21,
       name: '权限提示-定位权限',
       desc: '直接关闭所有类似形状窗口',

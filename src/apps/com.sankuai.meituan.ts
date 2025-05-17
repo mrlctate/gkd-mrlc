@@ -143,12 +143,49 @@ export default defineGkdApp({
       actionMaximumKey: 0,
       rules: [
         {
+          key: 0,
+          fastQuery: true,
+          activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
+          matches: '[vid="location_close"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/da856996-b128-486a-a6d4-964183b0c719',
+          snapshotUrls: 'https://i.gkd.li/i/14472663',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.sankuai.waimai.business.page.homepage.TakeoutActivity',
+          matches: '[id="com.sankuai.meituan:id/location_layer_close"]',
+          exampleUrls:
+            'https://m.gkd.li/57941037/3071d3a4-f8ca-4c6f-8aa2-cf9573dbed3d',
+          snapshotUrls: 'https://i.gkd.li/i/12910211',
+        },
+        {
           key: 2,
           activityIds: 'com.sankuai.meituan.MPMainActivity',
           matches: '[text="定位服务尚未开启"] +3 TextView',
           exampleUrls:
             'https://m.gkd.li/57941037/3bb08a42-5d88-4f9d-8cbe-cb913e136ec6',
           snapshotUrls: 'https://i.gkd.li/i/14472614',
+        },
+      ],
+    },
+    {
+      key: 8,
+      name: '权限提示-通知权限',
+      desc: '点击跳过',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.meituan.android.pt.homepage.activity.MainActivity',
+          matches: '@[vid="iv_close" || text="跳过"] -(1,2) [text^="开启通知"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13439134',
+            'https://i.gkd.li/i/15047918',
+          ],
         },
       ],
     },

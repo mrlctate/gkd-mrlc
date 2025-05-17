@@ -93,5 +93,36 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 6,
+      name: '全屏广告-[容量使用超限]提示',
+      desc: '点击关闭',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.alicloud.databox.MainActivity',
+          matches: ['[text="容量使用超限"]', '[vid="layout_close"]'],
+          exampleUrls:
+            'https://m.gkd.li/57941037/a219a480-c0a3-4064-832d-533f66995fed',
+          snapshotUrls: 'https://i.gkd.li/i/15158788',
+        },
+      ],
+    },
+    {
+      key: 7,
+      name: '局部广告-卡片广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          key: 0,
+          activityIds: 'com.alicloud.databox.transferpage.TransferListActivity',
+          matches: '[vid="close"]',
+          snapshotUrls: 'https://i.gkd.li/i/15433289',
+        },
+      ],
+    },
   ],
 });

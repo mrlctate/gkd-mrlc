@@ -20,7 +20,7 @@ export default defineGkdApp({
           key: 0,
           name: '第一段 点击朋友圈广告',
           matches:
-            '@LinearLayout[clickable=true&&left>850&&visibleToUser=true] <2 LinearLayout < LinearLayout - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
+            '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
           exampleUrls: 'https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126',
           snapshotUrls: [
             'https://i.gkd.li/i/13791200',
@@ -33,7 +33,7 @@ export default defineGkdApp({
           key: 1,
           name: '第二，三段 点击[关闭广告]',
           matches:
-            '@[clickable=true&&index<3&&visibleToUser=true] <<(3,4,6) [childCount>3] - ImageView[text=null] < LinearLayout[childCount=2&&index=0]',
+            '@[clickable=true&&index<3][visibleToUser=true] <<(3,4,6) [childCount>3][visibleToUser=true] - ImageView[text=null] < LinearLayout[childCount=2&&index=0]',
           snapshotUrls: [
             'https://i.gkd.li/i/13926578', // 第二段
             'https://i.gkd.li/i/15137016', // <<(4)

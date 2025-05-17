@@ -56,5 +56,19 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '局部广告-信息流广告',
+      desc: '点击关闭',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.activity.MainActivity',
+          matches: ['[text="广告"]', '[vid="iv_close"]'],
+          exampleUrls: 'https://e.gkd.li/717ad9b7-dce7-4284-9360-4f9923ebacd7',
+          snapshotUrls: 'https://i.gkd.li/i/18627427',
+        },
+      ],
+    },
   ],
 });
