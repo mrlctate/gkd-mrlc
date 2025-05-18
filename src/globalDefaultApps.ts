@@ -227,6 +227,7 @@ export const notificationBlackListAppIDs = new Set([...blackListAppIDs]);
 // 开屏广告白名单
 export const openAdWhiteListAppIDs = new Set([
   'com.hihonor.appmarket', // 荣耀应用市场
+  'com.vivo.space', // vivo 官网
   'com.bbk.appstore', // vivo应用商店
   'com.vivo.browser', // vivo浏览器
   'com.vivo.wallet', // vivo钱包
@@ -246,6 +247,7 @@ export const updateWhiteListAppIDs = new Set([
 
 // 通知提示白名单
 export const notificationWhiteListAppIDs = new Set([
+  'com.vivo.space', // vivo 官网
   'com.bbk.appstore', // vivo应用商店
   'com.vivo.wallet', // 钱包
   'com.xiaomi.market', // 小米应用商店
