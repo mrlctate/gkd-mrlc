@@ -11,12 +11,13 @@ export default defineGkdApp({
       actionMaximum: 1,
       matchTime: 5000,
       resetMatch: 'app',
-      actionDelay: 500,
+      actionDelay: 300,
       rules: [
         {
           key: 0,
           action: 'clickNode',
-          matches: '@ImageView[clickable=true] + ViewGroup > [text="跳过"]',
+          matches:
+            '@ImageView[clickable=true] + ViewGroup > [text="跳过"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14549281',
             'https://i.gkd.li/i/14549328', // 小窗模式下全局规则触发无效
