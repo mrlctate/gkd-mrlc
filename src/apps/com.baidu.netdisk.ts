@@ -46,7 +46,7 @@ export default defineGkdApp({
       key: 2,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
-      activityIds: 'com.baidu.netdisk.ui.MainActivity',
+      activityIds: '.ui.MainActivity',
       rules: [
         {
           key: 0,
@@ -74,6 +74,15 @@ export default defineGkdApp({
           name: '续费横幅提示',
           matches: 'View[desc="续费"] + ImageView',
           snapshotUrls: 'https://i.gkd.li/i/12924036',
+        },
+        {
+          key: 4,
+          name: 'VIP横幅广告',
+          fastQuery: true,
+          matches: [
+            '[text*="VIP"]',
+            '[id*="close" || id$="Close"][width=height]',
+          ],
         },
       ],
     },
