@@ -522,14 +522,11 @@ export default defineGkdApp({
     {
       key: 36,
       name: '功能类-自动点击[查看原视频]',
+      fastQuery: true,
+      activityIds: ['.ui.LauncherUI', '.ui.chatting.gallery.ImageGalleryUI'],
       rules: [
         {
-          fastQuery: true,
-          action: 'clickCenter',
-          activityIds: [
-            '.ui.chatting.gallery.ImageGalleryUI',
-            '.ui.LauncherUI',
-          ],
+          key: 0,
           matches:
             '@FrameLayout > [text^="查看原视频"][clickable=true][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/e1ea0437-f0e7-4f05-b790-cac1f1e7c04d',
@@ -543,9 +540,11 @@ export default defineGkdApp({
       desc: '长按语音后自动转文字',
       rules: [
         {
+          key: 0,
           fastQuery: true,
           activityIds: '.ui.LauncherUI',
-          matches: '@[clickable=true] >(1,2) [text="转文字"]',
+          matches:
+            '@[clickable=true][visibleToUser=true] >(1,2) [text="转文字"]',
           snapshotUrls: ['https://i.gkd.li/i/19246070'],
         },
       ],
@@ -563,8 +562,9 @@ export default defineGkdApp({
       ],
       rules: [
         {
+          key: 0,
           actionDelay: 800, // 过早点击大概率跳不过
-          matches: ['[text="广告"]', '[text="跳过"]'],
+          matches: ['[text="广告"]', '[text="跳过"][visibleToUser=true]'],
           snapshotUrls: [
             'https://i.gkd.li/i/12785183',
             'https://i.gkd.li/i/15108441',
@@ -590,7 +590,7 @@ export default defineGkdApp({
           name: '全屏广告-小程序弹窗广告',
           matches: [
             '[text="广告"]',
-            '@ImageView[width<150 && width>60] < FrameLayout < FrameLayout <2 FrameLayout[childCount=2] <5 FrameLayout[childCount=5 && index=1]',
+            '@ImageView[width<150 && width>60][visibleToUser=true] < FrameLayout < FrameLayout <2 FrameLayout[childCount=2] <5 FrameLayout[childCount=5 && index=1]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/19795409',
@@ -600,7 +600,7 @@ export default defineGkdApp({
         {
           key: 1,
           name: '全屏广告-关闭已获得奖励的弹窗广告',
-          matches: ['[text="已获得奖励"]', '[text="关闭"]'],
+          matches: ['[text="已获得奖励"]', '[text="关闭"][visibleToUser=true]'],
           snapshotUrls: 'https://i.gkd.li/i/19795527',
         },
         {
@@ -616,7 +616,7 @@ export default defineGkdApp({
           name: '局部广告1-点击【广告】',
           matches: [
             'FrameLayout[childCount=2] > ViewGroup[childCount>1] > FrameLayout[childCount=1 && index=0] + FrameLayout[childCount=1]', // 有弹窗时不点击  https://i.gkd.li/i/19927457
-            'View[childCount=1] > View[childCount=3] > [text="广告" || desc="广告"][index=1]',
+            'View[childCount=1] > View[childCount=3] > [text="广告" || desc="广告"][index=1][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/19796902',
@@ -627,13 +627,13 @@ export default defineGkdApp({
           preKeys: [3],
           key: 4,
           name: '局部广告1-点击【不感兴趣】',
-          matches: '[text="不感兴趣" || desc="不感兴趣"]',
+          matches: '[text="不感兴趣" || desc="不感兴趣"][visibleToUser=true]',
         },
         {
           preKeys: [4],
           key: 5,
           name: '局部广告1-【与我无关】',
-          matches: '[text="与我无关" || desc="与我无关"]',
+          matches: '[text="与我无关" || desc="与我无关"][visibleToUser=true]',
         },
 
         // [desc="广告"] 部分没有弹窗情况下使用, 可能多次触发
@@ -647,20 +647,20 @@ export default defineGkdApp({
             '[desc="不感兴趣"]',
             '[desc="与我无关"]',
           ],
-          matches: '[desc="广告" && height<35]',
+          matches: '[desc="广告" && height<35][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/19928443',
         },
         {
           preKeys: [6],
           key: 7,
           name: '局部广告2-点击【不感兴趣】',
-          matches: '[desc="不感兴趣"]',
+          matches: '[desc="不感兴趣"][visibleToUser=true]',
         },
         {
           preKeys: [7],
           key: 8,
           name: '局部广告2-【与我无关】',
-          matches: '[desc="与我无关"]',
+          matches: '[desc="与我无关"][visibleToUser=true]',
         },
       ],
     },
