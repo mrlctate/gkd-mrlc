@@ -593,7 +593,7 @@ export default defineGkdApp({
           name: '点击确认',
           activityIds:
             'com.tencent.open.agent.PublicFragmentActivityForOpenSDK',
-          matches: 'Button[text="确认"]',
+          matches: '[text="确认"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/14752519',
         },
       ],
