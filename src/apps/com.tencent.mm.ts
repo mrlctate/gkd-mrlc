@@ -235,18 +235,19 @@ export default defineGkdApp({
     },
     {
       key: 9,
-      name: '功能类-自动查看原图',
-      desc: '自动点击[查看原图]',
+      name: '功能类-自动点击[查看原图和视频]',
+      desc: '自动点击[查看原图和视频]',
       fastQuery: true,
       actionMaximum: 1,
-      activityIds: '.ui.LauncherUI',
+      activityIds: ['.ui.LauncherUI', '.ui.chatting.gallery.ImageGalleryUI'],
       rules: [
         {
           key: 0,
-          action: 'clickCenter',
-          matches:
-            '@RelativeLayout > [text^="查看原图"&&clickable=true][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/19638010',
+          matches: 'Button[clickable=true][text^="查看"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/19638010',
+            'https://i.gkd.li/i/20276198',
+          ],
         },
         {
           preKeys: [0],
@@ -517,20 +518,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16798658', // clickable=false，使用clickable=true避免误触
             'https://i.gkd.li/i/15198461', // 无id
           ],
-        },
-      ],
-    },
-    {
-      key: 36,
-      name: '功能类-自动点击[查看原视频]',
-      fastQuery: true,
-      activityIds: ['.ui.LauncherUI', '.ui.chatting.gallery.ImageGalleryUI'],
-      rules: [
-        {
-          key: 0,
-          matches: '@FrameLayout > [text^="查看原视频"][visibleToUser=true]',
-          exampleUrls: 'https://e.gkd.li/e1ea0437-f0e7-4f05-b790-cac1f1e7c04d',
-          snapshotUrls: 'https://i.gkd.li/i/20276198',
         },
       ],
     },
