@@ -243,7 +243,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches: 'Button[clickable=true][text^="查看"][visibleToUser=true]',
+          anyMatches: [
+            'Button[text^="查看"][clickable=true][visibleToUser=true]',
+            'Button[clickable=true][text^="查看"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/19638010',
             'https://i.gkd.li/i/20276198',
