@@ -18,6 +18,7 @@ export default defineGkdApp({
         // 第一段
         {
           key: 0,
+          actionCd: 3000,
           name: '第一段 点击朋友圈广告',
           matches:
             '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
@@ -527,8 +528,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches:
-            '@FrameLayout > [text^="查看原视频"][clickable=true][visibleToUser=true]',
+          matches: '@FrameLayout > [text^="查看原视频"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/e1ea0437-f0e7-4f05-b790-cac1f1e7c04d',
           snapshotUrls: 'https://i.gkd.li/i/20276198',
         },
