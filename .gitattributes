@@ -1,0 +1,3 @@
+workflows/** merge=ours
+dist/** merge=ours
+package.json merge=ours

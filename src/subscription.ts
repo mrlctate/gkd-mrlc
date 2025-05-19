@@ -19,8 +19,8 @@ apps.forEach((appConfig) => {
 });
 
 export default defineGkdSubscription({
-  id: 9,
-  name: 'Mrlc的订阅-Beta',
+  id: 2,
+  name: 'Mrlc的订阅-不得转发和传播',
   version: 0,
   author: 'Mrlc',
   checkUpdateUrl: './gkd.version.json5',
