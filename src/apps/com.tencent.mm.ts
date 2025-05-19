@@ -243,12 +243,13 @@ export default defineGkdApp({
         {
           key: 0,
           action: 'clickCenter',
-          matches: '[text^="查看原图" && clickable=true]',
+          matches:
+            '@RelativeLayout > [text^="查看原图"&&clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/19638010',
         },
         {
           preKeys: [0],
-          key: 2,
+          key: 1,
           matches: '[text="我知道了" && clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/19637941',
         },
@@ -529,9 +530,10 @@ export default defineGkdApp({
             '.ui.chatting.gallery.ImageGalleryUI',
             '.ui.LauncherUI',
           ],
-          matches: '[vid="cna"] > Button',
-          exampleUrls: 'https://e.gkd.li/5332aff9-05bb-4b44-b832-5e2d9b1c1270',
-          snapshotUrls: 'https://i.gkd.li/i/16833732',
+          matches:
+            '@FrameLayout > [text^="查看原视频"][clickable=true][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/e1ea0437-f0e7-4f05-b790-cac1f1e7c04d',
+          snapshotUrls: 'https://i.gkd.li/i/20276198',
         },
       ],
     },
