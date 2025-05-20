@@ -16,25 +16,27 @@ export default defineGkdApp({
       ],
       rules: [
         // 第一段
-        {
-          key: 0,
-          actionCd: 3000,
-          name: '第一段 点击朋友圈广告',
-          matches:
-            '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
-          exampleUrls: 'https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126',
-          snapshotUrls: [
-            'https://i.gkd.li/i/13791200',
-            'https://i.gkd.li/i/16568338',
-            'https://i.gkd.li/i/19644924',
-          ],
-        },
+        // {
+        //   key: 0,
+        //   actionCd: 3000,
+        //   name: '第一段 点击朋友圈广告',
+        //   matches:
+        //     '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
+        //   exampleUrls: 'https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126',
+        //   snapshotUrls: [
+        //     'https://i.gkd.li/i/13791200',
+        //     'https://i.gkd.li/i/16568338',
+        //     'https://i.gkd.li/i/19644924',
+        //   ],
+        // },
         // 第二，三段
         {
           key: 1,
-          name: '第二，三段 点击[关闭广告]',
+          // actionCd: 1000,
+          // forcedTime: 1000,
+          name: '点击[关闭广告]',
           matches:
-            '@[clickable=true&&index<3][visibleToUser=true] <<(3,4,6) [childCount>3][visibleToUser=true] - ImageView[text=null] < LinearLayout[childCount=2&&index=0]',
+            '@[clickable=true][index=1||index=2][visibleToUser=true] <<(3,4,6) [childCount>3][visibleToUser=true] - ImageView[text=null] < LinearLayout[childCount=2&&index=0][top>250]',
           snapshotUrls: [
             'https://i.gkd.li/i/13926578', // 第二段
             'https://i.gkd.li/i/15137016', // <<(4)
