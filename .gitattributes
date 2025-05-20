@@ -1,3 +1,7 @@
 workflows/** merge=ours
-dist/** merge=ours
+
+dist/CHANGELOG.md merge=ours
+dist/README.md merge=ours
+
 package.json merge=ours
+README.md merge=ours
