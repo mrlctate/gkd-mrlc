@@ -12,7 +12,14 @@ export default defineGkdApp({
         {
           key: 0,
           name: '点击[继续安装]',
-          activityIds: ['.InstallStart', '.FlymePackageInstallerActivity'],
+          activityIds: [
+            '.InstallStart',
+            '.NewInstallInstalling',
+            '.FlymePackageInstallerActivity',
+            '.PackageInstallerActivity',
+          ],
+          excludeMatches:
+            '[text^="正为您检测"][childCount=0][visibleToUser=true]',
           anyMatches: [
             '@LinearLayout[clickable=true] > [text="继续安装"][clickable=false]',
             '[text="继续安装"][clickable=true]',
