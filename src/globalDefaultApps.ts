@@ -202,6 +202,7 @@ export const blackListAppIDs: string[] = [
   'com.mmbox.xbrowser', // X浏览器
   'com.mmbox.xbrowser.pro', // X浏览器Google Play版
   'com.mycompany.app.soulbrowser', // soul浏览器
+  'youqu.android.todesk', // ToDesk
 ];
 
 // 在应用中单独禁用某个全局规则F
