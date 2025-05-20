@@ -13,9 +13,11 @@ export default defineGkdApp({
           key: 0,
           name: '点击[继续安装]',
           activityIds: ['.InstallStart', '.FlymePackageInstallerActivity'],
+          excludeMatches:
+            '[text^="正为您检测"][childCount=0][visibleToUser=true]',
           anyMatches: [
-            '[text="继续安装" && clickable=true]',
-            '@LinearLayout[clickable=true] > [text="继续安装"]',
+            '@LinearLayout[clickable=true] > [text="继续安装"][clickable=false]',
+            '[text="继续安装"][clickable=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13206444',
@@ -35,8 +37,8 @@ export default defineGkdApp({
             '.FlymePackageInstallerActivity',
           ],
           anyMatches: [
-            '[text="完成" && clickable=true]',
-            '@LinearLayout[clickable=true] > [text="完成"]',
+            '@LinearLayout[clickable=true] > [text="完成"][clickable=false]',
+            '[text="完成"][clickable=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13206476',
