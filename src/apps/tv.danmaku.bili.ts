@@ -164,38 +164,33 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '点击卡片广告右下角菜单按钮',
-          matches: '@[vid="more"] - [vid="desc_content"]',
+          matches:
+            '@[vid="more"] <<n [vid="tool_container" || vid="ad_tint_frame"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14083540',
             'https://i.gkd.li/i/14588315',
             'https://i.gkd.li/i/14729855',
+            'https://i.gkd.li/i/18274379',
             'https://i.gkd.li/i/18306851',
+            'https://i.gkd.li/i/19537979',
           ],
         },
         {
           key: 1,
           matches:
-            '@[vid="inline_more"][visibleToUser=true] <4 ViewGroup - FrameLayout > [vid="corner_hint_container"]',
+            '@[vid="inline_more"] <<n [vid="card_content"][visibleToUser=true][getChild(1).getChild(1).vid="corner_hint_container"]',
           exampleUrls: 'https://e.gkd.li/d3d37b4e-cda3-4ba6-8af3-7b45ac8efc10',
           snapshotUrls: 'https://i.gkd.li/i/17428126',
           excludeSnapshotUrls: 'https://i.gkd.li/i/17848536',
         },
-        {
-          key: 2,
-          matches:
-            '@[vid="more"][visibleToUser=true] -2 [text^="广告"] <<n [vid="tool_container"]',
-          exampleUrls: 'https://e.gkd.li/21292629-5d84-407d-a889-e7bfaa4babc3',
-          snapshotUrls: 'https://i.gkd.li/i/18274379',
-        },
 
         //预留key
         {
-          preKeys: [0, 1, 2],
+          preKeys: [0, 1],
           key: 50,
           name: '点击[不感兴趣]/[相似内容过多]',
           matches:
-            '@[clickable=true] > [text="相似内容过多" || text="不感兴趣" || text="up主不感兴趣" || text="对该up的直播不感兴趣"]',
+            '@[clickable=true] > [text="相似内容过多" || text="不感兴趣" || text="up主不感兴趣" || text="对该up的直播不感兴趣" || text="我不想看"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13625309',
             'https://i.gkd.li/i/13742257',
@@ -204,11 +199,20 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17428471',
             'https://i.gkd.li/i/18274380',
             'https://i.gkd.li/i/18292926',
+            'https://i.gkd.li/i/20710223',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/18292929',
             'https://i.gkd.li/i/18306849',
           ],
+        },
+        {
+          preKeys: [50],
+          key: 70,
+          matches:
+            '@FrameLayout[clickable=true] > [text="此类内容过多" || text="相似内容过多"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/2aba6082-1047-464e-959c-82ee62e492aa',
+          snapshotUrls: 'https://i.gkd.li/i/20718890',
         },
       ],
     },
@@ -327,13 +331,16 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches:
+          anyMatches: [
             '@[vid="more"] -(3,5) [vid="ad_desc" || vid="live_lottie_layout"][visibleToUser=true]',
+            '[id="tv.danmaku.bili.adbiz:id/more" || id="tv.danmaku.bili.adbiz:id/more_layout"][visibleToUser=true]',
+          ],
           exampleUrls: 'https://e.gkd.li/219c40c4-debf-40d8-889a-7eb39c87126c',
           snapshotUrls: [
             'https://i.gkd.li/i/17675629',
             'https://i.gkd.li/i/17675894',
             'https://i.gkd.li/i/18306858',
+            'https://i.gkd.li/i/20794380',
           ],
         },
         {

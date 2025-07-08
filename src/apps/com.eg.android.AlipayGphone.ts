@@ -71,6 +71,13 @@ export default defineGkdApp({
           matches: '@View < [vid="splash_skip_tip_container"]',
           snapshotUrls: 'https://i.gkd.li/i/19040262',
         },
+        {
+          key: 3,
+          name: '小程序添加至首页',
+          matches:
+            '[text="添加至首页"] < RelativeLayout + RelativeLayout[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21117818',
+        },
       ],
     },
     {

@@ -51,7 +51,7 @@ export default defineGkdApp({
           name: '个人中心页顶部背景广告',
           activityIds: '.ona.activity.SplashHomeActivity',
           matches:
-            'RelativeLayout > FrameLayout + @ImageView[clickable=true] + ImageView + ImageView',
+            'RelativeLayout > FrameLayout + FrameLayout + @ImageView[clickable=true][height<60] + ImageView + ImageView',
           snapshotUrls: 'https://i.gkd.li/i/12777344',
         },
         {

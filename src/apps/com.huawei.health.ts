@@ -5,16 +5,36 @@ export default defineGkdApp({
   name: '华为运动健康',
   groups: [
     {
-      key: 1,
-      name: '局部广告-“我的”页会员广告',
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
       rules: [
         {
-          activityIds: 'com.huawei.health.MainActivity',
-          matches: '[id="com.huawei.health:id/item_banner_ad_close_icon"]',
-          snapshotUrls: 'https://i.gkd.li/i/12667814',
+          key: 0,
+          action: 'clickCenter',
+          matches: '[id="com.huawei.health:id/hiad_skip_text"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13215012',
+            'https://i.gkd.li/i/13228290',
+          ],
         },
       ],
     },
+    // {
+    //   key: 1,
+    //   name: '局部广告-“我的”页会员广告',
+    //   rules: [
+    //     {
+    //       activityIds: 'com.huawei.health.MainActivity',
+    //       matches: '[id="com.huawei.health:id/item_banner_ad_close_icon"]',
+    //       snapshotUrls: 'https://i.gkd.li/i/12667814',
+    //     },
+    //   ],
+    // },
     {
       key: 2,
       name: '全屏广告-弹窗广告',
@@ -53,22 +73,34 @@ export default defineGkdApp({
     },
     {
       key: 5,
-      name: '功能类-请求开启[实时推送步数]弹窗',
+      name: '其他-请求开启[实时推送步数]弹窗',
       desc: '点击取消',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
       rules: [
         {
-          fastQuery: true,
+          key: 0,
           activityIds: 'com.huawei.health.MainActivity',
           matches: [
-            '[text*="实时推送步数" || text*="通知栏实时显示步数"]',
-            '[text="取消"]',
+            '[text*="实时推送步数" || text*="通知栏实时显示步数"][visibleToUser=true]',
+            '[text*="取消"][visibleToUser=true]',
           ],
-          exampleUrls:
-            'https://m.gkd.li/57941037/7e9b7131-35ae-49dd-badf-13b6dae3aa96',
+          exampleUrls: 'https://e.gkd.li/12af7c3a-3d53-43f0-880e-130135bad1a3',
           snapshotUrls: [
             'https://i.gkd.li/i/14321121',
             'https://i.gkd.li/i/16494762',
           ],
+        },
+        {
+          key: 1,
+          matches: [
+            '[text*="是否开启计步功能"][visibleToUser=true]',
+            '[text*="取消"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/ab4e3797-40e6-4d1e-96b2-c098e78cf848',
+          snapshotUrls: 'https://i.gkd.li/i/20499245',
         },
       ],
     },

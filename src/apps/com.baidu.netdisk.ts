@@ -79,6 +79,7 @@ export default defineGkdApp({
           key: 4,
           name: 'VIP横幅广告',
           fastQuery: true,
+          excludeMatches: '[text="删除文件"][visibleToUser=true]',
           matches: [
             '[text*="VIP"]',
             '[id*="close" || id$="Close"][width=height]',
