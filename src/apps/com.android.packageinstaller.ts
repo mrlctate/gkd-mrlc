@@ -21,8 +21,8 @@ export default defineGkdApp({
           excludeMatches:
             '[text^="正为您检测"][childCount=0][visibleToUser=true]',
           anyMatches: [
-            '@LinearLayout[clickable=true] > [text="继续安装"][clickable=false]',
-            '[text="继续安装"][clickable=true]',
+            '@LinearLayout[clickable=true][visibleToUser=true] > [text="继续安装"][clickable=false]',
+            '[text="继续安装"][clickable=true][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13206444',
@@ -41,9 +41,10 @@ export default defineGkdApp({
             '.oplus.InstallAppProgress',
             '.FlymePackageInstallerActivity',
           ],
+          excludeMatches: '[text="正在安装"][childCount=0][visibleToUser=true]',
           anyMatches: [
-            '@LinearLayout[clickable=true] > [text="完成"][clickable=false]',
-            '[text="完成"][clickable=true]',
+            '@LinearLayout[clickable=true][visibleToUser=true] > [text="完成"][clickable=false]',
+            '[text="完成"][clickable=true][visibleToUser=true]',
           ],
           snapshotUrls: [
             'https://i.gkd.li/i/13206476',

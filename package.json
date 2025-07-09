@@ -4,12 +4,12 @@
   "type": "module",
   "gkd": {
     "outDir": "dist",
-    "file": "beta.json5",
-    "versionFile": "beta.version.json5",
+    "file": "beta-gkd.json5",
+    "versionFile": "beta-gkd.version.json5",
     "changelog": "CHANGELOG.md",
     "README.md": "README.md"
   },
-  "main": "./dist/beta.json5",
+  "main": "./dist/beta-gkd.json5",
   "scripts": {
     "postinstall": "simple-git-hooks",
     "format": "prettier --cache --write ./**/*.{js,cjs,mjs,ts,jsx,tsx,json}",
