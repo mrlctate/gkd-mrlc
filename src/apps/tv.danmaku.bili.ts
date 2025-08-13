@@ -334,13 +334,14 @@ export default defineGkdApp({
           anyMatches: [
             '@[vid="more"] -(3,5) [vid="ad_desc" || vid="live_lottie_layout"][visibleToUser=true]',
             '[id="tv.danmaku.bili.adbiz:id/more" || id="tv.danmaku.bili.adbiz:id/more_layout"][visibleToUser=true]',
+            '@[vid="more"] <<n [vid="ad_tint_frame"][visibleToUser=true]',
           ],
           exampleUrls: 'https://e.gkd.li/219c40c4-debf-40d8-889a-7eb39c87126c',
           snapshotUrls: [
-            'https://i.gkd.li/i/17675629',
-            'https://i.gkd.li/i/17675894',
-            'https://i.gkd.li/i/18306858',
+            'https://i.gkd.li/i/20744764',
             'https://i.gkd.li/i/20794380',
+            'https://i.gkd.li/i/21552836',
+            'https://i.gkd.li/i/21705345',
           ],
         },
         {

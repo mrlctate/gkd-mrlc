@@ -390,5 +390,27 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 26,
+      name: '功能类-改变底部弹窗',
+      fastQuery: true,
+      rules: [
+        {
+          key: 0,
+          activityIds: '.AlipayLogin',
+          matches:
+            '[text^="开启通知权限"] <5 LinearLayout[childCount=2] + [desc="关闭"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21760083',
+        },
+        {
+          key: 1,
+          activityIds:
+            'com.alipay.mobile.nebulax.xriver.activity.XRiverActivity',
+          matches:
+            '[text*="添加到首页，使用更方便"] -2 [text=""][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21760169',
+        },
+      ],
+    },
   ],
 });

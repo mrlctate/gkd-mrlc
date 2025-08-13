@@ -82,5 +82,38 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 4,
+      name: '通知提示',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.MainActivity',
+          matches:
+            'View[childCount=11] > ImageView[clickable=true][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/02cf5d37-8808-4abb-abf9-81f7ba8a8375',
+          snapshotUrls: 'https://i.gkd.li/i/17469994',
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '全屏广告-相册自动备份弹窗',
+      desc: '点击关闭',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.MainActivity',
+          matches:
+            '@ImageView[childCount=0][clickable=true][visibleToUser=true][width<100 && height<100] +2 [desc="开启相册自动备份"]',
+          exampleUrls: 'https://e.gkd.li/e86a59e7-9329-4931-9bdd-5f6b4f896294',
+          snapshotUrls: 'https://i.gkd.li/i/21326468',
+        },
+      ],
+    },
   ],
 });

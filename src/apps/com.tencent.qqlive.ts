@@ -38,14 +38,14 @@ export default defineGkdApp({
             'ViewGroup > FrameLayout + ViewGroup > ImageView[index=2][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/12700175',
         },
-        {
-          key: 4,
-          name: '个人中心点击关闭广告',
-          activityIds: '.ona.activity.SplashHomeActivity',
-          matches:
-            'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/17959231',
-        },
+        // {
+        //   key: 4,
+        //   name: '个人中心点击关闭广告',
+        //   activityIds: '.ona.activity.SplashHomeActivity',
+        //   matches:
+        //     'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[clickable=true][visibleToUser=true]',
+        //   snapshotUrls: 'https://i.gkd.li/i/17959231',
+        // },
         {
           key: 5,
           name: '个人中心页顶部背景广告',

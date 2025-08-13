@@ -97,9 +97,8 @@ export default defineGkdApp({
         {
           key: 1,
           matches:
-            '[text^="连续签到7天后"] +2 TextView[text^="签到" && clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/18762226',
-          exampleUrls: 'https://e.gkd.li/89b963b3-f46c-426b-9439-8244f4ac4836',
+            '[text^="连续签到7天后"] +2 TextView[text^="签到+"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21760677',
         },
         {
           preKeys: [1],

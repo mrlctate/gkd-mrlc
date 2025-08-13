@@ -205,7 +205,7 @@ export const blackListAppIDs: string[] = [
   'youqu.android.todesk', // ToDesk
 ];
 
-// 在应用中单独禁用某个全局规则F
+// 在应用中单独禁用某个全局规则
 // 开屏广告黑名单
 export const openAdBlackListAppIDs = new Set([
   ...blackListAppIDs,
