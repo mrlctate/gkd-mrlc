@@ -113,6 +113,21 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 1,
+      name: '更新提示',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches:
+            '[text^="酷安-"][visibleToUser=true] +3 @View[clickable=true] > [text="取消"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/12882371',
+        },
+      ],
+    },
+    {
       key: 4,
       name: '局部广告-[大家还下载了]应用推荐',
       desc: '点击关闭',

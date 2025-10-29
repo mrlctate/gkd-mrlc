@@ -45,7 +45,7 @@ export default defineGkdGlobalGroups([
         anyMatches: [
           '[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip") && text.length<10 && width<300][visibleToUser=true]',
           '[(id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && text.length=null && width<300][visibleToUser=true]',
-          '@View[clickable=true&&width=height][visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(1,2,3,4) FrameLayout >(7,8,9) TextView[text*="跳转"]', // 字节SDK
+          '@View[clickable=true&&width=height][visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(1,2,3,4,5) FrameLayout >(5,6,7,8,9) TextView[text^="跳转"]', // 字节SDK
           '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
         ],
       },
@@ -91,9 +91,7 @@ export default defineGkdGlobalGroups([
     disableIfAppGroupMatch: '通知提示',
     order: NOTIFICATION_PROMPT,
     fastQuery: true,
-    actionMaximum: 2,
-    resetMatch: 'app',
-    actionMaximumKey: 0,
+    actionMaximum: 1,
     rules: [
       {
         key: 0,
@@ -101,7 +99,7 @@ export default defineGkdGlobalGroups([
         excludeMatches:
           '[text^="我已阅读"||text*="协议"||text*="选择"||text*="更新"||text*="新版"||desc*="新版"||text^="发送"||text*="登录"||text*="退款"||text$="应用更新"||text^="删除"||text*="清除"||text*="播放"||text="浏览器打开"||text$="分享文件"||text="加入黑名单"][name!$=".CheckBox"&&name!$=".EditText"&&vid!$=".checkbox"][childCount=0][visibleToUser=true]',
         matches: [
-          `[text*="通知" || text*="权限" || text*="公告" || text="广告" || text$="模式" || text$="签到" || text*="喜欢" || text*="是否满意" || text*="好评" || desc*="好评" || text*="评分" || text*="评价" || text*="获取" || text*="消息" || text*="使用" || text*="推荐" || text*="发现" || text*="推送" || text*="第一时间" || text*="免费" || text*="立即" || text*="剪贴板" || text*="开启" || text="去设置" || text*="使用" || text*="定位" || text*="位置" || text*="内容" || text*="调研" || text*="赞助" || text$="提示" || desc$="提示" || desc*="官网" || text*="交流" || text*="链接" || id$="image"]${CommonPrefix}`,
+          `[text*="通知" || text*="权限" || text*="公告" || text="广告" || text$="模式" || text$="签到" || text*="是否满意" || text*="好评" || desc*="好评" || text*="评分" || text*="评价" || text*="推送" || text*="免费" || text*="立即" || text*="剪贴板" || text*="开启" || text="去设置" || text*="使用" || text*="定位" || text*="位置" || text*="调研" || text*="赞助" || text$="提示" || desc$="提示" || desc*="官网" || text*="交流" || text*="链接" || id$="image"]${CommonPrefix}`,
           `[(text^="暂不" || text^="暂时" || text$="继续使用" || text$="知道了" || desc$="知道了" ||((text="取消")&&top>200)|| text="关闭" || desc="关闭" || text^="我已知晓" || text*="拒绝"||((text^="忽略")&&text!="全部忽略")||text^="不再" || text$="再说" || text="不允许" || text*="不了" || text^="下次" || text="不，谢谢" || text="考虑一下" || text="没兴趣" || text="我没空" || text="關閉" || text="确定" || text="收到" || text="隐藏" || text="否" || text="返回")&&${CommonIdPostfix}&&text.length<6]${CommonPromptImpose}`,
         ],
       },

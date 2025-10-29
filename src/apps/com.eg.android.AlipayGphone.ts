@@ -392,7 +392,7 @@ export default defineGkdApp({
     },
     {
       key: 26,
-      name: '功能类-改变底部弹窗',
+      name: '功能类-关闭底部弹窗',
       fastQuery: true,
       rules: [
         {

@@ -10,6 +10,14 @@ export default defineGkdApp({
       fastQuery: true,
       rules: [
         {
+          key: 0,
+          name: '评价提示—个人中心页评价提示',
+          activityIds: '.ona.activity.SplashHomeActivity',
+          matches:
+            '[text="您对腾讯视频的满意度感受如何？"][visibleToUser=true] +1 View[clickable=true]',
+          snapshotUrls: ['https://i.gkd.li/i/23218549'],
+        },
+        {
           key: 1,
           name: '首页顶部卡片广告',
           activityIds: '.ona.activity.SplashHomeActivity',
@@ -38,14 +46,14 @@ export default defineGkdApp({
             'ViewGroup > FrameLayout + ViewGroup > ImageView[index=2][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/12700175',
         },
-        // {
-        //   key: 4,
-        //   name: '个人中心点击关闭广告',
-        //   activityIds: '.ona.activity.SplashHomeActivity',
-        //   matches:
-        //     'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[clickable=true][visibleToUser=true]',
-        //   snapshotUrls: 'https://i.gkd.li/i/17959231',
-        // },
+        {
+          key: 4,
+          name: '个人中心点击关闭广告',
+          activityIds: '.ona.activity.SplashHomeActivity',
+          matches:
+            'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17959231',
+        },
         {
           key: 5,
           name: '个人中心页顶部背景广告',
@@ -276,7 +284,7 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '其他-视频播放时的评价悬浮窗',
+      name: '更新提示',
       desc: '点击关闭',
       rules: [
         {
