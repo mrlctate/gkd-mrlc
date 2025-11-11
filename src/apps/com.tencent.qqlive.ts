@@ -51,7 +51,7 @@ export default defineGkdApp({
           name: '个人中心点击关闭广告',
           activityIds: '.ona.activity.SplashHomeActivity',
           matches:
-            'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[clickable=true][visibleToUser=true]',
+            'View[childCount=4] >2 TextView[text.length=4 || text.length=5] < View + View[width=height][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17959231',
         },
         {
@@ -284,7 +284,7 @@ export default defineGkdApp({
     },
     {
       key: 8,
-      name: '更新提示',
+      name: '其他-视频播放时的评价悬浮窗',
       desc: '点击关闭',
       rules: [
         {

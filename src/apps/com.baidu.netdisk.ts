@@ -11,6 +11,13 @@ export default defineGkdApp({
       fastQuery: true,
       rules: [
         {
+          key: 1,
+          activityIds: '.ui.MainActivity',
+          matches:
+            '[vid="cl_root"][childCount=2][visibleToUser=true] > [vid="iv_close"][width=height][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23483484',
+        },
+        {
           key: 2,
           activityIds: '.module.sharelink.ChainInfoActivity',
           matches: '[text="为你推荐"] + [desc="关闭"][clickable=true]',

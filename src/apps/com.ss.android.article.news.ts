@@ -29,32 +29,41 @@ export default defineGkdApp({
     {
       key: 11,
       name: '全屏广告-竖屏视频广告',
-      desc: '点击右上角[更多]图标按钮,点击不感兴趣',
+      desc: '点击右上角[...]图标按钮,点击少推荐',
       activityIds: 'com.ss.android.ugc.detail.activity.TikTokActivity',
       rules: [
         {
           key: 0,
-          name: '点击右上角[更多]图标按钮',
+          name: '点击右上角[...]图标按钮',
           matches: 'ImageView[clickable=true][desc="更多"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12679280',
-            'https://i.gkd.li/i/12733282',
-            'https://i.gkd.li/i/12763251',
-            'https://i.gkd.li/i/12763252',
-            'https://i.gkd.li/i/12733281',
-            'https://i.gkd.li/i/13185633',
-            'https://i.gkd.li/i/13186082',
-            'https://i.gkd.li/i/13930050',
-          ],
+          snapshotUrls: 'https://i.gkd.li/i/13930050',
         },
         {
-          key: -1,
+          key: 1,
           preKeys: [0],
-          actionCd: 35000, //APP更新后点击不感兴趣不会跳过当前视频了，所以需要冷却一下等下一次重新跳过广告视频
-          name: '点击不感兴趣',
+          name: '点击少推荐',
           matches:
-            '@LinearLayout[clickable=true] > RelativeLayout + TextView[text="不感兴趣"]',
-          snapshotUrls: 'https://i.gkd.li/i/12679277',
+            '@LinearLayout[clickable=true] > [text="少推荐"||text="减少这类内容"]',
+          snapshotUrls: 'https://i.gkd.li/i/23483917',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          name: '点击不喜欢',
+          matches:
+            '[text="个人偏好不喜欢"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23483956',
+        },
+        {
+          key: 3,
+          preKeys: [2],
+          name: '点击提交',
+          matches:
+            '[text="提交" || text="确定"][clickable=true][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23484007',
+            'https://i.gkd.li/i/23484283',
+          ],
         },
       ],
     },

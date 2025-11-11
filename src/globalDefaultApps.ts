@@ -1,9 +1,7 @@
 // 全局规则黑名单
 // 在一些非系统应用中禁用所有全局规则
 export const blackListAppIDs: string[] = [
-  'com.tencent.mm', // 微信
   'li.songe.gkd', // GKD
-  'com.eg.android.AlipayGphone', //支付宝
   'com.tencent.wetype', // 微信输入法
   'com.tmri.app.main', // 交管12123
   'com.github.android', // GitHub

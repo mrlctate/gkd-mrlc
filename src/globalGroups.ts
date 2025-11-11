@@ -40,12 +40,12 @@ export default defineGkdGlobalGroups([
         key: 0,
         // 防止页面触发
         excludeMatches:
-          '[text*="搜索" || desc*="搜索" || text="删除" || text="清楚" || text^="猜你" || text="历史记录" || text$="在搜"][childCount=0][text.length<6][visibleToUser=true]',
+          '[text*="搜索"||desc*="搜索"||text="删除"||text="清楚"||text^="猜你"||text="历史记录"||text$="在搜"][childCount=0][text.length<6][visibleToUser=true]',
         action: 'clickCenter',
         anyMatches: [
-          '[(text*="跳过" || text*="跳過" || text*="skip" || text*="Skip") && text.length<10 && width<300][visibleToUser=true]',
-          '[(id*="skip" || id*="Skip" || id*="jump" || vid="btn_close") && text.length=null && width<300][visibleToUser=true]',
-          '@View[clickable=true&&width=height][visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(1,2,3,4,5) FrameLayout >(5,6,7,8,9) TextView[text^="跳转"]', // 字节SDK
+          '[(text*="跳过"||text*="跳過"||text*="skip"||text*="Skip")&&text.length<10&&width<300][visibleToUser=true]',
+          '[(id*="skip"||id*="Skip"||id*="jump"||vid="btn_close")&&text.length=null&&width<300][visibleToUser=true]',
+          '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -(1,2,3,4,5) FrameLayout >(5,6,7,8,9) TextView[text*="跳转"||text*="第三方"||text*="点击"][visibleToUser=true]', // 字节SDK
           '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
         ],
       },
@@ -71,10 +71,10 @@ export default defineGkdGlobalGroups([
         key: 0,
         // 防止页面触发
         excludeMatches:
-          '[text^="动态" || text="订阅更新"][name!$=".CheckBox"&&name!$=".EditText"&&vid!$=".checkbox"][childCount=0][text.length<6][visibleToUser=true]',
+          '[text^="动态"||text="订阅更新"][name!$=".CheckBox"&&name!$=".EditText"&&vid!$=".checkbox"][childCount=0][text.length<6][visibleToUser=true]',
         matches: [
           `[text*="更新" || text*="新版" || desc*="新版" || text*="升级" || text*="体验" || text*="内测" || text*="测试版" || text*="內測" || text*="測試版" || text*="體驗" || text*="update" || text*="Update" || text*="Upgrade" || text*="Experience"]${UpdatePromptText}`,
-          `[(text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || desc*="关闭" || text$="再想想" || text*="再看看"||((text^="忽略")&&text!="全部忽略")||text^="暂不" || text^="放弃" || text^="取消" || desc^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel")&&${CommonIdPostfix}&&text.length<6 || ${UpdatePromptId}][top>360]${CommonPromptImpose}`,
+          `[(text$="不再提醒" || text="不感兴趣" || text$="再说" || text$="拒绝" || desc*="关闭" || text$="再想想" || text*="再看看" || ((text^="忽略")&&text!="全部忽略") ||text^="暂不" || text^="放弃" || text^="取消" || desc^="取消" || text$="不要" || text$="再說" || text$="暫不" || text$="拒絕" || text*="稍后" || text^="下次" || text="No" || text$="Later" || text^="Ignore" || text^="Not now" || text^="Cancel")&&${CommonIdPostfix}&&text.length<6 || ${UpdatePromptId}][top>360]${CommonPromptImpose}`,
         ],
       },
     ],

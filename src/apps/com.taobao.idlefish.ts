@@ -92,7 +92,6 @@ export default defineGkdApp({
         {
           key: 1,
           actionCd: 2000,
-          forcedTime: 2000,
           name: '点击[赚骰子]-有领取奖励',
           matches: '[text="领"] < View[visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17634886',
@@ -107,8 +106,8 @@ export default defineGkdApp({
         {
           key: 3,
           name: '领取奖励',
-          actionCd: 1600,
-          forcedTime: 1600,
+          actionCd: 1500,
+          forcedTime: 1500,
           matches: '[text="领取奖励"][clickable=true][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/17606051',
@@ -164,8 +163,8 @@ export default defineGkdApp({
         },
         {
           key: 2,
-          actionCd: 5000,
-          forcedTime: 5000,
+          actionCd: 3500,
+          forcedTime: 3500,
           name: '扱骰子',
           matches:
             '@View[id="mapDiceBtn"][visibleToUser=true] > TextView[text!="赚"]',
