@@ -43,7 +43,7 @@ export default defineGkdGlobalGroups([
           '[text*="搜索"||desc*="搜索"||text="删除"||text="清楚"||text^="猜你"||text="历史记录"||text$="在搜"][childCount=0][text.length<6][visibleToUser=true]',
         action: 'clickCenter',
         anyMatches: [
-          '[text*="跳过"||text*="跳過"text*="skip"||text*="Skip"][text.length<10][width<300][visibleToUser=true]',
+          '[text*="跳过"||text*="跳過"||text*="skip"||text*="Skip"][text.length<10][width<300][visibleToUser=true]',
           '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -n FrameLayout >(3+n) TextView[text*="跳转"||text*="第三方"||text*="点击"][visibleToUser=true]', // 字节SDK
           '@ImageView[width=height&&visibleToUser=true] <2 ViewGroup + ViewGroup[index=parent.childCount.minus(1)] > [text="广告"]', // https://i.gkd.li/i/23917114
           '[desc*="跳过"||desc*="跳過"||desc*="skip"||desc*="Skip"][desc.length<10][width<300][visibleToUser=true]',
