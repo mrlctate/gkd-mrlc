@@ -155,14 +155,7 @@ export default defineGkdApp({
       activityIds: '.webview.WebHybridActivity',
       rules: [
         {
-          key: 1,
-          name: '关闭-弹窗',
-          matches:
-            'View[childCount=3][clickable=true] > Image + View + Image[clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/17606064',
-        },
-        {
-          key: 2,
+          key: 0,
           actionCd: 3500,
           forcedTime: 3500,
           name: '扱骰子',
@@ -171,26 +164,33 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/17606060',
         },
         {
+          key: 1,
+          name: '关闭-限时惊喜',
+          matches:
+            '[text="骰子×1"] < View[visibleToUser=true] + Image[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17606064',
+        },
+        {
           key: 3,
-          name: '全部收下',
-          matches: 'View[text^="全部收下"]',
+          name: '关闭-全部收下',
+          matches: '[text^="全部收下"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17606050',
         },
         {
           key: 4,
-          name: '继续寻宝',
-          matches: 'View[text="继续寻宝"][clickable=true]',
+          name: '关闭-继续寻宝',
+          matches: '[text="继续寻宝"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17695522',
         },
         {
           key: 5,
-          name: '关闭开始刮奖',
-          matches: 'TextView[text="开始刮奖"][clickable=true] + TextView',
+          name: '关闭-开始刮奖',
+          matches: '[text="开始抽奖"][visibleToUser=true] + TextView',
           snapshotUrls: 'https://i.gkd.li/i/21134392',
         },
         {
           key: 6,
-          name: '关闭没有抽中',
+          name: '关闭-没有抽中',
           matches:
             'TextView[text^="很遗憾没有抽中"] +2 TextView[clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/21134388',

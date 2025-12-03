@@ -95,43 +95,6 @@ export default defineGkdApp({
       ],
     },
     {
-      key: 3,
-      name: '功能类-签到',
-      fastQuery: true,
-      actionMaximum: 1,
-      activityIds: '.ui.cloudp2p.RichMediaActivity',
-      rules: [
-        {
-          key: 1,
-          matches:
-            '[text^="连续签到7天后"] +2 TextView[text^="签到+"][visibleToUser=true]',
-          snapshotUrls: 'https://i.gkd.li/i/21760677',
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          position: {
-            left: 'width * 0.6509',
-            top: 'width * 0.8515',
-          },
-          matches:
-            'TextView[clickable=true && text^="已签到"] -2 [text^="连续签到7天后"] <4 View[childCount=7 && height>900]',
-          snapshotUrls: 'https://i.gkd.li/i/19788772',
-        },
-        {
-          key: 3,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity',
-          position: {
-            left: 'width * 0.8274',
-            top: 'width * 0.0888',
-          },
-          matches: 'View[childCount=4] > [text="奖励已领取"][index=1]',
-          snapshotUrls: 'https://i.gkd.li/i/19885285',
-        },
-      ],
-    },
-    {
       key: 8,
       name: '权限提示-通知权限',
       desc: '自动点击关闭',

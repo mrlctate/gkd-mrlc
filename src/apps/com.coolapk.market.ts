@@ -121,8 +121,9 @@ export default defineGkdApp({
       resetMatch: 'app',
       rules: [
         {
+          action: 'clickCenter',
           matches:
-            '[text^="酷安-"][visibleToUser=true] +3 @View[clickable=true] > [text="取消"][visibleToUser=true]',
+            '[text^="酷安-"][visibleToUser=true] +3 View[clickable=true] > [text="取消"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/12882371',
         },
       ],

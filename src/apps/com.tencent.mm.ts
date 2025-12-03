@@ -16,23 +16,26 @@ export default defineGkdApp({
       ],
       rules: [
         // 第一段
-        // {
-        //   key: 0,
-        //   actionCd: 3000,
-        //   name: '第一段 点击朋友圈广告',
-        //   matches:
-        //     '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
-        //   exampleUrls: 'https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126',
-        //   snapshotUrls: [
-        //     'https://i.gkd.li/i/13791200',
-        //     'https://i.gkd.li/i/16568338',
-        //     'https://i.gkd.li/i/19644924',
-        //   ],
-        // },
+        {
+          key: 0,
+          fastQuery: true,
+          actionCd: 500,
+          position: {
+            left: 'width * 0.9400',
+            top: 'width * 0.0393',
+          },
+          name: '第一段 点击朋友圈广告',
+          matches: '[vid="kbe"][childCount=2][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13791200',
+            'https://i.gkd.li/i/16568338',
+            'https://i.gkd.li/i/19644924',
+          ],
+        },
         // 第二，三段
         {
           key: 1,
-          // actionCd: 1000,
+          actionCd: 500,
           // forcedTime: 1000,
           name: '点击[关闭广告]',
           matches:
@@ -216,22 +219,13 @@ export default defineGkdApp({
       name: '功能类-自动选中发送原图',
       desc: '自动选中原图，可手动取消勾选',
       fastQuery: true,
-      actionMaximum: 1,
       activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
       rules: [
         {
-          key: 1, // 8.0.56
-          action: 'clickCenter',
+          key: 1,
           matches:
-            '@ImageButton[clickable=true && width!=height] + TextView <2 RelativeLayout[childCount=2 && width!=height] < RelativeLayout[vid!=""] + RelativeLayout[vid!="" && clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18764301', // 已选中
-            'https://i.gkd.li/i/16987145', // 未选中
-            'https://i.gkd.li/i/16987141', // 已选中
-          ],
-          exampleUrls: [
-            'https://e.gkd.li/354ca046-80ca-41d0-a31f-931a19a4695f',
-          ],
+            '@[desc="未选中,原图,复选框"][clickable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中
         },
       ],
     },

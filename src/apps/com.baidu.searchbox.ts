@@ -49,5 +49,33 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 3,
+      name: '局部广告',
+      desc: '点击广告',
+      fastQuery: true,
+      activityIds: '.MainActivity',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '[text="广告"] + [desc="不感兴趣"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23504812',
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          matches:
+            '[text="不看:拼多多" || text="不感兴趣"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23504970',
+        },
+        {
+          key: 2,
+          preKeys: [1],
+          matches: '[text="确认"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23504970',
+        },
+      ],
+    },
   ],
 });
