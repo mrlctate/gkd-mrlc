@@ -223,6 +223,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          action: 'clickCenter',
           matches:
             '@[desc="未选中,原图,复选框"][clickable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中

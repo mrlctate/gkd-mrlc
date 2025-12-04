@@ -45,6 +45,7 @@ export default defineGkdGlobalGroups([
         anyMatches: [
           '[text*="跳过"||text*="跳過"||text*="skip"||text*="Skip"][text.length<10][width<300][visibleToUser=true]',
           '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -n FrameLayout >(3+n) TextView[text*="跳转"||text*="第三方"||text*="点击"][visibleToUser=true]', // 字节SDK
+          'FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]',
           '@ImageView[width=height&&visibleToUser=true] <2 ViewGroup + ViewGroup[index=parent.childCount.minus(1)] > [text="广告"]', // https://i.gkd.li/i/23917114
           '[desc*="跳过"||desc*="跳過"||desc*="skip"||desc*="Skip"][desc.length<10][width<300][visibleToUser=true]',
           '[id*="skip"||id*="Skip"||id*="jump"||vid="btn_close"][text.length=null&&width<300][visibleToUser=true]',
