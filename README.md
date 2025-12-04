@@ -19,7 +19,7 @@ https://registry.npmmirror.com/gkd-mrlc/latest/files/dist/beta-gkd.json5
 
 ##
 
-当前版本: v150
+当前版本: v151
 
 当前订阅文件已适配 686 个应用，共有 1467 应用规则组，3 全局规则组
 
