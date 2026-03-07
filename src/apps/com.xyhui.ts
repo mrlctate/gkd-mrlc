@@ -87,6 +87,15 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/240494b6-026f-49f7-a77d-986e70077218',
           snapshotUrls: 'https://i.gkd.li/i/18245369',
         },
+        {
+          key: 13,
+          fastQuery: true,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTFullScreenVideoActivity',
+          matches:
+            '@ImageView[width<100 && height<100] <<4 * + * >4 [text="反馈"]',
+          snapshotUrls: 'https://i.gkd.li/i/23567050',
+        },
       ],
     },
     {

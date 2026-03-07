@@ -5,6 +5,29 @@ export default defineGkdApp({
   name: '网易云音乐',
   groups: [
     {
+      key: 0,
+      name: '开屏广告',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      priorityTime: 10000,
+      rules: [
+        {
+          key: 0,
+          excludeActivityIds:
+            'com.netease.cloudmusic.music.biz.setting.activity.SettingActivity',
+          matches:
+            '[text*="跳过"||text*="Skip"][text.length<10][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/15092772',
+            'https://i.gkd.li/i/15092814', // 避免误触
+            'https://i.gkd.li/i/17892200', // 'Skip' for English users.
+          ],
+        },
+      ],
+    },
+    {
       key: 1,
       name: '分段广告-卡片广告',
       desc: '点击[X]-点击[直接关闭]/[不感兴趣]',
@@ -170,13 +193,17 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          name: '试听VIP音乐弹窗',
           action: 'back',
           activityIds: [
-            'com.netease.cloudmusic.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
-            'com.netease.cloudmusic.activity.MainActivity',
+            '.music.biz.rn.activity.MainProcessLayerReactNativeActivity',
+            '.activity.MainActivity',
             '.activity.PlayListActivity',
           ],
-          matches: ['[text="支付宝"]', '[text^="确认协议并"]'],
+          matches: [
+            '[text="支付宝"][visibleToUser=true]',
+            '[text^="确认协议并" || text^="正在试听" || text="立即开通"][visibleToUser=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/13189055',
             'https://i.gkd.li/i/13260416',
@@ -187,10 +214,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/14045917',
             'https://i.gkd.li/i/14926722',
             'https://i.gkd.li/i/16242200',
+            'https://i.gkd.li/i/19958685',
+            'https://i.gkd.li/i/22457612',
           ],
         },
         {
           key: 1,
+          name: '“我喜欢的音乐”界面弹窗',
           action: 'back',
           activityIds:
             'com.netease.cloudmusic.music.biz.rn.activity.LayerReactNativeActivity',
@@ -198,11 +228,33 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/14956768',
         },
         {
-          key: 7,
+          key: 2,
+          name: '会员开通界面弹窗',
+          activityIds: '.music.biz.rn.activity.CashierRNActivity',
+          matches: '@ViewGroup[clickable=true] > [text="忍痛离开"]',
+          snapshotUrls: 'https://i.gkd.li/i/23455243',
+        },
+        {
+          key: 3,
+          name: '会员过期后重新开通弹窗',
           action: 'back',
-          activityIds: 'com.netease.cloudmusic.activity.MainActivity',
-          matches: '[vid="view_button_main"][text*="立即续费"]',
-          snapshotUrls: 'https://i.gkd.li/i/14969806',
+          activityIds: [
+            'com.netease.cloudmusic.activity.MainActivity',
+            '.music.biz.rn.activity.LayerReactNativeActivity',
+          ],
+          matches: '[text*="立即续费" || text*="自动续费"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14969806',
+            'https://i.gkd.li/i/22448900',
+          ],
+        },
+        {
+          key: 4,
+          activityIds: '.music.biz.rn.activity.LayerReactNativeActivity',
+          matches:
+            'ViewGroup[childCount=0] < @ViewGroup[clickable=true][childCount=1][visibleToUser=true][width=height][id=null][text=null][desc=null] <2 ViewGroup[childCount=4] < ViewGroup < ViewGroup < ViewGroup < FrameLayout < FrameLayout < [id="android:id/content"]',
+          exampleUrls: 'https://e.gkd.li/407857dd-3537-4e51-9c51-2d32910bf70b',
+          snapshotUrls: 'https://i.gkd.li/i/23602564',
         },
       ],
     },

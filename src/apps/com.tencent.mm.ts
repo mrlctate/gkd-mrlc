@@ -19,7 +19,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
-          actionCd: 500,
+          actionCd: 800,
           position: {
             left: 'width * 0.9400',
             top: 'width * 0.0393',
@@ -218,14 +218,12 @@ export default defineGkdApp({
       key: 8,
       name: '功能类-自动选中发送原图',
       desc: '自动选中原图，可手动取消勾选',
-      fastQuery: true,
       activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
       rules: [
         {
           key: 1,
-          action: 'clickCenter',
           matches:
-            '@[desc="未选中,原图,复选框"][clickable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
+            '@[desc="未选中,原图,复选框"][desc!^="已选中"][clickable=true][focusable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中
         },
       ],
@@ -648,6 +646,46 @@ export default defineGkdApp({
           key: 8,
           name: '局部广告2-【与我无关】',
           matches: '[desc="与我无关"][visibleToUser=true]',
+        },
+      ],
+    },
+    {
+      key: 41,
+      name: '功能类-语音/视频通话呼入10秒后自动点击接听',
+      rules: [
+        {
+          matchTime: 15000,
+          actionDelay: 10000,
+          activityIds: ['.plugin.voip.ui.VideoActivity', '.ui.LauncherUI'],
+          matches: 'Button[desc="接听"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/fbfea6ba-ce43-4641-a919-9c21fa49dc73',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18225086',
+            'https://i.gkd.li/i/23295677',
+          ],
+        },
+      ],
+    },
+    {
+      key: 42,
+      name: '功能类-自动接龙',
+      desc: '手动点接龙后点击加号再点击发送',
+      fastQuery: true,
+      activityIds: '.plugin.groupsolitaire.ui.GroupSolitatireEditUI',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '@[desc="添加"] -n LinearLayout > [text^="由"][text*="发起接龙"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/5f446d2a-432f-4dca-9bb7-81eba83713c6',
+          snapshotUrls: 'https://i.gkd.li/i/21705413',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '@[text="发送"] < LinearLayout < LinearLayout < LinearLayout - [vid="actionbar_up_indicator"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/30f0f903-0a1a-422e-991c-02b7cbedc2da',
+          snapshotUrls: 'https://i.gkd.li/i/21705384',
         },
       ],
     },

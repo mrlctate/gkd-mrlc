@@ -242,7 +242,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          action: 'clickCenter',
+          //action: 'clickCenter', 此种点击方式在部分应用版本会造成误触，需点击 clickable=true 节点
           activityIds: [
             'tv.danmaku.bili.MainActivityV2',
             'com.bilibili.vip.web.VipWebActivity',
@@ -257,6 +257,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15289942',
             'https://i.gkd.li/i/15328394',
             'https://i.gkd.li/i/18236032',
+            'https://i.gkd.li/i/22310507',
           ],
         },
         {
@@ -273,6 +274,14 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15523975',
             'https://i.gkd.li/i/15814146',
           ],
+        },
+        {
+          key: 5,
+          fastQuery: true,
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches:
+            '@TextView[width<130 && height<130] - TextView[childCount=0][id="dialog-canvas"] <<n [vid="webview"]',
+          snapshotUrls: 'https://i.gkd.li/i/23385023',
         },
       ],
     },
@@ -380,6 +389,66 @@ export default defineGkdApp({
           matches: '[vid="story_ctrl_router"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/4bfd6131-d4be-46be-affb-73338b01f49c',
           snapshotUrls: 'https://i.gkd.li/i/18164075',
+        },
+      ],
+    },
+    {
+      key: 17,
+      name: '功能类-自动点击评论区的[展开更多评论]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            'com.bilibili.video.story.StoryVideoActivity',
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity',
+          ],
+          matches: '@LinearLayout[clickable=true] > [text="展开更多评论"]',
+          exampleUrls: 'https://e.gkd.li/e7b7167e-7623-4079-9f16-fd253f303074',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22572375',
+            'https://i.gkd.li/i/22573433',
+          ],
+        },
+      ],
+    },
+    {
+      key: 18,
+      name: '功能类-自动领取会员经验',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.bilibili.vip.web.VipWebActivity',
+          matches:
+            '[text^="专属等级加速包"] +n @TextView[childCount=0][text="领取"] <<n [vid="webview"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22886723', // 领取前
+            'https://i.gkd.li/i/22886739', // 领取后
+          ],
+        },
+      ],
+    },
+    {
+      key: 19,
+      name: '功能类-自动点击查看原图',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: [
+            'com.bilibili.video.story.StoryTransparentActivity', // 视频：竖屏模式
+            'com.bilibili.ship.theseus.detail.UnitedBizDetailsActivity', // 视频：详情页模式
+            'com.bilibili.bplus.followinglist.page.browser.ui.LightBrowserActivityV2', // 动态：图片
+            'com.bilibili.lib.ui.ComposeActivity', // 动态：评论图片
+            'com.bilibili.column.ui.detail.image.ColumnImageViewerActivity', // 专栏图片
+          ],
+          matches: '[text^="查看原图"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/c0ffc9cb-fac0-4b5c-9645-3674942b5c7d',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23304237', // 视频：竖屏模式
+            'https://i.gkd.li/i/23304245', // 视频：详情页模式
+            'https://i.gkd.li/i/23305280', // 动态：帖内图片
+            'https://i.gkd.li/i/23305281', // 动态：评论图片
+            'https://i.gkd.li/i/23305275', // 专栏图片
+          ],
         },
       ],
     },

@@ -67,6 +67,31 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18587159',
           ],
         },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: 'com.taobao.themis.container.app.TMSActivity',
+          matches:
+            '[text="规则"] +2 @View[childCount=1][clickable=true] > Image[childCount=0][text!=null] <<n [vid="tms_tab_content_view"]',
+          exampleUrls: 'https://e.gkd.li/dbf9ea95-3674-4cb2-8a88-dfb96c24e71b',
+          snapshotUrls: 'https://i.gkd.li/i/22308745',
+        },
+        {
+          key: 4,
+          fastQuery: true,
+          activityIds: [
+            'com.taobao.search.uniform.SearchActivity',
+            'com.taobao.android.detail.alittdetail.TTDetailActivity',
+            'com.taobao.tao.TBMainActivity',
+          ],
+          matches:
+            '@[clickable=true][childCount=0][width<150 && height<150][index=parent.childCount.minus(1)] - TextView[text.length>0] <n View <<n WebView[vid="poplayer_inner_view"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22949963',
+            'https://i.gkd.li/i/23289412',
+            'https://i.gkd.li/i/23567053',
+          ],
+        },
       ],
     },
     {

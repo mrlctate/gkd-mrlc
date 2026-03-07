@@ -17,7 +17,7 @@ export default defineGkdApp({
             top: 'width * 0.0798',
           },
           matches:
-            'FrameLayout[childCount=2][clickable=true][visibleToUser=true]',
+            '[vid="splashParent"][childCount=2][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/21760226',
         },
       ],

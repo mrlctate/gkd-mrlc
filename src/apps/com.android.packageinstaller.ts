@@ -20,10 +20,8 @@ export default defineGkdApp({
           ],
           excludeMatches:
             '[text^="正为您检测"][childCount=0][visibleToUser=true]',
-          anyMatches: [
-            '@LinearLayout[clickable=true][visibleToUser=true] > [text="继续安装"][clickable=false]',
-            '[text="继续安装"][clickable=true][visibleToUser=true]',
-          ],
+          matches:
+            '[text="继续安装"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13206444',
             'https://i.gkd.li/i/14046749',

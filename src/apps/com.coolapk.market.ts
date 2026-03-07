@@ -52,63 +52,55 @@ export default defineGkdApp({
     {
       key: 0,
       name: '分段广告-信息流广告',
-      desc: '点击卡片右上角按钮->免广告-点击关闭->选择关闭原因-点击不感兴趣',
-      matchRoot: true,
       fastQuery: true,
       activityIds: [
-        'com.coolapk.market.view.main.MainActivity',
-        'com.coolapk.market.view.node.DynamicNodePageActivity',
-        'com.coolapk.market.view.feed.FeedDetailActivityV8',
-        'com.bytedance.sdk.openadsdk.core.dislike.ui.f',
+        '.view.feed.FeedDetailActivityV8',
+        '.view.main.MainActivity',
+        '.view.node.DynamicNodePageActivity',
+        '.view.base.SimpleAlphaActivity',
+        '.view.search.SuperSearchResultActivity',
       ],
       rules: [
         {
-          key: 1,
-          name: '点击右上角x按钮',
-          excludeMatches: [
-            '[text="回复"] + [text="发布"]',
-            '[text="创建收藏单"][visibleToUser=true]',
-            '[vid="submit_view"][text="发布"]',
-          ],
-          matches: [
-            '[text*="广告" || text="推广"][visibleToUser=true]',
-            '[vid="close_view"]',
-          ],
+          key: 0,
+          matches:
+            '@[vid="close_view"] <<n [vid="coolapk_card_view"][visibleToUser=true]',
           snapshotUrls: [
-            'https://i.gkd.li/i/12707506',
-            'https://i.gkd.li/i/12642094',
-            'https://i.gkd.li/i/12642148',
-            'https://i.gkd.li/i/12774771',
-            'https://i.gkd.li/i/13257987',
-            'https://i.gkd.li/i/17450282',
+            'https://i.gkd.li/i/19004644',
+            'https://i.gkd.li/i/19004652',
+            'https://i.gkd.li/i/19004663',
+            'https://i.gkd.li/i/19005176',
+            'https://i.gkd.li/i/20776874',
+            'https://i.gkd.li/i/21693917',
           ],
           excludeSnapshotUrls: [
-            'https://i.gkd.li/i/14996359', // 避免误触
-            'https://i.gkd.li/i/15159886', // 避免误触
-            'https://i.gkd.li/i/15587119', // 避免误触
+            'https://i.gkd.li/i/14996359',
+            'https://i.gkd.li/i/15159886',
+            'https://i.gkd.li/i/15587119',
+            'https://i.gkd.li/i/20768037',
           ],
         },
         {
-          preKeys: [1],
-          key: 2,
-          name: '点击[不感兴趣]/[关闭]',
-          matches: '[text="不感兴趣" || text="关闭"]',
+          preKeys: [0],
+          key: 1,
+          anyMatches: [
+            '@[clickable=true] >(1,2) [text="不感兴趣"][visibleToUser=true]',
+            '[text="不感兴趣"][clickable=true][visibleToUser=true]',
+          ],
           snapshotUrls: [
-            'https://i.gkd.li/i/14959519',
-            'https://i.gkd.li/i/14964859',
+            'https://i.gkd.li/i/19004649',
+            'https://i.gkd.li/i/19643258',
+            'https://i.gkd.li/i/19643262',
+            'https://i.gkd.li/i/19534649',
+            'https://i.gkd.li/i/20776872',
+            'https://i.gkd.li/i/21693916',
+            'https://i.gkd.li/i/23046625',
           ],
         },
         {
-          preKeys: [1, 2],
-          key: 3,
-          name: '选择关闭原因-点击不感兴趣',
-          matches: '@LinearLayout > TextView[text="不感兴趣"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/12472633',
-            'https://i.gkd.li/i/12655713',
-            'https://i.gkd.li/i/12660759',
-            'https://i.gkd.li/i/12706437',
-          ],
+          preKeys: [0, 1], // 疑似酷安旧版本bug，点击不感兴趣后会再出现一个弹窗
+          matches: '[text="不感兴趣"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/21036817',
         },
       ],
     },
