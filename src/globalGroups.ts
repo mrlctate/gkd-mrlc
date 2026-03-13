@@ -46,7 +46,7 @@ export default defineGkdGlobalGroups([
           '[text*="跳过"||text*="跳過"||text*="skip"||text*="Skip"][text.length<10][width<300][visibleToUser=true]',
 
           // '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -n FrameLayout >(3+n) TextView[text*="跳转"||text*="第三方"||text*="点击"][visibleToUser=true]', // 字节SDK
-          '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -n FrameLayout >(3+n)', // 字节SDK
+          '@View[clickable=true&&width=height&&visibleToUser=true] +(1,2) TextView[index=parent.childCount.minus(1)&&clickable=true] -n FrameLayout', // 字节SDK
 
           'FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]',
           '@ImageView[width=height&&visibleToUser=true] <2 ViewGroup + ViewGroup[index=parent.childCount.minus(1)] > [text="广告"]', // https://i.gkd.li/i/23917114
