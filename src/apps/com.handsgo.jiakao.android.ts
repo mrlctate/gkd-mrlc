@@ -36,7 +36,6 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          name: '字节广告',
           fastQuery: true,
           activityIds:
             'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
@@ -46,12 +45,37 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          name: '课程广告',
           fastQuery: true,
           activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
+          matches: [
+            '[vid="adsdk__ids_cta_layout"][visibleToUser=true]',
+            '[vid="close"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/20745398',
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.main.activity.MainActivity',
           matches:
-            '[id="com.handsgo.jiakao.android:id/adsdk__ids_cta_layout"] - * > [id="com.handsgo.jiakao.android:id/close"]',
-          snapshotUrls: 'https://i.gkd.li/i/13523033',
+            '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] +n FrameLayout >(1,2) [text^="立即" || text="查看详情" || text="了解更多" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
+          exampleUrls: 'https://e.gkd.li/5370968e-fded-4be0-8fa4-b7997f8a861a',
+          snapshotUrls: 'https://i.gkd.li/i/20745379',
+        },
+      ],
+    },
+    {
+      key: 3,
+      name: '权限提示-通知权限',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.handsgo.jiakao.android.main.activity.MainActivity',
+          matches: '[text="开启专属学习资料推送"] + [vid="closeIv"]',
+          exampleUrls: 'https://e.gkd.li/9a9aad9b-052b-4e00-9926-d4a213f96372',
+          snapshotUrls: 'https://i.gkd.li/i/17001986',
         },
       ],
     },

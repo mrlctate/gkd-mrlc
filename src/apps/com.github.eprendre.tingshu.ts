@@ -28,6 +28,42 @@ export default defineGkdApp({
             'https://i.gkd.li/i/13446735',
           ],
         },
+        {
+          key: 2,
+          fastQuery: true,
+          activityIds: '.ui.play.PlayerActivity',
+          matches:
+            'ImageView[childCount=0] < @ViewGroup[clickable=true][childCount=1] < ViewGroup[childCount=1] <2 ViewGroup - ViewGroup >2 [text="广告"]',
+          exampleUrls: 'https://e.gkd.li/055cfec1-d022-4e46-83f3-bc4c2860f919',
+          snapshotUrls: 'https://i.gkd.li/i/23407169',
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          activityIds: '.ui.play.PlayerActivity',
+          matches:
+            '@[id="cj.mobile.wm.allmodules:id/wm_express_close_iv"] - LinearLayout > [text="广告"]',
+          exampleUrls: 'https://e.gkd.li/0174efc4-5eb6-4224-a213-e5c46d421a16',
+          snapshotUrls: 'https://i.gkd.li/i/23475820',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '全屏广告-弹窗广告',
+      desc: '点击关闭',
+      rules: [
+        {
+          key: 0,
+          name: '快手广告',
+          fastQuery: true,
+          activityIds: 'com.github.eprendre.tingshu.ui.SplashActivity',
+          matches: [
+            '[text="广告"]',
+            '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/13625303',
+        },
       ],
     },
     {

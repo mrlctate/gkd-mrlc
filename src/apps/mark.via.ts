@@ -20,6 +20,7 @@ export default defineGkdApp({
         },
         {
           key: 2,
+          actionMaximum: 2,
           name: '底部弹窗-打开QQ浏览器',
           matches: '@TextView +2 [text="立即打开"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/17690798',

@@ -5,6 +5,35 @@ export default defineGkdApp({
   name: '招商银行',
   groups: [
     {
+      key: 1,
+      name: '通知提示-消息通知',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.app.mainframe.container.PBMainActivity',
+          matches:
+            '[text="开启消息通知"] + [vid="close_btn"][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23218184',
+        },
+      ],
+    },
+    {
+      key: 2,
+      name: '局部广告-卡片广告',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.app.mainframe.container.PBMainActivity',
+          matches: '[vid="float_window"] > [vid="ivCancle"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23218092',
+        },
+      ],
+    },
+    {
       key: 3,
       name: '局部广告-首页活动悬浮广告',
       fastQuery: true,
@@ -14,7 +43,8 @@ export default defineGkdApp({
       rules: [
         {
           activityIds: 'cmb.pb.app.mainframe.container.PBMainActivity',
-          matches: '[vid="float_window"] > [vid="ivCancle"][clickable=true]',
+          matches:
+            '[text^="小招"] + View > TextView[text.length=0][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/14208669',
         },
       ],

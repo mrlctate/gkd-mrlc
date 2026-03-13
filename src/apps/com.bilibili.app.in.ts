@@ -60,5 +60,14 @@ export default defineGkdApp({
         '[text="对当前的评论区满意吗？"] + [id="com.bilibili.app.in:id/close"]',
       snapshotUrls: 'https://i.gkd.li/i/13115189',
     },
+    {
+      key: 6,
+      name: '评价提示',
+      fastQuery: true,
+      activityIds: 'tv.danmaku.bili.MainActivityV2',
+      rules:
+        '[vid="content"][text$="请评分鼓励一下吧～"] +6 [text="下次再说"][clickable=true][visibleToUser=true]',
+      snapshotUrls: 'https://i.gkd.li/i/21759798',
+    },
   ],
 });

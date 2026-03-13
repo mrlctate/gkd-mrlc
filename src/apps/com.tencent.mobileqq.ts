@@ -40,7 +40,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
-          matches: 'ImageView[desc="关闭"][clickable=true]',
+          matches: [
+            '[desc="快捷入口"]',
+            'ImageView[desc="关闭"][clickable=true]',
+          ],
           snapshotUrls: ['https://i.gkd.li/i/17552202'],
         },
         {
@@ -174,7 +177,7 @@ export default defineGkdApp({
           key: 5,
           fastQuery: true,
           matches:
-            'ViewGroup[childCount=6] > ViewGroup[clickable=true][index=2]',
+            'ViewGroup[childCount=6] > ViewGroup[desc=null][clickable=true][index=2][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/15136939',
         },
         {

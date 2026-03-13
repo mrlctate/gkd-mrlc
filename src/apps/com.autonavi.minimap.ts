@@ -73,9 +73,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          action: 'clickCenter',
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            'ViewGroup > ViewGroup > [desc="关闭"][clickable=true][visibleToUser=true]',
+            'ViewGroup > [desc="关闭"][clickable=true][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/071a07d2-c760-4f15-9359-f54bf51b6205',
           snapshotUrls: 'https://i.gkd.li/i/14715295',
@@ -103,7 +104,7 @@ export default defineGkdApp({
           fastQuery: true,
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            '@[clickable=true] > [visibleToUser=true][text="关闭"] <<n [vid="ajx_view_container"]',
+            '@ViewGroup[childCount=2][clickable=true] > [visibleToUser=true][text="关闭"] + View[text!=null] <<n [vid="ajx_view_container"]',
           exampleUrls: 'https://e.gkd.li/018aa83b-3f0a-46b4-b084-a5e7a397ca68',
           snapshotUrls: 'https://i.gkd.li/i/18627401',
         },

@@ -11,6 +11,13 @@ export default defineGkdApp({
       fastQuery: true,
       rules: [
         {
+          key: 1,
+          activityIds: '.ui.MainActivity',
+          matches:
+            '[vid="cl_root"][childCount=2][visibleToUser=true] > [vid="iv_close"][width=height][clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23483484',
+        },
+        {
           key: 2,
           activityIds: '.module.sharelink.ChainInfoActivity',
           matches: '[text="为你推荐"] + [desc="关闭"][clickable=true]',
@@ -79,48 +86,11 @@ export default defineGkdApp({
           key: 4,
           name: 'VIP横幅广告',
           fastQuery: true,
+          excludeMatches: '[text="删除文件"][visibleToUser=true]',
           matches: [
             '[text*="VIP"]',
             '[id*="close" || id$="Close"][width=height]',
           ],
-        },
-      ],
-    },
-    {
-      key: 3,
-      name: '功能类-签到',
-      fastQuery: true,
-      actionMaximum: 1,
-      activityIds: '.ui.cloudp2p.RichMediaActivity',
-      rules: [
-        {
-          key: 1,
-          matches:
-            '[text^="连续签到7天后"] +2 TextView[text^="签到" && clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/18762226',
-          exampleUrls: 'https://e.gkd.li/89b963b3-f46c-426b-9439-8244f4ac4836',
-        },
-        {
-          preKeys: [1],
-          key: 2,
-          position: {
-            left: 'width * 0.6509',
-            top: 'width * 0.8515',
-          },
-          matches:
-            'TextView[clickable=true && text^="已签到"] -2 [text^="连续签到7天后"] <4 View[childCount=7 && height>900]',
-          snapshotUrls: 'https://i.gkd.li/i/19788772',
-        },
-        {
-          key: 3,
-          activityIds:
-            'com.bytedance.sdk.openadsdk.core.component.reward.activity.TTRewardVideoActivity',
-          position: {
-            left: 'width * 0.8274',
-            top: 'width * 0.0888',
-          },
-          matches: 'View[childCount=4] > [text="奖励已领取"][index=1]',
-          snapshotUrls: 'https://i.gkd.li/i/19885285',
         },
       ],
     },

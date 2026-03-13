@@ -16,23 +16,26 @@ export default defineGkdApp({
       ],
       rules: [
         // 第一段
-        // {
-        //   key: 0,
-        //   actionCd: 3000,
-        //   name: '第一段 点击朋友圈广告',
-        //   matches:
-        //     '@LinearLayout[clickable=true&&left>850][visibleToUser=true] <2 LinearLayout < LinearLayout[visibleToUser=true] - ImageView[desc!=null] < LinearLayout[childCount=2&&index=0]',
-        //   exampleUrls: 'https://e.gkd.li/d1941064-d4e9-4bb2-99ab-ba30e0ce8126',
-        //   snapshotUrls: [
-        //     'https://i.gkd.li/i/13791200',
-        //     'https://i.gkd.li/i/16568338',
-        //     'https://i.gkd.li/i/19644924',
-        //   ],
-        // },
+        {
+          key: 0,
+          fastQuery: true,
+          actionCd: 800,
+          position: {
+            left: 'width * 0.9400',
+            top: 'width * 0.0393',
+          },
+          name: '第一段 点击朋友圈广告',
+          matches: '[vid="kbe"][childCount=2][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13791200',
+            'https://i.gkd.li/i/16568338',
+            'https://i.gkd.li/i/19644924',
+          ],
+        },
         // 第二，三段
         {
           key: 1,
-          // actionCd: 1000,
+          actionCd: 500,
           // forcedTime: 1000,
           name: '点击[关闭广告]',
           matches:
@@ -215,23 +218,13 @@ export default defineGkdApp({
       key: 8,
       name: '功能类-自动选中发送原图',
       desc: '自动选中原图，可手动取消勾选',
-      fastQuery: true,
-      actionMaximum: 1,
       activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
       rules: [
         {
-          key: 1, // 8.0.56
-          action: 'clickCenter',
+          key: 1,
           matches:
-            '@ImageButton[clickable=true && width!=height] + TextView <2 RelativeLayout[childCount=2 && width!=height] < RelativeLayout[vid!=""] + RelativeLayout[vid!="" && clickable=true]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18764301', // 已选中
-            'https://i.gkd.li/i/16987145', // 未选中
-            'https://i.gkd.li/i/16987141', // 已选中
-          ],
-          exampleUrls: [
-            'https://e.gkd.li/354ca046-80ca-41d0-a31f-931a19a4695f',
-          ],
+            '@[desc="未选中,原图,复选框"][desc!^="已选中"][clickable=true][focusable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中
         },
       ],
     },
@@ -448,8 +441,8 @@ export default defineGkdApp({
     },
     {
       key: 35,
-      name: '分段广告-订阅号消息内容-广告',
-      desc: '点击下拉框-[关闭此广告]/[不感兴趣]-[与我无关]',
+      name: '分段广告-订阅号文章内广告',
+      desc: '注意：该规则有概率误触，请谨慎开启',
       activityIds: [
         '.plugin.brandservice.ui.timeline.preload.ui.TmplWebView', //调整为TmplWebView, 同时兼容多种ID
         '.plugin.webview.ui.tools.fts.MMSosWebViewUI',
@@ -463,7 +456,7 @@ export default defineGkdApp({
             '[text="不感兴趣" || text="与我无关" || text="感谢你的反馈"][visibleToUser=true]',
           ],
           matches:
-            '@[clickable=true][visibleToUser=true] > TextView[text^="广告"][visibleToUser=true]', // 某些微信版本上该节点的`clickable=false`
+            '@View[childCount<5] > [text^="广告"][text.length<4][visibleToUser=true]', // 某些微信版本上该节点的`clickable=false`
           exampleUrls: [
             'https://e.gkd.li/e73bb653-cc79-455c-958b-38aff6687c37',
             'https://e.gkd.li/5915f80b-66b9-4441-9d36-3caa3fe1be58',
@@ -471,11 +464,11 @@ export default defineGkdApp({
           snapshotUrls: [
             'https://i.gkd.li/i/12642232', // ui.TmplWebViewMMUI
             'https://i.gkd.li/i/13199281', // ui.TmplWebViewTooLMpUI
-            'https://i.gkd.li/i/14006180', // com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI
-            'https://i.gkd.li/i/17093010', // com.tencent.mm.plugin.webview.ui.tools.MMWebViewUI
+            'https://i.gkd.li/i/14006180', // .plugin.webview.ui.tools.fts.MMSosWebViewUI
+            'https://i.gkd.li/i/17093010', // .plugin.webview.ui.tools.MMWebViewUI
             'https://i.gkd.li/i/16796663', // 内容尾部广告
             'https://i.gkd.li/i/16796725', // 内容中部广告
-            'https://i.gkd.li/i/16798663', // clickable=false，使用clickable=true避免误触
+            'https://i.gkd.li/i/16798663', // clickable=false
             'https://i.gkd.li/i/15198455', // 无id
             'https://i.gkd.li/i/17276697', // text="广告 "，有空格
           ],
@@ -487,7 +480,7 @@ export default defineGkdApp({
           // 第二段-有“关闭此广告”按钮，则直接关闭该广告
           preKeys: [0],
           key: 20,
-          matches: '[text="关闭此广告"][clickable=true][visibleToUser=true]',
+          matches: '[text="关闭此广告"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16796729', // 内容中部广告
             'https://i.gkd.li/i/17113565', // 在某些情况下，点击“不感兴趣”会导致无法执行下一步操作，因此点击“关闭此广告”
@@ -499,12 +492,12 @@ export default defineGkdApp({
           key: 25,
           excludeMatches: [
             '[text="感谢你的反馈"][visibleToUser=true]',
-            '[text="关闭此广告"][clickable=true][visibleToUser=true]',
+            '[text="关闭此广告"][visibleToUser=true]',
           ],
-          matches: '[text="不感兴趣"][clickable=true][visibleToUser=true]', // 为确保能够关闭尾部广告，此处点击“不感兴趣”而非“关闭此广告”
+          matches: '[text="不感兴趣"][visibleToUser=true]', // 为确保能够关闭尾部广告，此处点击“不感兴趣”而非“关闭此广告”
           snapshotUrls: [
             'https://i.gkd.li/i/16796666', // 内容尾部广告
-            'https://i.gkd.li/i/16798661', // clickable=false，使用clickable=true避免误触
+            'https://i.gkd.li/i/16798661', // clickable=false
             'https://i.gkd.li/i/15198459', // 无id
           ],
           excludeSnapshotUrls: [
@@ -516,11 +509,11 @@ export default defineGkdApp({
           // 第三段
           preKeys: [25],
           key: 50,
-          matches: '[text="与我无关"][clickable=true][visibleToUser=true]',
+          matches: '[text="与我无关"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/16796674', // 内容尾部广告
             'https://i.gkd.li/i/16796732', // 内容中部广告
-            'https://i.gkd.li/i/16798658', // clickable=false，使用clickable=true避免误触
+            'https://i.gkd.li/i/16798658', // clickable=false
             'https://i.gkd.li/i/15198461', // 无id
           ],
         },
@@ -653,6 +646,46 @@ export default defineGkdApp({
           key: 8,
           name: '局部广告2-【与我无关】',
           matches: '[desc="与我无关"][visibleToUser=true]',
+        },
+      ],
+    },
+    {
+      key: 41,
+      name: '功能类-语音/视频通话呼入10秒后自动点击接听',
+      rules: [
+        {
+          matchTime: 15000,
+          actionDelay: 10000,
+          activityIds: ['.plugin.voip.ui.VideoActivity', '.ui.LauncherUI'],
+          matches: 'Button[desc="接听"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/fbfea6ba-ce43-4641-a919-9c21fa49dc73',
+          snapshotUrls: [
+            'https://i.gkd.li/i/18225086',
+            'https://i.gkd.li/i/23295677',
+          ],
+        },
+      ],
+    },
+    {
+      key: 42,
+      name: '功能类-自动接龙',
+      desc: '手动点接龙后点击加号再点击发送',
+      fastQuery: true,
+      activityIds: '.plugin.groupsolitaire.ui.GroupSolitatireEditUI',
+      rules: [
+        {
+          key: 0,
+          matches:
+            '@[desc="添加"] -n LinearLayout > [text^="由"][text*="发起接龙"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/5f446d2a-432f-4dca-9bb7-81eba83713c6',
+          snapshotUrls: 'https://i.gkd.li/i/21705413',
+        },
+        {
+          preKeys: [0],
+          matches:
+            '@[text="发送"] < LinearLayout < LinearLayout < LinearLayout - [vid="actionbar_up_indicator"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/30f0f903-0a1a-422e-991c-02b7cbedc2da',
+          snapshotUrls: 'https://i.gkd.li/i/21705384',
         },
       ],
     },

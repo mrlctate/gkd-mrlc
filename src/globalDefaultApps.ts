@@ -1,9 +1,7 @@
 // 全局规则黑名单
 // 在一些非系统应用中禁用所有全局规则
 export const blackListAppIDs: string[] = [
-  'com.tencent.mm', // 微信
   'li.songe.gkd', // GKD
-  'com.eg.android.AlipayGphone', //支付宝
   'com.tencent.wetype', // 微信输入法
   'com.tmri.app.main', // 交管12123
   'com.github.android', // GitHub
@@ -205,7 +203,7 @@ export const blackListAppIDs: string[] = [
   'youqu.android.todesk', // ToDesk
 ];
 
-// 在应用中单独禁用某个全局规则F
+// 在应用中单独禁用某个全局规则
 // 开屏广告黑名单
 export const openAdBlackListAppIDs = new Set([
   ...blackListAppIDs,
@@ -239,6 +237,11 @@ export const openAdWhiteListAppIDs = new Set([
   'com.bbk.theme', // vivo主题商店
   'com.huawei.android.thememanager', // 华为主题
   'com.heytap.themestore', // oppo主题商店
+  'com.bbk.theme', // vivo主题商店
+  'com.vivo.game', // vivo游戏中心 https://i.gkd.li/i/20097148
+  'com.meizu.media.video', // 魅族视频
+  'com.hihonor.vmall', // 荣耀商城
+  'com.miui.systemAdSolution', // 智能服务
 ]);
 
 // 更新提示白名单
