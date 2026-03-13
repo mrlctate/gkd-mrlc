@@ -92,7 +92,7 @@ export default defineGkdGlobalGroups([
   },
   {
     key: 2,
-    name: '通知提示-全局关闭应用的弹窗提示',
+    name: '通知提示-全局关闭应用的通知提示',
     desc: '关闭通知提示,权限提示,评价提示',
     disableIfAppGroupMatch: '通知提示',
     order: NOTIFICATION_PROMPT,
