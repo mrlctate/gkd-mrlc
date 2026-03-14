@@ -9,8 +9,11 @@
 
 ## 订阅
 
-npmmirror源（国内源）
+cloudflare源（国内源,推荐使用）
 
+```txt
+https://gkd-mrlc.pages.dev/gkd.json5
+```
 
 GitHub源
 
@@ -20,7 +23,7 @@ https://raw.githubusercontent.com/mrlctate/gkd-mrlc/main/dist/gkd.json5
 
 ##
 
-当前版本: v69
+当前版本: v70
 
 当前订阅文件已适配 690 个应用，共有 1488 应用规则组，3 全局规则组
 
