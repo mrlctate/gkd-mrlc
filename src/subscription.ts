@@ -20,9 +20,10 @@ apps.forEach((appConfig) => {
 
 export default defineGkdSubscription({
   id: 2,
-  name: 'Mrlc的订阅-不得转发和传播',
+  // name: 'Mrlc的订阅-不得转发和传播',
+  name: 'Mrlc的战神—天下无敌',
   version: 0,
-  author: 'Mrlc',
+  author: '战神',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/mrlctate/gkd-mrlc/issues/new/choose',
   categories,

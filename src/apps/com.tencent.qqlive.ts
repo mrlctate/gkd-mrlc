@@ -233,8 +233,8 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: 'View[id="95777258"] > Button[index=2]',
-          snapshotUrls: 'https://i.gkd.li/i/17626519',
+          matches: '[id="app"] > View[childCount>=2] > [text="x"]',
+          snapshotUrls: 'https://i.gkd.li/i/25996420',
         },
         {
           key: 2,
