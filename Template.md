@@ -9,8 +9,11 @@
 
 ## 订阅
 
-npmmirror源（国内源）
+cloudflare源（国内源,推荐使用）
 
+```txt
+https://gkd-mrlc.pages.dev/gkd.json5
+```
 
 GitHub源
 
