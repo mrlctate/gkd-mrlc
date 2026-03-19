@@ -23,9 +23,9 @@ https://raw.githubusercontent.com/mrlctate/gkd-mrlc/main/dist/gkd.json5
 
 ##
 
-当前版本: v70
+当前版本: v71
 
-当前订阅文件已适配 690 个应用，共有 1488 应用规则组，3 全局规则组
+当前订阅文件已适配 690 个应用，共有 1492 应用规则组，3 全局规则组
 
 ## 相关
 
