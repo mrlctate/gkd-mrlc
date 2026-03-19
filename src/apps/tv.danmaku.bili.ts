@@ -165,7 +165,7 @@ export default defineGkdApp({
         {
           key: 0,
           matches:
-            '@[vid="more"] <<n [vid="tool_container" || vid="ad_tint_frame"][visibleToUser=true]',
+            '@[vid="more" || id="tv.danmaku.bili.adbiz:id/more"] <<n [vid="tool_container" || vid="ad_tint_frame" || id="tv.danmaku.bili.adbiz:id/ad_tint_frame" || id="tv.danmaku.bili.adbiz:id/root_container" || id="tv.danmaku.bili.adbiz:id/constraintLayout"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/14083540',
             'https://i.gkd.li/i/14588315',
@@ -173,6 +173,9 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18274379',
             'https://i.gkd.li/i/18306851',
             'https://i.gkd.li/i/19537979',
+            'https://i.gkd.li/i/23012670',
+            'https://i.gkd.li/i/23123800',
+            'https://i.gkd.li/i/23687196',
           ],
         },
         {
@@ -190,7 +193,7 @@ export default defineGkdApp({
           key: 50,
           name: '点击[不感兴趣]/[相似内容过多]',
           matches:
-            '@[clickable=true] > [text="相似内容过多" || text="不感兴趣" || text="up主不感兴趣" || text="对该up的直播不感兴趣" || text="我不想看"]',
+            '@[clickable=true] > [text="相似内容过多" || text="不感兴趣" || text="up主不感兴趣" || text="对该up的直播不感兴趣" || text="我不想看" || text="引人不适"]',
           snapshotUrls: [
             'https://i.gkd.li/i/13625309',
             'https://i.gkd.li/i/13742257',
@@ -200,6 +203,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18274380',
             'https://i.gkd.li/i/18292926',
             'https://i.gkd.li/i/20710223',
+            'https://i.gkd.li/i/23687208',
           ],
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/18292929',

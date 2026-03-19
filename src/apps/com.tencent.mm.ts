@@ -222,6 +222,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
+          action: 'clickCenter',
           matches:
             '@[desc="未选中,原图,复选框"][desc!^="已选中"][clickable=true][focusable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中
@@ -368,10 +369,14 @@ export default defineGkdApp({
         {
           fastQuery: true,
           activityIds: 'com.tencent.mm.plugin.webwx.ui.WebWXUnlockUI',
-          matches: '[text="解锁"]',
+          matches:
+            '@[text="解锁"][clickable=true] < LinearLayout -2 [text^="解锁"][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/85bb6dcd-0d04-46c1-af14-6e4b57ff4dca',
-          snapshotUrls: 'https://i.gkd.li/i/14490116',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14490116',
+            'https://i.gkd.li/i/23688962',
+          ],
         },
       ],
     },

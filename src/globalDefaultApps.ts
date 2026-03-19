@@ -218,7 +218,11 @@ export const updateBlackListAppIDs = new Set([
 ]);
 
 // 通知提示黑名单
-export const notificationBlackListAppIDs = new Set([...blackListAppIDs]);
+export const notificationBlackListAppIDs = new Set([
+  ...blackListAppIDs,
+  'com.tencent.mm', // 微信
+  'com.ss.android.ugc.aweme', // 抖音
+]);
 
 // 全局规则白名单（由于系统应用默认禁用全局规则，所以对系统应用启用白名单模式）
 

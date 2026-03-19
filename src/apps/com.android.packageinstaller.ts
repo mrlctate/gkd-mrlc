@@ -13,15 +13,16 @@ export default defineGkdApp({
           key: 0,
           name: '点击[继续安装]',
           activityIds: [
-            '.InstallStart',
-            '.NewInstallInstalling',
-            '.FlymePackageInstallerActivity',
             '.PackageInstallerActivity',
+            '.FlymePackageInstallerActivity',
+            '.PackageInterceptActivity',
+            '.NewInstallInstalling',
+            '.InstallSuccess',
+            '.oplus.InstallAppProgress',
+            '.DeleteStagedFileOnResult',
           ],
-          excludeMatches:
-            '[text^="正为您检测"][childCount=0][visibleToUser=true]',
           matches:
-            '[text="继续安装"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
+            '[text*="安装"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/13206444',
             'https://i.gkd.li/i/14046749',

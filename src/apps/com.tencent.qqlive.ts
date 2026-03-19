@@ -233,7 +233,7 @@ export default defineGkdApp({
       rules: [
         {
           key: 1,
-          matches: '[id="app"] > View[childCount>=2] > [text="x"]',
+          matches: '[id="app"] > View > [text="x"][text.length=1]',
           snapshotUrls: 'https://i.gkd.li/i/25996420',
         },
         {
