@@ -5,24 +5,42 @@ export default defineGkdApp({
   name: '软件包安装程序',
   groups: [
     {
-      key: 1,
-      name: '功能类-自动安装应用',
+      key: 0,
+      name: '功能类-勾选[已了解该应用存在的风险]',
       fastQuery: true,
       rules: [
         {
           key: 0,
-          name: '点击[继续安装]',
-          activityIds: [
-            '.PackageInstallerActivity',
-            '.FlymePackageInstallerActivity',
-            '.PackageInterceptActivity',
-            '.NewInstallInstalling',
-            '.InstallSuccess',
-            '.oplus.InstallAppProgress',
-            '.DeleteStagedFileOnResult',
+          activityIds: '.PackageInstallerActivity',
+          matches: '[vid$="checkbox" && clickable=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/14595443',
+            'https://i.gkd.li/i/26134797',
+            'https://i.gkd.li/i/26134808',
           ],
-          matches:
-            '[text*="安装"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
+        },
+      ],
+    },
+    {
+      key: 1,
+      name: '功能类-自动安装应用',
+      fastQuery: true,
+      activityIds: [
+        '.PackageInstallerActivity',
+        '.FlymePackageInstallerActivity',
+        '.PackageInterceptActivity',
+        '.NewInstallInstalling',
+        '.InstallSuccess',
+        '.oplus.InstallAppProgress',
+        '.DeleteStagedFileOnResult',
+      ],
+      rules: [
+        {
+          key: 0,
+          name: '点击[继续安装]',
+          matches: [
+            '[text="继续安装" || text="完成"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
+          ],
           snapshotUrls: [
             'https://i.gkd.li/i/13206444',
             'https://i.gkd.li/i/14046749',
@@ -33,56 +51,14 @@ export default defineGkdApp({
         },
         {
           key: 1,
-          name: '点击[完成]',
-          activityIds: [
-            '.NewInstallInstalling',
-            '.InstallSuccess',
-            '.oplus.InstallAppProgress',
-            '.FlymePackageInstallerActivity',
-          ],
-          excludeMatches: '[text="正在安装"][childCount=0][visibleToUser=true]',
-          anyMatches: [
-            '@LinearLayout[clickable=true][visibleToUser=true] > [text="完成"][clickable=false]',
-            '[text="完成"][clickable=true][visibleToUser=true]',
-          ],
-          snapshotUrls: [
-            'https://i.gkd.li/i/13206476',
-            'https://i.gkd.li/i/13766420',
-            'https://i.gkd.li/i/14138323',
-            'https://i.gkd.li/i/14471862',
-            'https://i.gkd.li/i/16550273',
-          ],
-        },
-        {
-          key: 2,
           name: '点击[安装]',
-          activityIds: '.DeleteStagedFileOnResult',
-          matches: '[vid="confirm_bottom_button_layout"]',
-          snapshotUrls: 'https://i.gkd.li/i/14228348',
-        },
-        {
-          key: 3,
-          name: '勾选[已了解此应用未经检测，可能存在风险]',
-          activityIds: '.PackageInstallerActivity',
-          matches: '[vid="checkbox" && clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/14595443',
-        },
-        {
-          key: 4,
-          position: {
-            left: 'width * 1.5394',
-            top: 'height * 0.5',
-          },
-          activityIds: [
-            '.PackageInstallerActivity',
-            '.DeleteStagedFileOnResult',
+          matches: [
+            '[text^="已了解该应用"][checked=true]',
+            '[text="安装"][focusable=true || parent.focusable=true || parent.parent.focusable=true]',
           ],
-          excludeMatches: '[text="继续安装" || text="完成"]',
-          matches:
-            'LinearLayout[childCount=1] > Button[text="取消"][childCount=0]',
           snapshotUrls: [
-            'https://i.gkd.li/i/14969116',
-            'https://i.gkd.li/i/17158050',
+            'https://i.gkd.li/i/26134797',
+            'https://i.gkd.li/i/26134808',
           ],
         },
       ],

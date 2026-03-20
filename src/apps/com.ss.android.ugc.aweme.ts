@@ -41,11 +41,7 @@ export default defineGkdApp({
           activityIds:
             '.ecommerce.im.choosemedia.ECommerceIMMediaChooseActivity',
           matches:
-            '@ImageView[clickable=true][visibleToUser=true] + [text="原图"]',
-          snapshotUrls: [
-            'https://i.gkd.li/i/18637952', // 未选中
-            'https://i.gkd.li/i/18637948', // 已选中
-          ],
+            '@[vid="czt"][clickable=true][visibleToUser=true] > TextView[text="原图"]',
         },
       ],
     },

@@ -218,13 +218,14 @@ export default defineGkdApp({
       key: 8,
       name: '功能类-自动选中发送原图',
       desc: '自动选中原图，可手动取消勾选',
-      activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
       rules: [
         {
           key: 1,
+          activityIds: '.plugin.gallery.ui.AlbumPreviewUI',
           action: 'clickCenter',
+          actionDelay: 2000,
           matches:
-            '@[desc="未选中,原图,复选框"][desc!^="已选中"][clickable=true][focusable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
+            '[vid="kmg"] >2 @[desc^="未选中"][clickable=true][focusable=true][visibleToUser=true] + [text="原图"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/16987145', // 未选中
         },
       ],
@@ -368,9 +369,11 @@ export default defineGkdApp({
       rules: [
         {
           fastQuery: true,
-          activityIds: 'com.tencent.mm.plugin.webwx.ui.WebWXUnlockUI',
-          matches:
+          activityIds: '.plugin.webwx.ui.WebWXUnlockUI',
+          anyMatches: [
+            '[text="解锁"][clickable=true][visibleToUser=true]',
             '@[text="解锁"][clickable=true] < LinearLayout -2 [text^="解锁"][visibleToUser=true]',
+          ],
           exampleUrls:
             'https://m.gkd.li/57941037/85bb6dcd-0d04-46c1-af14-6e4b57ff4dca',
           snapshotUrls: [
@@ -428,12 +431,12 @@ export default defineGkdApp({
     {
       key: 34,
       name: '功能类-付款时自动点击[支付]',
-      fastQuery: true,
       actionMaximum: 1,
-      activityIds: 'com.tencent.mm.framework.app.UIPageFragmentActivity',
       rules: [
         {
           key: 0,
+          fastQuery: true,
+          activityIds: '.framework.app.UIPageFragmentActivity',
           matches:
             'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
           snapshotUrls: [
@@ -441,6 +444,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15144571',
             'https://i.gkd.li/i/15360745',
           ],
+        },
+        {
+          key: 1,
+          activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
+          matches:
+            '[desc^="付款方式"] + Button[desc="支付"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/23746748',
         },
       ],
     },
@@ -691,6 +701,32 @@ export default defineGkdApp({
             '@[text="发送"] < LinearLayout < LinearLayout < LinearLayout - [vid="actionbar_up_indicator"][visibleToUser=true]',
           exampleUrls: 'https://e.gkd.li/30f0f903-0a1a-422e-991c-02b7cbedc2da',
           snapshotUrls: 'https://i.gkd.li/i/21705384',
+        },
+      ],
+    },
+    {
+      key: 43,
+      name: '功能类-自动点击未读消息（头像右上角为数字）',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.LauncherUI',
+          matches:
+            'TextView[childCount=0] - ImageView[childCount=0] < RelativeLayout[childCount=2] < LinearLayout < @LinearLayout[clickable=true][visibleToUser=true] <n ListView < RelativeLayout < FrameLayout < FrameLayout < FrameLayout < ViewGroup < FrameLayout < FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/23711037',
+        },
+      ],
+    },
+    {
+      key: 44,
+      name: '功能类-自动点击未读消息（头像右上角为红点）',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: '.ui.LauncherUI',
+          matches:
+            'ImageView[childCount=0] - ImageView[childCount=0] < RelativeLayout[childCount=2] < LinearLayout < @LinearLayout[clickable=true][visibleToUser=true] <n ListView < RelativeLayout < FrameLayout < FrameLayout < FrameLayout < ViewGroup < FrameLayout < FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/23711037',
         },
       ],
     },
