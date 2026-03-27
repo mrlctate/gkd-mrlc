@@ -417,9 +417,8 @@ export default defineGkdApp({
           key: 1,
           name: '关闭弹窗',
           activityIds: '.tblauncher.MainTabActivity',
-          matches:
-            '[text="个性化内容推荐已关闭"] +2 [vid="obfuscated"]',
-          snapshotUrls: '',
+          matches: '[text="个性化内容推荐已关闭"] +2 [vid="obfuscated"]',
+          snapshotUrls: 'https://i.gkd.li/i/26312471',
         },
       ],
     },
