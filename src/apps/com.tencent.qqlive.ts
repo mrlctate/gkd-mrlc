@@ -229,12 +229,18 @@ export default defineGkdApp({
       activityIds: [
         '.ona.activity.SplashHomeActivity',
         '.ona.activity.VideoDetailActivity',
+        '.ona.activity.origin.OriginIconHomeActivity',
       ],
       rules: [
         {
           key: 1,
-          matches: '[id="app"] > View > [text="x"][text.length=1]',
-          snapshotUrls: 'https://i.gkd.li/i/25996420',
+          matches:
+            '@TextView[text="x"][clickable=true][childCount=0] + View >2 [text.length>=5&&text.length<10][childCount=0][index=0][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/3a524370-1dbc-4017-a357-6728f809bd9c',
+          snapshotUrls: [
+            'https://i.gkd.li/i/23763930',
+            'https://i.gkd.li/i/25996420',
+          ],
         },
         {
           key: 2,

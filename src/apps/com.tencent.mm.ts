@@ -436,6 +436,7 @@ export default defineGkdApp({
         {
           key: 0,
           fastQuery: true,
+          forcedTime: 100000,
           activityIds: '.framework.app.UIPageFragmentActivity',
           matches:
             'ViewGroup + ViewGroup > ViewGroup > [vid="kinda_button_impl_wrapper"][desc="支付"]',
@@ -447,6 +448,7 @@ export default defineGkdApp({
         },
         {
           key: 1,
+          matchRoot: true,
           activityIds: '.plugin.lite.ui.WxaLiteAppTransparentLiteUI',
           matches:
             '[desc^="付款方式"] + Button[desc="支付"][visibleToUser=true]',

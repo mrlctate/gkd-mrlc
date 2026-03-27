@@ -215,6 +215,7 @@ export const openAdBlackListAppIDs = new Set([
 export const updateBlackListAppIDs = new Set([
   ...blackListAppIDs,
   'info.muge.appshare', // AppShare
+  'com.netease.uuremote', // UU远程（不更新会强制退出）
 ]);
 
 // 通知提示黑名单
