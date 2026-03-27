@@ -7,7 +7,6 @@ export default defineGkdApp({
     {
       key: 1,
       name: '权限提示-通知权限',
-      matchTime: 10000,
       actionMaximum: 1,
       rules: [
         {
@@ -87,8 +86,31 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/16596210',
         },
         {
-          preKeys: [0, 1, 2, 3],
           key: 4,
+          activityIds: [
+            '.tblauncher.MainTabActivity',
+            '.pb.pb.main.PbActivity',
+          ],
+          matches:
+            'ImageView[childCount=0] < @FrameLayout[clickable=true][childCount=1][visibleToUser=true] <(3,4) RelativeLayout + FrameLayout >9 [text="广告"]',
+          exampleUrls: 'https://e.gkd.li/0ac82700-02f3-40c6-bf45-b21e365ac84c',
+          snapshotUrls: [
+            'https://i.gkd.li/i/21524232',
+            'https://i.gkd.li/i/21529443',
+            'https://i.gkd.li/i/21556758',
+            'https://i.gkd.li/i/24520138',
+          ],
+        },
+        {
+          key: 5,
+          activityIds: '.pb.pb.main.PbActivity',
+          matches:
+            'ImageView[childCount=0] < @FrameLayout[clickable=true][childCount=1][visibleToUser=true] <2 RelativeLayout + RelativeLayout >3 [text="广告"] ',
+          exampleUrls: 'https://e.gkd.li/0d5fea40-44ac-4b47-8b3c-e8388640e37d',
+          snapshotUrls: 'https://i.gkd.li/i/24541094',
+        },
+        {
+          preKeys: [0, 1, 2, 3, 4, 5],
           activityIds: [
             '.tblauncher.MainTabActivity',
             '.pb.pb.main.PbActivity',
@@ -102,13 +124,6 @@ export default defineGkdApp({
             'https://i.gkd.li/i/16595511',
             'https://i.gkd.li/i/16595113',
           ],
-        },
-        {
-          key: 5,
-          activityIds: '.tblauncher.MainTabActivity',
-          matches:
-            'RelativeLayout[childCount=4] > TextView[text="刚刚"][index=2] + FrameLayout[vid="obfuscated"][clickable=true]',
-          snapshotUrls: 'https://i.gkd.li/i/20033629',
         },
       ],
     },
@@ -169,11 +184,18 @@ export default defineGkdApp({
       key: 10,
       name: '局部广告-悬浮小广告',
       matchDelay: 500,
-      fastQuery: true,
-      activityIds: ['.tblauncher.MainTabActivity', '.pb.pb.main.PbActivity'],
+      matchTime: 10000,
+      actionMaximum: 1,
       rules: [
         {
           key: 0,
+          fastQuery: true,
+          matchTime: 10000,
+          actionMaximum: 1,
+          activityIds: [
+            '.tblauncher.MainTabActivity',
+            '.pb.pb.main.PbActivity',
+          ],
           matches:
             '@ImageView[clickable=true][visibleToUser=true][vid="obfuscated"] - [text="广告"]',
           snapshotUrls: [
@@ -185,19 +207,26 @@ export default defineGkdApp({
         {
           key: 1,
           name: '首页右侧悬浮广告-2',
+          activityIds: '.tblauncher.MainTabActivity',
           matches:
-            'RelativeLayout[childCount=2] > RelativeLayout[childCount=1][vid="obfuscated"] > ImageView[clickable=true]',
+            'RelativeLayout >2 RelativeLayout[childCount=1] > ImageView[childCount=0][clickable=true]',
           snapshotUrls: 'https://i.gkd.li/i/14291964',
         },
         {
           key: 2,
           name: '评论区左侧悬浮广告',
+          activityIds: '.pb.pb.main.PbActivity',
           matches:
-            'LinearLayout[childCount=2] + LinearLayout > LinearLayout[childCount=2] > @ImageView + [text="广告"]',
+            'FrameLayout[getChild(1).getChild(1).text!=null] + @FrameLayout[clickable=true] > LinearLayout[childCount=2] > ImageView + [text="广告"][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/13296280',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/20361318',
         },
         {
           key: 3,
+          activityIds: [
+            '.pb.pb.main.PbActivity',
+            '.tblauncher.MainTabActivity',
+          ],
           matches:
             'RelativeLayout[childCount=2] > RelativeLayout[childCount=1] > ImageView[childCount=0][clickable=true]',
           snapshotUrls: [
@@ -288,15 +317,17 @@ export default defineGkdApp({
       key: 14,
       name: '全屏广告-会员弹窗',
       desc: '点击关闭',
+      forcedTime: 10000,
       rules: [
         {
-          forcedTime: 10000,
+          key: 1,
+          actionMaximum: 2,
           activityIds: [
             '.tblauncher.MainTabActivity',
             'com.baidu.tbadk.browser.TBWebContainerActivity',
           ],
           matches:
-            'WebView[text="会员弹窗" || text="一键签到"] >(3,4) TextView + Image[text!=null][childCount=0][visibleToUser=true]',
+            'WebView[text="会员弹窗" || text="一键签到"] >(3,4,5) TextView + Image[text!=null][childCount=0][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/dd2f2a00-e9d3-47fa-986d-09ae6180d932',
           snapshotUrls: [
@@ -335,12 +366,13 @@ export default defineGkdApp({
             '.forum.ForumActivity',
           ],
           matches:
-            '@FrameLayout[clickable=true][visibleToUser=true] <4 RelativeLayout + FrameLayout >7 [text="广告"]',
+            'LinearLayout[childCount=3][vid!=null] > RelativeLayout[childCount=4][vid!=null] > FrameLayout[childCount=1][vid!=null] > ImageView',
           exampleUrls: 'https://e.gkd.li/5b53c3be-4972-44aa-a62e-3ca780ae7098',
           snapshotUrls: [
             'https://i.gkd.li/i/16595301',
             'https://i.gkd.li/i/16596195',
             'https://i.gkd.li/i/16596775',
+            'https://i.gkd.li/i/26306039',
           ],
         },
         {
@@ -372,6 +404,22 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17944680',
             'https://i.gkd.li/i/18218517',
           ],
+        },
+      ],
+    },
+    {
+      key: 17,
+      name: '功能类-个性化内容推荐关闭弹窗',
+      fastQuery: true,
+      actionMaximum: 1,
+      rules: [
+        {
+          key: 1,
+          name: '关闭弹窗',
+          activityIds: '.tblauncher.MainTabActivity',
+          matches:
+            '[text="个性化内容推荐已关闭"] +2 [vid="obfuscated"]',
+          snapshotUrls: '',
         },
       ],
     },
