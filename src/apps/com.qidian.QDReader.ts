@@ -29,7 +29,7 @@ export default defineGkdApp({
     },
     {
       key: 3,
-      name: '全屏广告-活动弹窗',
+      name: '全屏广告',
       fastQuery: true,
       rules: [
         {
@@ -39,13 +39,14 @@ export default defineGkdApp({
             'com.qidian.QDReader.framework.widget.dialog.judian',
             'com.qidian.QDReader.ui.activity.BookLastPageNewActivity',
           ],
-          matches:
-            '[id="com.qidian.QDReader:id/imgBKT"] + [id="com.qidian.QDReader:id/imgClose"]',
+          matches: '[vid="imgClose" || vid="btnClose"][visibleToUser=true]',
           snapshotUrls: [
             'https://i.gkd.li/i/12640195',
             'https://i.gkd.li/i/12640158',
             'https://i.gkd.li/i/12818198',
             'https://i.gkd.li/i/13469004',
+            'https://i.gkd.li/i/23210736',
+            'https://i.gkd.li/i/23249358',
           ],
         },
       ],
@@ -156,6 +157,32 @@ export default defineGkdApp({
           exampleUrls:
             'https://m.gkd.li/57941037/ea612e44-12a9-405f-aa03-60a19cebef57',
           snapshotUrls: 'https://i.gkd.li/i/15857381',
+        },
+      ],
+    },
+    {
+      key: 15,
+      name: '功能类-自动签到',
+      rules: [
+        {
+          key: 0,
+          fastQuery: true,
+          activityIds: '.ui.activity.MainGroupActivity',
+          excludeMatches: '[vid="tvTipNum"][text="--"][visibleToUser=true]',
+          matches: '@[vid="btnCheckIn"] >2 [text="签到"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/22634962',
+          excludeSnapshotUrls: [
+            'https://i.gkd.li/i/23210761',
+            'https://i.gkd.li/i/23211622',
+          ],
+        },
+        {
+          preKeys: [0],
+          fastQuery: true,
+          activityIds: '.ui.activity.QDBrowserActivity',
+          matches:
+            '@View[id=null][childCount=0][clickable=true] < View < View < WebView[text="福利中心"] < WebView < FrameLayout < [vid="webViewContainer"]',
+          snapshotUrls: 'https://i.gkd.li/i/24012947',
         },
       ],
     },

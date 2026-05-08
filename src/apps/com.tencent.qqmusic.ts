@@ -73,6 +73,13 @@ export default defineGkdApp({
             'https://i.gkd.li/i/23623677',
           ],
         },
+        {
+          key: 9,
+          activityIds: '.activity.AppStarterActivity',
+          matches:
+            'ImageView[width<80 && height<80] <<2 @ViewGroup[clickable=true] - [text^="hi~"]',
+          snapshotUrls: 'https://i.gkd.li/i/23930716',
+        },
       ],
     },
     {
@@ -83,6 +90,7 @@ export default defineGkdApp({
       activityIds: [
         '.activity.TranslucentWebViewActivity',
         '.activity.AppStarterActivity',
+        '.business.playernew.view.NewPlayerActivity',
       ],
       rules: [
         {
@@ -94,6 +102,8 @@ export default defineGkdApp({
             'https://i.gkd.li/i/17459008',
             'https://i.gkd.li/i/17057551',
             'https://i.gkd.li/i/19229689',
+            'https://i.gkd.li/i/23930628',
+            'https://i.gkd.li/i/23930853',
           ],
         },
         {

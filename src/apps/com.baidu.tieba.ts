@@ -410,14 +410,14 @@ export default defineGkdApp({
     {
       key: 17,
       name: '功能类-个性化内容推荐关闭弹窗',
-      fastQuery: true,
-      actionMaximum: 1,
       rules: [
         {
           key: 1,
           name: '关闭弹窗',
+          fastQuery: true,
           activityIds: '.tblauncher.MainTabActivity',
-          matches: '[text="个性化内容推荐已关闭"] +2 [vid="obfuscated"]',
+          matches:
+            '[text="个性化内容推荐已关闭"] +2 [vid="obfuscated"][clickable=true][visibleToUser=true]',
           snapshotUrls: 'https://i.gkd.li/i/26312471',
         },
       ],

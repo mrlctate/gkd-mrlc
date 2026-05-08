@@ -5,7 +5,7 @@ export default defineGkdApp({
   name: '豆瓣',
   groups: [
     {
-      key: 0,
+      key: -1,
       name: '开屏广告',
       matchTime: 10000,
       actionMaximum: 2,
@@ -15,9 +15,10 @@ export default defineGkdApp({
       rules: [
         {
           key: 0,
+          fastQuery: true,
           anyMatches: [
-            '[text*="跳过" || text*="跳過" && text.length<10]',
-            '@View[clickable=true && width=height] +(1,2) TextView[index=parent.childCount.minus(1) && clickable=true] -(2,3,4) FrameLayout >(7,8,9) TextView[index=parent.childCount.minus(1) && text*="跳转"]', // 字节SDK
+            '@View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0] <n FrameLayout[childCount>2][text=null][desc=null] >(n+6) [text*="第三方应用" || text*="扭动手机" || text*="点击或上滑" || text*="省钱好物" || text*="扭一扭"][visibleToUser=true]',
+            'FrameLayout > FrameLayout[childCount>2][text=null][desc=null] > @View[text=null][clickable=true][childCount=0][visibleToUser=true][width<200&&height<200] +(1,2) TextView[index=parent.childCount.minus(1)][childCount=0][visibleToUser=true]',
           ],
           snapshotUrls: 'https://i.gkd.li/i/15981630',
         },
@@ -29,7 +30,7 @@ export default defineGkdApp({
             top: 'width * 0.17', // height可能会变化，不建议使用
           },
           matches:
-            '[vid="ad_view"][visibleToUser=true][width>=1200 && width!=1440]',
+            '[vid="ad_view"][visibleToUser=true][width>=1200 && width!=1440 && width!=1224]',
           snapshotUrls: [
             'https://i.gkd.li/i/13601755',
             'https://i.gkd.li/i/16054268',
@@ -40,7 +41,53 @@ export default defineGkdApp({
           excludeSnapshotUrls: [
             'https://i.gkd.li/i/23283060',
             'https://i.gkd.li/i/23382528',
+            'https://i.gkd.li/i/23982586',
           ],
+        },
+        {
+          key: 2,
+          fastQuery: true,
+          position: {
+            left: 'width * 0.875',
+            top: 'width * 0.137', // height可能会变化，不建议使用
+          },
+          matches:
+            '[vid="ad_view"][visibleToUser=true][width<1200 || width=1224]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/13575257',
+            'https://i.gkd.li/i/13575547',
+            'https://i.gkd.li/i/18423724',
+            'https://i.gkd.li/i/23982586',
+          ],
+        },
+        {
+          key: 3,
+          fastQuery: true,
+          excludeMatches: '[text="去绑定邮箱"][visibleToUser=true]',
+          matches:
+            '[text*="跳过"][text.length<10][width<400 && height<200][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/17687115',
+          excludeSnapshotUrls: 'https://i.gkd.li/i/23283375',
+        },
+        {
+          key: 4,
+          fastQuery: true,
+          position: {
+            left: 'width * 0.868',
+            top: 'width * 0.09', // height可能会变化，不建议使用
+          },
+          matches: '[vid="ad_view"][visibleToUser=true][width=1216]',
+          snapshotUrls: 'https://i.gkd.li/i/23283060',
+        },
+        {
+          key: 5,
+          fastQuery: true,
+          position: {
+            left: 'width * 0.875',
+            top: 'width * 0.125',
+          },
+          matches: '[vid="ad_view"][visibleToUser=true][width=1440]',
+          snapshotUrls: 'https://i.gkd.li/i/23382528',
         },
       ],
     },
@@ -57,6 +104,7 @@ export default defineGkdApp({
             '.subject.structure.activity.MovieActivity',
             '.group.activity.GroupTopicActivity',
             '.fangorns.topic.TopicsActivity',
+            '.subject.struct2.MovieActivity2',
           ],
           matches:
             '[vid="ad_header_new"] > [vid="menu_item"][visibleToUser=true]',
@@ -65,6 +113,7 @@ export default defineGkdApp({
             'https://i.gkd.li/i/18424418',
             'https://i.gkd.li/i/18424924',
             'https://i.gkd.li/i/19615325',
+            'https://i.gkd.li/i/23982599',
           ],
         },
         {
@@ -122,6 +171,24 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 5,
+      name: '评价提示-关闭评分反馈弹窗',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.activity.SplashActivity',
+          matches: [
+            '[text^="喜欢豆瓣吗"][visibleToUser=true]',
+            '[text="下次再说"][visibleToUser=true]',
+          ],
+          snapshotUrls: 'https://i.gkd.li/i/18424257',
+        },
+      ],
+    },
+    {
       key: 8,
       name: '局部广告-卡片广告',
       desc: '点击关闭',
@@ -165,14 +232,14 @@ export default defineGkdApp({
           activityIds:
             'com.douban.frodo.subject.structure.activity.MovieActivity',
           matches:
-            '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] +n FrameLayout >(1,2) [text^="立即" || text="查看详情" || text="了解更多" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
+            '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null][parent.childCount>3] +n FrameLayout >(1,2) [text^="立即" || text$="详情" || text^="了解" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
           snapshotUrls: 'https://i.gkd.li/i/13195565',
         },
         {
           key: 1,
           fastQuery: true,
           matches:
-            '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null] <2 FrameLayout[childCount=5] + FrameLayout[childCount=2] > [text^="立即" || text="查看详情" || text="了解更多" || text="去逛逛" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
+            '@ImageView[childCount=0][text=null][desc=null][id=null][visibleToUser=true][width<90 && height<90] < FrameLayout[childCount=1][text=null][desc=null][id=null] <2 FrameLayout[childCount=5] + FrameLayout[childCount=2] > [text^="立即" || text$="详情" || text^="了解" || text="去逛逛" || text="去微信看看" || text$="应用" || text="进入小程序" || text="领取优惠" || text="跳转微信"]',
           snapshotUrls: 'https://i.gkd.li/i/13328126',
         },
         {

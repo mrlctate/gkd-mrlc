@@ -7,14 +7,14 @@ on:
 
 jobs:
   check:
-    if: github.repository == 'mrlctate/subscription' && github.event.pull_request.user.login != 'renovate[bot]'
+    if: github.repository == 'mrlctate/gkd-mrlc' && github.event.pull_request.user.login != 'renovate[bot]'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6.0.2
 
       - name: Get changed files
         id: changed_files
-        uses: tj-actions/changed-files@v44
+        uses: tj-actions/changed-files@v47.0.6
         with:
           files: |
             src/apps/*.ts
@@ -32,13 +32,17 @@ jobs:
             exit 1
           fi
 
-      - uses: actions/setup-node@v4
+      - uses: pnpm/action-setup@v6.0.5
         with:
-          node-version: 22
+          version: latest
 
-      - uses: pnpm/action-setup@v4
-
-      - run: pnpm install
+      - uses: actions/setup-node@v6.4.0
+        with:
+          node-version: lts/*
+          cache: pnpm
+        
+      - name: Install Dependencies
+        run: pnpm install --frozen-lockfile
 
       - run: pnpm run check
 
@@ -50,7 +54,7 @@ jobs:
         run: |
           status=$(git status --porcelain)
           if [ -n "$status" ]; then
-            echo "Something wasn't formatted properly"
+            echo "某些内容格式不正确"
             git --no-pager diff
             exit 1
           fi
