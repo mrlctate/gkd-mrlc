@@ -76,7 +76,7 @@ export default defineGkdApp({
           action: 'clickCenter',
           activityIds: 'com.autonavi.map.activity.NewMapActivity',
           matches:
-            'ViewGroup[childCount>1] > [desc="关闭"][clickable=true][visibleToUser=true]',
+            '@ViewGroup[desc="关闭"][clickable=true][visibleToUser=true] - ViewGroup > [desc!=null][visibleToUser=true] + [desc!=null][visibleToUser=true]',
           exampleUrls:
             'https://m.gkd.li/57941037/071a07d2-c760-4f15-9359-f54bf51b6205',
           snapshotUrls: 'https://i.gkd.li/i/14715295',

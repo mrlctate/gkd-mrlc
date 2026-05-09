@@ -14,8 +14,12 @@ export default defineGkdApp({
           forcedTime: 10000,
           activityIds:
             'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
-          matches: '[vid="draw_dialog_iv_close"]',
-          snapshotUrls: 'https://i.gkd.li/i/16118156',
+          matches:
+            '[vid="draw_dialog_iv_close" || vid="package_import_ad_dialog_iv_close"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/16118156',
+            'https://i.gkd.li/i/22570634',
+          ],
         },
         {
           key: 1,
@@ -58,6 +62,26 @@ export default defineGkdApp({
             'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
           matches: '[vid="cn_bottom_sheet_close"]',
           snapshotUrls: 'https://i.gkd.li/i/16118155',
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          activityIds: '.homepage.view.activity.HomePageActivity',
+          matches:
+            '[desc="恭喜你获得" || desc="你想买的"] - @ImageView[id=null][text=null][clickable=true][visibleToUser=true][width<150&&height<150] <2 FrameLayout <2 FrameLayout < FrameLayout < [vid="fl_guide_ad_get_reward_dialog_dx_container"]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/22441306',
+            'https://i.gkd.li/i/22570632',
+          ],
+        },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds:
+            'com.taobao.cainiao.logistic.ui.view.LogisticDetailActivity',
+          matches:
+            'Image[childCount=0][width<100 && height<100] < @View[clickable=true][childCount=1] - Image[childCount=0][text="超时享"] <<n [vid="browser_fragment_layout"]',
+          snapshotUrls: 'https://i.gkd.li/i/24099845',
         },
       ],
     },
@@ -103,6 +127,21 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 4,
+      name: '更新提示',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: '.homepage.view.activity.HomePageActivity',
+          matches: '[text="确认"] - [text="取消"]',
+          snapshotUrls: 'https://i.gkd.li/i/13042207',
+        },
+      ],
+    },
+    {
       key: 5,
       name: '权限提示-通知权限',
       desc: '自动点击关闭',
@@ -141,6 +180,19 @@ export default defineGkdApp({
           matches:
             '@[clickable=true] > View[desc="展开"] <<n LinearLayout[vid="layout_root"]',
           snapshotUrls: 'https://i.gkd.li/i/15879126',
+        },
+      ],
+    },
+    {
+      key: 11,
+      name: '其他-好友代取功能提示',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            'com.cainiao.wireless.homepage.view.activity.HomePageActivity',
+          matches: ['[text^="好友代取"]', '[text="下次再说"][clickable=true]'],
+          snapshotUrls: 'https://i.gkd.li/i/23787455',
         },
       ],
     },

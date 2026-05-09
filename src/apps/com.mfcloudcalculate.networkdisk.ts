@@ -62,6 +62,75 @@ export default defineGkdApp({
           exampleUrls: 'https://e.gkd.li/af430910-56e0-4b19-b23f-b120ce19fdc0',
           snapshotUrls: 'https://i.gkd.li/i/17456625',
         },
+        {
+          key: 5,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches:
+            '@ImageView[childCount=0][text=null][visibleToUser=true] < FrameLayout[childCount=1] <2 FrameLayout[childCount=2] <2 FrameLayout[childCount=2] <2 FrameLayout[childCount=2] - FrameLayout > [text^="扭动或点击"]',
+          exampleUrls: 'https://e.gkd.li/069fb571-ab57-42a7-a360-79b44efc2790',
+          snapshotUrls: 'https://i.gkd.li/i/18032004',
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches: [
+            '[text="反馈"][visibleToUser=true]',
+            '[text="跳过"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/1326c88b-81e0-4f78-b301-778d29e10433',
+          snapshotUrls: 'https://i.gkd.li/i/18121205',
+        },
+        {
+          key: 7,
+          fastQuery: true,
+          activityIds: 'com.meishu.sdk.activity.SdkInterstitialActivity',
+          matches:
+            '[vid="ms_activity_sdk_interstitial_cacel"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/e2e7b175-20f6-4e12-a24a-504364a8b765',
+          snapshotUrls: 'https://i.gkd.li/i/18095705',
+        },
+        {
+          key: 8,
+          fastQuery: true,
+          action: 'back',
+          activityIds: '.MainActivity',
+          matches:
+            '[desc="开通前请阅读"] -8 @ImageView[clickable=true][childCount=0][visibleToUser=true] < View < View < View < View < FrameLayout < FrameLayout < [id="android:id/content"]',
+          snapshotUrls: 'https://i.gkd.li/i/21820334',
+        },
+        {
+          key: 9,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches:
+            '@[id="cj.mobile.wm.allmodules:id/wm_pop_pic_close"] +n * > [text="广告"]',
+          snapshotUrls: 'https://i.gkd.li/i/23253580',
+        },
+        {
+          key: 10,
+          activityIds:
+            'com.bytedance.sdk.openadsdk.stub.activity.Stub_Standard_Portrait_Activity',
+          matches:
+            '@Image[childCount=0][width<60 && height<60] < View[childCount=1] < View[childCount=1] < View[childCount=1] < View[childCount=1] + View >2 [text="广告"]',
+          exampleUrls: 'https://e.gkd.li/34c7741f-0f03-4b0d-b8d2-917ed297e304',
+          snapshotUrls: 'https://i.gkd.li/i/24119772',
+        },
+        {
+          key: 11,
+          fastQuery: true,
+          position: {
+            left: 'width * 0.9636',
+            top: 'height * 0.5',
+          },
+          activityIds: '.MainActivity',
+          matches:
+            '[desc="开通前请阅读"] -n @ImageView[childCount=0] < View < View < View < View < FrameLayout < [id="android:id/content"]',
+          exampleUrls: 'https://e.gkd.li/ee504d60-ca93-40de-bb0f-292ef1df8c70',
+          snapshotUrls: 'https://i.gkd.li/i/24119773',
+        },
       ],
     },
     {

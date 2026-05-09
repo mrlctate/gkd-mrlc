@@ -5,6 +5,21 @@ export default defineGkdApp({
   name: '小米运动健康',
   groups: [
     {
+      key: 2,
+      name: '权限提示-权限提醒',
+      fastQuery: true,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          activityIds: 'com.xiaomi.fitness.main.MainActivity',
+          matches:
+            '[text="开启后台无限制"] + [id="com.mi.health:id/close_icon"]',
+          snapshotUrls: 'https://i.gkd.li/i/13495035',
+        },
+      ],
+    },
+    {
       key: 3,
       name: '全屏广告',
       fastQuery: true,
@@ -26,6 +41,39 @@ export default defineGkdApp({
           activityIds: 'com.xiaomi.wearable.yrn.views.WearableRNActivity',
           matches: '@[clickable=true] > [desc="Close"]',
           snapshotUrls: 'https://i.gkd.li/i/23923968',
+        },
+      ],
+    },
+    {
+      key: 4,
+      name: '更新提示',
+      fastQuery: true,
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      rules: [
+        {
+          matches: [
+            '[text="下载并安装" || text="立即更新"]',
+            '[text="放弃更新" || text="取消"]',
+          ],
+          snapshotUrls: [
+            'https://i.gkd.li/i/13537840',
+            'https://i.gkd.li/i/13626328',
+          ],
+        },
+      ],
+    },
+    {
+      key: 5,
+      name: '通知提示-公告栏',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds: 'com.xiaomi.fitness.main.MainActivity',
+          matches:
+            '[vid="bannerAnnouncementView"] [vid="iv_close"][clickable=true]',
+          snapshotUrls: 'https://i.gkd.li/i/24099864',
         },
       ],
     },

@@ -43,6 +43,14 @@ export default defineGkdApp({
           snapshotUrls: 'https://i.gkd.li/i/18033023',
         },
         {
+          key: 3,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '@ImageView[clickable=true] - [text="|"] - [text$="s"]',
+          exampleUrls: 'https://e.gkd.li/343016ff-dd8f-4a19-8e3c-63520b087e98',
+          snapshotUrls: 'https://i.gkd.li/i/12903095',
+        },
+        {
           key: 4,
           fastQuery: true,
           activityIds: 'com.baidu.mobads.sdk.api.MobRewardVideoActivity',
@@ -50,6 +58,26 @@ export default defineGkdApp({
             '@ImageView[clickable=true][visibleToUser=true][childCount=0] + RelativeLayout >2 [text="反馈"]',
           exampleUrls: 'https://e.gkd.li/501c8360-a261-40fb-b361-f1c6493289d7',
           snapshotUrls: 'https://i.gkd.li/i/18094642',
+        },
+        {
+          key: 5,
+          fastQuery: true,
+          activityIds: '.MainActivity',
+          matches: '[vid="iv_cancel" || vid="ad_close"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/13b65be1-e126-4a32-a4d8-efc0f20623bc',
+          snapshotUrls: [
+            'https://i.gkd.li/i/24045175',
+            'https://i.gkd.li/i/24100793',
+          ],
+        },
+        {
+          key: 6,
+          fastQuery: true,
+          activityIds: 'com.octopus.ad.AdActivity',
+          matches:
+            '@ImageView[clickable=true][childCount=0][width<100 && height<100] - [text="反馈"][visibleToUser=true]',
+          exampleUrls: 'https://e.gkd.li/c5363e69-4206-4266-9e45-3ce1cc650bd2',
+          snapshotUrls: 'https://i.gkd.li/i/24100775',
         },
       ],
     },
