@@ -9,17 +9,7 @@
 
 ## 订阅
 
-cloudflare源（国内源,推荐使用）
 
-```txt
-https://gkd-mrlc.pages.dev/gkd.json5
-```
-
-GitHub源
-
-```txt
-https://raw.githubusercontent.com/mrlctate/gkd-mrlc/main/dist/gkd.json5
-```
 
 ##
 
