@@ -137,5 +137,18 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 16,
+      name: '权限提示-通知权限',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            'com.yxcorp.gifshow.detail.PhotoDetailActivity',
+          matches: 'TextView[text~="^打开.{0,4}通知$"] - ViewGroup > @ImageView',
+          snapshotUrls: 'https://i.gkd.li/i/29371462',
+        },
+      ],
+    },
   ],
 });

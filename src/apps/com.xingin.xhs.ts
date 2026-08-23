@@ -59,8 +59,14 @@ export default defineGkdApp({
         {
           key: 1,
           activityIds: '.index.v2.IndexActivityV2',
-          matches: '@ImageView <2 FrameLayout - [text^="打开通知"]',
-          snapshotUrls: 'https://i.gkd.li/i/13250418',
+          matches: 'TextView[text^="打开通知"] + LinearLayout > @ImageView[clickable=true][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/29371146',
+        },
+        {
+          key: 2,
+          activityIds: 'com.xingin.authorization.NotificationAuthorizationTranslucentActivity',          
+          matches: 'TextView[text="允许“小红书”向你发送通知？"] < LinearLayout + LinearLayout > @TextView[text="拒绝"]',
+          snapshotUrls: 'https://i.gkd.li/i/29370915',
         },
       ],
     },
